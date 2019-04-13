@@ -1,0 +1,178 @@
+<html>
+<body>
+<pre>
+<h1>礦ision Build Log</h1>
+<h2>Project:</h2>
+F:\TB工作台\开发板配套资料保存\YS-V0.4 STM32语音识别开发板\YS-V0.4 配套程序\YS-V0.4 识别基本程序\RVMDK\STM32-LD3320.uvproj
+Project File Date:  04/07/2012
+
+<h2>Output:</h2>
+Build target 'STM32-LD3320-Driver'
+compiling main.c...
+..\user\main.c(37): error:  #20: identifier "GPIO_InitTypeDef" is undefined
+..\user\main.c(58): warning:  #223-D: function "RCC_APB2PeriphClockCmd" declared implicitly
+..\user\main.c(58): error:  #20: identifier "RCC_APB2Periph_GPIOA" is undefined
+..\user\main.c(58): error:  #20: identifier "RCC_APB2Periph_GPIOB" is undefined
+..\user\main.c(59): error:  #20: identifier "RCC_APB2Periph_GPIOC" is undefined
+..\user\main.c(59): error:  #20: identifier "RCC_APB2Periph_GPIOD" is undefined
+..\user\main.c(60): error:  #20: identifier "RCC_APB2Periph_GPIOE" is undefined
+..\user\main.c(62): error:  #20: identifier "GPIO_Pin_All" is undefined
+..\user\main.c(63): error:  #20: identifier "GPIO_Mode_AIN" is undefined
+..\user\main.c(64): warning:  #223-D: function "GPIO_Init" declared implicitly
+..\user\main.c(79): error:  #20: identifier "GPIO_Pin_5" is undefined
+..\user\main.c(80): error:  #20: identifier "GPIO_Mode_Out_PP" is undefined
+..\user\main.c(81): error:  #20: identifier "GPIO_Speed_50MHz" is undefined
+..\user\main.c(84): error:  #20: identifier "GPIO_Pin_6" is undefined
+..\user\main.c(84): error:  #20: identifier "GPIO_Pin_3" is undefined
+..\user\main.c(90): warning:  #223-D: function "GPIO_SetBits" declared implicitly
+..\user\main.c(99): warning:  #223-D: function "GPIO_ResetBits" declared implicitly
+compiling stm32f10x_it.c...
+..\user\stm32f10x_it.c(168): warning:  #223-D: function "GPIO_Write" declared implicitly
+compiling misc.c...
+..\M3lib\SRC\misc.c(98): warning:  #223-D: function "assert_param" declared implicitly
+..\M3lib\SRC\misc.c(117): warning:  #223-D: function "assert_param" declared implicitly
+..\M3lib\SRC\misc.c(160): warning:  #223-D: function "assert_param" declared implicitly
+..\M3lib\SRC\misc.c(181): warning:  #223-D: function "assert_param" declared implicitly
+..\M3lib\SRC\misc.c(207): warning:  #223-D: function "assert_param" declared implicitly
+compiling stm32f10x_gpio.c...
+..\M3lib\SRC\stm32f10x_gpio.c(103): warning:  #223-D: function "assert_param" declared implicitly
+..\M3lib\SRC\stm32f10x_gpio.c(168): warning:  #223-D: function "assert_param" declared implicitly
+..\M3lib\SRC\stm32f10x_gpio.c(276): warning:  #223-D: function "assert_param" declared implicitly
+..\M3lib\SRC\stm32f10x_gpio.c(298): warning:  #223-D: function "assert_param" declared implicitly
+..\M3lib\SRC\stm32f10x_gpio.c(314): warning:  #223-D: function "assert_param" declared implicitly
+..\M3lib\SRC\stm32f10x_gpio.c(336): warning:  #223-D: function "assert_param" declared implicitly
+..\M3lib\SRC\stm32f10x_gpio.c(352): warning:  #223-D: function "assert_param" declared implicitly
+..\M3lib\SRC\stm32f10x_gpio.c(369): warning:  #223-D: function "assert_param" declared implicitly
+..\M3lib\SRC\stm32f10x_gpio.c(389): warning:  #223-D: function "assert_param" declared implicitly
+..\M3lib\SRC\stm32f10x_gpio.c(413): warning:  #223-D: function "assert_param" declared implicitly
+..\M3lib\SRC\stm32f10x_gpio.c(431): warning:  #223-D: function "assert_param" declared implicitly
+..\M3lib\SRC\stm32f10x_gpio.c(461): warning:  #223-D: function "assert_param" declared implicitly
+..\M3lib\SRC\stm32f10x_gpio.c(481): warning:  #223-D: function "assert_param" declared implicitly
+..\M3lib\SRC\stm32f10x_gpio.c(523): warning:  #223-D: function "assert_param" declared implicitly
+..\M3lib\SRC\stm32f10x_gpio.c(566): warning:  #223-D: function "assert_param" declared implicitly
+compiling stm32f10x_rcc.c...
+..\M3lib\SRC\stm32f10x_rcc.c(211): warning:  #223-D: function "assert_param" declared implicitly
+..\M3lib\SRC\stm32f10x_rcc.c(276): warning:  #223-D: function "assert_param" declared implicitly
+..\M3lib\SRC\stm32f10x_rcc.c(297): warning:  #223-D: function "assert_param" declared implicitly
+..\M3lib\SRC\stm32f10x_rcc.c(320): warning:  #223-D: function "assert_param" declared implicitly
+..\M3lib\SRC\stm32f10x_rcc.c(341): warning:  #223-D: function "assert_param" declared implicitly
+..\M3lib\SRC\stm32f10x_rcc.c(358): warning:  #223-D: function "assert_param" declared implicitly
+..\M3lib\SRC\stm32f10x_rcc.c(402): warning:  #223-D: function "assert_param" declared implicitly
+..\M3lib\SRC\stm32f10x_rcc.c(428): warning:  #223-D: function "assert_param" declared implicitly
+..\M3lib\SRC\stm32f10x_rcc.c(454): warning:  #223-D: function "assert_param" declared implicitly
+..\M3lib\SRC\stm32f10x_rcc.c(480): warning:  #223-D: function "assert_param" declared implicitly
+..\M3lib\SRC\stm32f10x_rcc.c(507): warning:  #223-D: function "assert_param" declared implicitly
+..\M3lib\SRC\stm32f10x_rcc.c(526): warning:  #223-D: function "assert_param" declared implicitly
+..\M3lib\SRC\stm32f10x_rcc.c(549): warning:  #223-D: function "assert_param" declared implicitly
+..\M3lib\SRC\stm32f10x_rcc.c(583): warning:  #223-D: function "assert_param" declared implicitly
+..\M3lib\SRC\stm32f10x_rcc.c(602): warning:  #223-D: function "assert_param" declared implicitly
+..\M3lib\SRC\stm32f10x_rcc.c(618): warning:  #223-D: function "assert_param" declared implicitly
+..\M3lib\SRC\stm32f10x_rcc.c(712): warning:  #223-D: function "assert_param" declared implicitly
+..\M3lib\SRC\stm32f10x_rcc.c(742): warning:  #223-D: function "assert_param" declared implicitly
+..\M3lib\SRC\stm32f10x_rcc.c(773): warning:  #223-D: function "assert_param" declared implicitly
+..\M3lib\SRC\stm32f10x_rcc.c(802): warning:  #223-D: function "assert_param" declared implicitly
+..\M3lib\SRC\stm32f10x_rcc.c(832): warning:  #223-D: function "assert_param" declared implicitly
+..\M3lib\SRC\stm32f10x_rcc.c(853): warning:  #223-D: function "assert_param" declared implicitly
+..\M3lib\SRC\stm32f10x_rcc.c(866): warning:  #223-D: function "assert_param" declared implicitly
+..\M3lib\SRC\stm32f10x_rcc.c(884): warning:  #223-D: function "assert_param" declared implicitly
+..\M3lib\SRC\stm32f10x_rcc.c(912): warning:  #223-D: function "assert_param" declared implicitly
+..\M3lib\SRC\stm32f10x_rcc.c(971): warning:  #223-D: function "assert_param" declared implicitly
+..\M3lib\SRC\stm32f10x_rcc.c(1000): warning:  #223-D: function "assert_param" declared implicitly
+compiling stm32f10x_usart.c...
+..\M3lib\SRC\stm32f10x_usart.c(135): warning:  #223-D: function "assert_param" declared implicitly
+..\M3lib\SRC\stm32f10x_usart.c(184): warning:  #223-D: function "assert_param" declared implicitly
+..\M3lib\SRC\stm32f10x_usart.c(278): warning:  #223-D: function "assert_param" declared implicitly
+..\M3lib\SRC\stm32f10x_usart.c(326): warning:  #223-D: function "assert_param" declared implicitly
+..\M3lib\SRC\stm32f10x_usart.c(369): warning:  #223-D: function "assert_param" declared implicitly
+..\M3lib\SRC\stm32f10x_usart.c(419): warning:  #223-D: function "assert_param" declared implicitly
+..\M3lib\SRC\stm32f10x_usart.c(447): warning:  #223-D: function "assert_param" declared implicitly
+..\M3lib\SRC\stm32f10x_usart.c(470): warning:  #223-D: function "assert_param" declared implicitly
+..\M3lib\SRC\stm32f10x_usart.c(489): warning:  #223-D: function "assert_param" declared implicitly
+..\M3lib\SRC\stm32f10x_usart.c(519): warning:  #223-D: function "assert_param" declared implicitly
+..\M3lib\SRC\stm32f10x_usart.c(538): warning:  #223-D: function "assert_param" declared implicitly
+..\M3lib\SRC\stm32f10x_usart.c(564): warning:  #223-D: function "assert_param" declared implicitly
+..\M3lib\SRC\stm32f10x_usart.c(581): warning:  #223-D: function "assert_param" declared implicitly
+..\M3lib\SRC\stm32f10x_usart.c(597): warning:  #223-D: function "assert_param" declared implicitly
+..\M3lib\SRC\stm32f10x_usart.c(614): warning:  #223-D: function "assert_param" declared implicitly
+..\M3lib\SRC\stm32f10x_usart.c(634): warning:  #223-D: function "assert_param" declared implicitly
+..\M3lib\SRC\stm32f10x_usart.c(654): warning:  #223-D: function "assert_param" declared implicitly
+..\M3lib\SRC\stm32f10x_usart.c(680): warning:  #223-D: function "assert_param" declared implicitly
+..\M3lib\SRC\stm32f10x_usart.c(706): warning:  #223-D: function "assert_param" declared implicitly
+..\M3lib\SRC\stm32f10x_usart.c(735): warning:  #223-D: function "assert_param" declared implicitly
+..\M3lib\SRC\stm32f10x_usart.c(754): warning:  #223-D: function "assert_param" declared implicitly
+..\M3lib\SRC\stm32f10x_usart.c(792): warning:  #223-D: function "assert_param" declared implicitly
+..\M3lib\SRC\stm32f10x_usart.c(835): warning:  #223-D: function "assert_param" declared implicitly
+..\M3lib\SRC\stm32f10x_usart.c(866): warning:  #223-D: function "assert_param" declared implicitly
+..\M3lib\SRC\stm32f10x_usart.c(935): warning:  #223-D: function "assert_param" declared implicitly
+compiling core_cm3.c...
+compiling system_stm32f10x.c...
+Target not created
+Build target 'STM32-LD3320-Driver'
+compiling main.c...
+..\user\main.c(22): error:  #5: cannot open source input file "include.h": No such file or directory
+compiling stm32f10x_it.c...
+..\user\stm32f10x_it.c(24): error:  #5: cannot open source input file "include.h": No such file or directory
+Target not created
+Build target 'STM32-LD3320-Driver'
+compiling main.c...
+..\user\main.c(37): error:  #20: identifier "GPIO_InitTypeDef" is undefined
+..\user\main.c(58): warning:  #223-D: function "RCC_APB2PeriphClockCmd" declared implicitly
+..\user\main.c(58): error:  #20: identifier "RCC_APB2Periph_GPIOA" is undefined
+..\user\main.c(58): error:  #20: identifier "RCC_APB2Periph_GPIOB" is undefined
+..\user\main.c(59): error:  #20: identifier "RCC_APB2Periph_GPIOC" is undefined
+..\user\main.c(59): error:  #20: identifier "RCC_APB2Periph_GPIOD" is undefined
+..\user\main.c(60): error:  #20: identifier "RCC_APB2Periph_GPIOE" is undefined
+..\user\main.c(62): error:  #20: identifier "GPIO_Pin_All" is undefined
+..\user\main.c(63): error:  #20: identifier "GPIO_Mode_AIN" is undefined
+..\user\main.c(64): warning:  #223-D: function "GPIO_Init" declared implicitly
+..\user\main.c(77): error:  #20: identifier "RCC_APB2Periph_GPIO_LED1" is undefined
+..\user\main.c(77): error:  #20: identifier "RCC_APB2Periph_GPIO_LED2" is undefined
+..\user\main.c(79): error:  #20: identifier "GPIO_Pin_5" is undefined
+..\user\main.c(80): error:  #20: identifier "GPIO_Mode_Out_PP" is undefined
+..\user\main.c(81): error:  #20: identifier "GPIO_Speed_50MHz" is undefined
+..\user\main.c(84): error:  #20: identifier "GPIO_Pin_6" is undefined
+..\user\main.c(84): error:  #20: identifier "GPIO_Pin_3" is undefined
+..\user\main.c(90): warning:  #223-D: function "GPIO_SetBits" declared implicitly
+..\user\main.c(99): warning:  #223-D: function "GPIO_ResetBits" declared implicitly
+compiling stm32f10x_it.c...
+..\user\stm32f10x_it.c(167): warning:  #223-D: function "GPIO_Write" declared implicitly
+Target not created
+Build target 'STM32-LD3320-Driver'
+compiling main.c...
+..\user\main.c(77): error:  #20: identifier "RCC_APB2Periph_GPIO_LED1" is undefined
+..\user\main.c(77): error:  #20: identifier "RCC_APB2Periph_GPIO_LED2" is undefined
+compiling stm32f10x_it.c...
+Target not created
+Build target 'STM32-LD3320-Driver'
+compiling main.c...
+..\user\main.c(77): error:  #20: identifier "RCC_APB2Periph_GPIO_LED1" is undefined
+..\user\main.c(77): error:  #20: identifier "RCC_APB2Periph_GPIO_LED2" is undefined
+compiling stm32f10x_it.c...
+Target not created
+Build target 'STM32-LD3320-Driver'
+compiling main.c...
+..\user\main.c(46): warning:  #1295-D: Deprecated declaration read_temperature - give arg types
+..\user\main.c(74): warning:  #177-D: variable "add" was declared but never referenced
+compiling stm32f10x_it.c...
+linking...
+.\Obj\STM32-LD3320.sct(7): error: L6236E: No section matches selector - no section to be FIRST/LAST.
+".\Obj\STM32-LD3320.axf" - 1 Error(s), 2 Warning(s).
+Build target 'STM32-LD3320-Driver'
+compiling main.c...
+..\user\main.c(47): warning:  #1295-D: Deprecated declaration read_temperature - give arg types
+..\user\main.c(75): warning:  #177-D: variable "add" was declared but never referenced
+compiling stm32f10x_it.c...
+linking...
+.\Obj\STM32-LD3320.sct(7): error: L6236E: No section matches selector - no section to be FIRST/LAST.
+".\Obj\STM32-LD3320.axf" - 1 Error(s), 2 Warning(s).
+Build target 'STM32-LD3320-Driver'
+compiling main.c...
+..\user\main.c(47): warning:  #1295-D: Deprecated declaration read_temperature - give arg types
+linking...
+.\Obj\STM32-LD3320.sct(7): error: L6236E: No section matches selector - no section to be FIRST/LAST.
+".\Obj\STM32-LD3320.axf" - 1 Error(s), 1 Warning(s).
+Build target 'STM32-LD3320-Driver'
+compiling main.c...
+linking...
+.\Obj\STM32-LD3320.sct(7): error: L6236E: No section matches selector - no section to be FIRST/LAST.
+".\Obj\STM32-LD3320.axf" - 1 Error(s), 0 Warning(s).

@@ -1,0 +1,855 @@
+Dependencies for Project 'STM32-LD3320', Target 'STM32-LD3320': (DO NOT MODIFY !)
+F (..\user\main.c)(0x5CB20CFB)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I ..\user -I ..\Libraries -I ..\Libraries\CMSIS -I ..\Libraries\CMSIS\CM3 -I ..\Libraries\CMSIS\CM3\CoreSupport -I ..\Libraries\CMSIS\CM3\DeviceSupport -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\arm -I ..\Libraries\STM32F10x_StdPeriph_Driver\inc -I ..\Libraries\STM32_USB-FS-Device_Driver\inc -I ..\BSP\LD_Driver -I ..\BSP\usart -I ..\BSP\delay -I ..\BSP\dma -I ..\BSP\timer -I ..\BSP\usb_user -I ..\BSP\sd_card -I ..\FATFS -I ..\FATFS\option-I.\RTE\_STM32-LD3320-I"D:\Program Files (x86)\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include"-I"D:\Program Files (x86)\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include"-D__UVISION_VERSION="526" -D_RTE_ -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o .\obj\main.o --omf_browse .\obj\main.crf --depend .\obj\main.d)
+I (..\user\includes.h)(0x5CB20CA0)
+I (..\user\stm32f10x.h)(0x5CB1F3FB)
+I (..\Libraries\CMSIS\CM3\CoreSupport\core_cm3.h)(0x4D523B58)
+I (D:\Program Files (x86)\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599EDB3E)
+I (..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\system_stm32f10x.h)(0x4D783CAA)
+I (..\user\stm32f10x_conf.h)(0x5CB1A7F1)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_dma.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_exti.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_gpio.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_rcc.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_sdio.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_spi.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_tim.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_usart.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h)(0x4D783BB4)
+I (..\BSP\LD_Driver\LDchip.h)(0x5CB20C62)
+I (..\BSP\LD_Driver\Reg_RW.h)(0x5CB1924B)
+I (..\user\LEDtest.h)(0x5CB19257)
+I (..\BSP\usart\usart.h)(0x5CAD67B7)
+I (D:\Program Files (x86)\Keil_v5\ARM\ARMCC\include\stdio.h)(0x599EDB3C)
+I (..\BSP\delay\delay.h)(0x560D4AC8)
+I (..\FATFS\ff.h)(0x4E950DD4)
+I (..\FATFS\integer.h)(0x4BD31212)
+I (..\FATFS\ffconf.h)(0x4EF1C7E0)
+I (..\FATFS\diskio.h)(0x4C6932A0)
+I (..\FATFS\fatfs_posix.h)(0x4EC9F2FA)
+I (D:\Program Files (x86)\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x599EDB3C)
+I (..\BSP\sd_card\sdio_sdcard.h)(0x4EC74924)
+F (..\user\stm32f10x_it.c)(0x5CB1A807)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I ..\user -I ..\Libraries -I ..\Libraries\CMSIS -I ..\Libraries\CMSIS\CM3 -I ..\Libraries\CMSIS\CM3\CoreSupport -I ..\Libraries\CMSIS\CM3\DeviceSupport -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\arm -I ..\Libraries\STM32F10x_StdPeriph_Driver\inc -I ..\Libraries\STM32_USB-FS-Device_Driver\inc -I ..\BSP\LD_Driver -I ..\BSP\usart -I ..\BSP\delay -I ..\BSP\dma -I ..\BSP\timer -I ..\BSP\usb_user -I ..\BSP\sd_card -I ..\FATFS -I ..\FATFS\option-I.\RTE\_STM32-LD3320-I"D:\Program Files (x86)\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include"-I"D:\Program Files (x86)\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include"-D__UVISION_VERSION="526" -D_RTE_ -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o .\obj\stm32f10x_it.o --omf_browse .\obj\stm32f10x_it.crf --depend .\obj\stm32f10x_it.d)
+I (..\user\stm32f10x.h)(0x5CB1F3FB)
+I (..\Libraries\CMSIS\CM3\CoreSupport\core_cm3.h)(0x4D523B58)
+I (D:\Program Files (x86)\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599EDB3E)
+I (..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\system_stm32f10x.h)(0x4D783CAA)
+I (..\user\stm32f10x_conf.h)(0x5CB1A7F1)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_dma.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_exti.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_gpio.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_rcc.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_sdio.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_spi.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_tim.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_usart.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h)(0x4D783BB4)
+F (..\BSP\LD_Driver\LD3320_main.c)(0x5CB20CFB)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I ..\user -I ..\Libraries -I ..\Libraries\CMSIS -I ..\Libraries\CMSIS\CM3 -I ..\Libraries\CMSIS\CM3\CoreSupport -I ..\Libraries\CMSIS\CM3\DeviceSupport -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\arm -I ..\Libraries\STM32F10x_StdPeriph_Driver\inc -I ..\Libraries\STM32_USB-FS-Device_Driver\inc -I ..\BSP\LD_Driver -I ..\BSP\usart -I ..\BSP\delay -I ..\BSP\dma -I ..\BSP\timer -I ..\BSP\usb_user -I ..\BSP\sd_card -I ..\FATFS -I ..\FATFS\option-I.\RTE\_STM32-LD3320-I"D:\Program Files (x86)\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include"-I"D:\Program Files (x86)\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include"-D__UVISION_VERSION="526" -D_RTE_ -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o .\obj\ld3320_main.o --omf_browse .\obj\ld3320_main.crf --depend .\obj\ld3320_main.d)
+I (..\user\includes.h)(0x5CB20CA0)
+I (..\user\stm32f10x.h)(0x5CB1F3FB)
+I (..\Libraries\CMSIS\CM3\CoreSupport\core_cm3.h)(0x4D523B58)
+I (D:\Program Files (x86)\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599EDB3E)
+I (..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\system_stm32f10x.h)(0x4D783CAA)
+I (..\user\stm32f10x_conf.h)(0x5CB1A7F1)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_dma.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_exti.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_gpio.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_rcc.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_sdio.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_spi.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_tim.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_usart.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h)(0x4D783BB4)
+I (..\BSP\LD_Driver\LDchip.h)(0x5CB20C62)
+I (..\BSP\LD_Driver\Reg_RW.h)(0x5CB1924B)
+I (..\user\LEDtest.h)(0x5CB19257)
+I (..\BSP\usart\usart.h)(0x5CAD67B7)
+I (D:\Program Files (x86)\Keil_v5\ARM\ARMCC\include\stdio.h)(0x599EDB3C)
+I (..\BSP\delay\delay.h)(0x560D4AC8)
+I (..\FATFS\ff.h)(0x4E950DD4)
+I (..\FATFS\integer.h)(0x4BD31212)
+I (..\FATFS\ffconf.h)(0x4EF1C7E0)
+I (..\FATFS\diskio.h)(0x4C6932A0)
+I (..\FATFS\fatfs_posix.h)(0x4EC9F2FA)
+I (D:\Program Files (x86)\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x599EDB3C)
+I (..\BSP\sd_card\sdio_sdcard.h)(0x4EC74924)
+F (..\BSP\LD_Driver\LDChip.c)(0x5CB20C97)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I ..\user -I ..\Libraries -I ..\Libraries\CMSIS -I ..\Libraries\CMSIS\CM3 -I ..\Libraries\CMSIS\CM3\CoreSupport -I ..\Libraries\CMSIS\CM3\DeviceSupport -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\arm -I ..\Libraries\STM32F10x_StdPeriph_Driver\inc -I ..\Libraries\STM32_USB-FS-Device_Driver\inc -I ..\BSP\LD_Driver -I ..\BSP\usart -I ..\BSP\delay -I ..\BSP\dma -I ..\BSP\timer -I ..\BSP\usb_user -I ..\BSP\sd_card -I ..\FATFS -I ..\FATFS\option-I.\RTE\_STM32-LD3320-I"D:\Program Files (x86)\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include"-I"D:\Program Files (x86)\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include"-D__UVISION_VERSION="526" -D_RTE_ -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o .\obj\ldchip.o --omf_browse .\obj\ldchip.crf --depend .\obj\ldchip.d)
+I (..\user\includes.h)(0x5CB20CA0)
+I (..\user\stm32f10x.h)(0x5CB1F3FB)
+I (..\Libraries\CMSIS\CM3\CoreSupport\core_cm3.h)(0x4D523B58)
+I (D:\Program Files (x86)\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599EDB3E)
+I (..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\system_stm32f10x.h)(0x4D783CAA)
+I (..\user\stm32f10x_conf.h)(0x5CB1A7F1)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_dma.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_exti.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_gpio.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_rcc.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_sdio.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_spi.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_tim.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_usart.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h)(0x4D783BB4)
+I (..\BSP\LD_Driver\LDchip.h)(0x5CB20C62)
+I (..\BSP\LD_Driver\Reg_RW.h)(0x5CB1924B)
+I (..\user\LEDtest.h)(0x5CB19257)
+I (..\BSP\usart\usart.h)(0x5CAD67B7)
+I (D:\Program Files (x86)\Keil_v5\ARM\ARMCC\include\stdio.h)(0x599EDB3C)
+I (..\BSP\delay\delay.h)(0x560D4AC8)
+I (..\FATFS\ff.h)(0x4E950DD4)
+I (..\FATFS\integer.h)(0x4BD31212)
+I (..\FATFS\ffconf.h)(0x4EF1C7E0)
+I (..\FATFS\diskio.h)(0x4C6932A0)
+I (..\FATFS\fatfs_posix.h)(0x4EC9F2FA)
+I (D:\Program Files (x86)\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x599EDB3C)
+I (..\BSP\sd_card\sdio_sdcard.h)(0x4EC74924)
+F (..\BSP\LD_Driver\Reg_RW.c)(0x5CB19175)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I ..\user -I ..\Libraries -I ..\Libraries\CMSIS -I ..\Libraries\CMSIS\CM3 -I ..\Libraries\CMSIS\CM3\CoreSupport -I ..\Libraries\CMSIS\CM3\DeviceSupport -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\arm -I ..\Libraries\STM32F10x_StdPeriph_Driver\inc -I ..\Libraries\STM32_USB-FS-Device_Driver\inc -I ..\BSP\LD_Driver -I ..\BSP\usart -I ..\BSP\delay -I ..\BSP\dma -I ..\BSP\timer -I ..\BSP\usb_user -I ..\BSP\sd_card -I ..\FATFS -I ..\FATFS\option-I.\RTE\_STM32-LD3320-I"D:\Program Files (x86)\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include"-I"D:\Program Files (x86)\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include"-D__UVISION_VERSION="526" -D_RTE_ -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o .\obj\reg_rw.o --omf_browse .\obj\reg_rw.crf --depend .\obj\reg_rw.d)
+I (..\user\includes.h)(0x5CB20CA0)
+I (..\user\stm32f10x.h)(0x5CB1F3FB)
+I (..\Libraries\CMSIS\CM3\CoreSupport\core_cm3.h)(0x4D523B58)
+I (D:\Program Files (x86)\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599EDB3E)
+I (..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\system_stm32f10x.h)(0x4D783CAA)
+I (..\user\stm32f10x_conf.h)(0x5CB1A7F1)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_dma.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_exti.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_gpio.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_rcc.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_sdio.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_spi.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_tim.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_usart.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h)(0x4D783BB4)
+I (..\BSP\LD_Driver\LDchip.h)(0x5CB20C62)
+I (..\BSP\LD_Driver\Reg_RW.h)(0x5CB1924B)
+I (..\user\LEDtest.h)(0x5CB19257)
+I (..\BSP\usart\usart.h)(0x5CAD67B7)
+I (D:\Program Files (x86)\Keil_v5\ARM\ARMCC\include\stdio.h)(0x599EDB3C)
+I (..\BSP\delay\delay.h)(0x560D4AC8)
+I (..\FATFS\ff.h)(0x4E950DD4)
+I (..\FATFS\integer.h)(0x4BD31212)
+I (..\FATFS\ffconf.h)(0x4EF1C7E0)
+I (..\FATFS\diskio.h)(0x4C6932A0)
+I (..\FATFS\fatfs_posix.h)(0x4EC9F2FA)
+I (D:\Program Files (x86)\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x599EDB3C)
+I (..\BSP\sd_card\sdio_sdcard.h)(0x4EC74924)
+F (..\BSP\usart\usart.c)(0x5CB1EABC)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I ..\user -I ..\Libraries -I ..\Libraries\CMSIS -I ..\Libraries\CMSIS\CM3 -I ..\Libraries\CMSIS\CM3\CoreSupport -I ..\Libraries\CMSIS\CM3\DeviceSupport -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\arm -I ..\Libraries\STM32F10x_StdPeriph_Driver\inc -I ..\Libraries\STM32_USB-FS-Device_Driver\inc -I ..\BSP\LD_Driver -I ..\BSP\usart -I ..\BSP\delay -I ..\BSP\dma -I ..\BSP\timer -I ..\BSP\usb_user -I ..\BSP\sd_card -I ..\FATFS -I ..\FATFS\option-I.\RTE\_STM32-LD3320-I"D:\Program Files (x86)\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include"-I"D:\Program Files (x86)\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include"-D__UVISION_VERSION="526" -D_RTE_ -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o .\obj\usart.o --omf_browse .\obj\usart.crf --depend .\obj\usart.d)
+I (..\BSP\usart\usart.h)(0x5CAD67B7)
+I (..\user\stm32f10x.h)(0x5CB1F3FB)
+I (..\Libraries\CMSIS\CM3\CoreSupport\core_cm3.h)(0x4D523B58)
+I (D:\Program Files (x86)\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599EDB3E)
+I (..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\system_stm32f10x.h)(0x4D783CAA)
+I (..\user\stm32f10x_conf.h)(0x5CB1A7F1)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_dma.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_exti.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_gpio.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_rcc.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_sdio.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_spi.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_tim.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_usart.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h)(0x4D783BB4)
+I (D:\Program Files (x86)\Keil_v5\ARM\ARMCC\include\stdio.h)(0x599EDB3C)
+F (..\BSP\usart\usart2.c)(0x5C9F77CB)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I ..\user -I ..\Libraries -I ..\Libraries\CMSIS -I ..\Libraries\CMSIS\CM3 -I ..\Libraries\CMSIS\CM3\CoreSupport -I ..\Libraries\CMSIS\CM3\DeviceSupport -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\arm -I ..\Libraries\STM32F10x_StdPeriph_Driver\inc -I ..\Libraries\STM32_USB-FS-Device_Driver\inc -I ..\BSP\LD_Driver -I ..\BSP\usart -I ..\BSP\delay -I ..\BSP\dma -I ..\BSP\timer -I ..\BSP\usb_user -I ..\BSP\sd_card -I ..\FATFS -I ..\FATFS\option-I.\RTE\_STM32-LD3320-I"D:\Program Files (x86)\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include"-I"D:\Program Files (x86)\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include"-D__UVISION_VERSION="526" -D_RTE_ -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o .\obj\usart2.o --omf_browse .\obj\usart2.crf --depend .\obj\usart2.d)
+I (..\BSP\usart\usart2.h)(0x5C9F2473)
+I (..\user\stm32f10x.h)(0x5CB1F3FB)
+I (..\Libraries\CMSIS\CM3\CoreSupport\core_cm3.h)(0x4D523B58)
+I (D:\Program Files (x86)\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599EDB3E)
+I (..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\system_stm32f10x.h)(0x4D783CAA)
+I (..\user\stm32f10x_conf.h)(0x5CB1A7F1)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_dma.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_exti.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_gpio.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_rcc.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_sdio.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_spi.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_tim.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_usart.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h)(0x4D783BB4)
+I (D:\Program Files (x86)\Keil_v5\ARM\ARMCC\include\stdio.h)(0x599EDB3C)
+I (D:\Program Files (x86)\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x599EDB3A)
+I (D:\Program Files (x86)\Keil_v5\ARM\ARMCC\include\string.h)(0x599EDB3C)
+I (..\BSP\dma\dma.h)(0x5CB1A814)
+I (..\BSP\timer\timer.h)(0x5CB1A814)
+F (..\BSP\delay\delay.c)(0x5C9F2473)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I ..\user -I ..\Libraries -I ..\Libraries\CMSIS -I ..\Libraries\CMSIS\CM3 -I ..\Libraries\CMSIS\CM3\CoreSupport -I ..\Libraries\CMSIS\CM3\DeviceSupport -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\arm -I ..\Libraries\STM32F10x_StdPeriph_Driver\inc -I ..\Libraries\STM32_USB-FS-Device_Driver\inc -I ..\BSP\LD_Driver -I ..\BSP\usart -I ..\BSP\delay -I ..\BSP\dma -I ..\BSP\timer -I ..\BSP\usb_user -I ..\BSP\sd_card -I ..\FATFS -I ..\FATFS\option-I.\RTE\_STM32-LD3320-I"D:\Program Files (x86)\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include"-I"D:\Program Files (x86)\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include"-D__UVISION_VERSION="526" -D_RTE_ -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o .\obj\delay.o --omf_browse .\obj\delay.crf --depend .\obj\delay.d)
+I (..\BSP\delay\delay.h)(0x560D4AC8)
+I (..\user\stm32f10x.h)(0x5CB1F3FB)
+I (..\Libraries\CMSIS\CM3\CoreSupport\core_cm3.h)(0x4D523B58)
+I (D:\Program Files (x86)\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599EDB3E)
+I (..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\system_stm32f10x.h)(0x4D783CAA)
+I (..\user\stm32f10x_conf.h)(0x5CB1A7F1)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_dma.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_exti.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_gpio.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_rcc.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_sdio.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_spi.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_tim.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_usart.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h)(0x4D783BB4)
+F (..\BSP\dma\dma.c)(0x5CB1A76B)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I ..\user -I ..\Libraries -I ..\Libraries\CMSIS -I ..\Libraries\CMSIS\CM3 -I ..\Libraries\CMSIS\CM3\CoreSupport -I ..\Libraries\CMSIS\CM3\DeviceSupport -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\arm -I ..\Libraries\STM32F10x_StdPeriph_Driver\inc -I ..\Libraries\STM32_USB-FS-Device_Driver\inc -I ..\BSP\LD_Driver -I ..\BSP\usart -I ..\BSP\delay -I ..\BSP\dma -I ..\BSP\timer -I ..\BSP\usb_user -I ..\BSP\sd_card -I ..\FATFS -I ..\FATFS\option-I.\RTE\_STM32-LD3320-I"D:\Program Files (x86)\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include"-I"D:\Program Files (x86)\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include"-D__UVISION_VERSION="526" -D_RTE_ -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o .\obj\dma.o --omf_browse .\obj\dma.crf --depend .\obj\dma.d)
+I (..\BSP\dma\dma.h)(0x5CB1A814)
+I (..\user\stm32f10x.h)(0x5CB1F3FB)
+I (..\Libraries\CMSIS\CM3\CoreSupport\core_cm3.h)(0x4D523B58)
+I (D:\Program Files (x86)\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599EDB3E)
+I (..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\system_stm32f10x.h)(0x4D783CAA)
+I (..\user\stm32f10x_conf.h)(0x5CB1A7F1)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_dma.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_exti.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_gpio.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_rcc.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_sdio.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_spi.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_tim.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_usart.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h)(0x4D783BB4)
+F (..\BSP\timer\timer.c)(0x5CB1A7B6)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I ..\user -I ..\Libraries -I ..\Libraries\CMSIS -I ..\Libraries\CMSIS\CM3 -I ..\Libraries\CMSIS\CM3\CoreSupport -I ..\Libraries\CMSIS\CM3\DeviceSupport -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\arm -I ..\Libraries\STM32F10x_StdPeriph_Driver\inc -I ..\Libraries\STM32_USB-FS-Device_Driver\inc -I ..\BSP\LD_Driver -I ..\BSP\usart -I ..\BSP\delay -I ..\BSP\dma -I ..\BSP\timer -I ..\BSP\usb_user -I ..\BSP\sd_card -I ..\FATFS -I ..\FATFS\option-I.\RTE\_STM32-LD3320-I"D:\Program Files (x86)\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include"-I"D:\Program Files (x86)\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include"-D__UVISION_VERSION="526" -D_RTE_ -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o .\obj\timer.o --omf_browse .\obj\timer.crf --depend .\obj\timer.d)
+I (..\BSP\timer\timer.h)(0x5CB1A814)
+I (..\user\stm32f10x.h)(0x5CB1F3FB)
+I (..\Libraries\CMSIS\CM3\CoreSupport\core_cm3.h)(0x4D523B58)
+I (D:\Program Files (x86)\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599EDB3E)
+I (..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\system_stm32f10x.h)(0x4D783CAA)
+I (..\user\stm32f10x_conf.h)(0x5CB1A7F1)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_dma.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_exti.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_gpio.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_rcc.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_sdio.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_spi.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_tim.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_usart.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h)(0x4D783BB4)
+I (..\BSP\usart\usart2.h)(0x5C9F2473)
+I (D:\Program Files (x86)\Keil_v5\ARM\ARMCC\include\stdio.h)(0x599EDB3C)
+I (D:\Program Files (x86)\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x599EDB3A)
+I (D:\Program Files (x86)\Keil_v5\ARM\ARMCC\include\string.h)(0x599EDB3C)
+F (..\BSP\sd_card\sdio_sdcard.c)(0x4F881781)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I ..\user -I ..\Libraries -I ..\Libraries\CMSIS -I ..\Libraries\CMSIS\CM3 -I ..\Libraries\CMSIS\CM3\CoreSupport -I ..\Libraries\CMSIS\CM3\DeviceSupport -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\arm -I ..\Libraries\STM32F10x_StdPeriph_Driver\inc -I ..\Libraries\STM32_USB-FS-Device_Driver\inc -I ..\BSP\LD_Driver -I ..\BSP\usart -I ..\BSP\delay -I ..\BSP\dma -I ..\BSP\timer -I ..\BSP\usb_user -I ..\BSP\sd_card -I ..\FATFS -I ..\FATFS\option-I.\RTE\_STM32-LD3320-I"D:\Program Files (x86)\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include"-I"D:\Program Files (x86)\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include"-D__UVISION_VERSION="526" -D_RTE_ -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o .\obj\sdio_sdcard.o --omf_browse .\obj\sdio_sdcard.crf --depend .\obj\sdio_sdcard.d)
+I (..\BSP\sd_card\sdio_sdcard.h)(0x4EC74924)
+I (..\user\stm32f10x.h)(0x5CB1F3FB)
+I (..\Libraries\CMSIS\CM3\CoreSupport\core_cm3.h)(0x4D523B58)
+I (D:\Program Files (x86)\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599EDB3E)
+I (..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\system_stm32f10x.h)(0x4D783CAA)
+I (..\user\stm32f10x_conf.h)(0x5CB1A7F1)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_dma.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_exti.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_gpio.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_rcc.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_sdio.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_spi.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_tim.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_usart.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h)(0x4D783BB4)
+F (..\Libraries\CMSIS\CM3\CoreSupport\core_cm3.c)(0x4C0C587E)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I ..\user -I ..\Libraries -I ..\Libraries\CMSIS -I ..\Libraries\CMSIS\CM3 -I ..\Libraries\CMSIS\CM3\CoreSupport -I ..\Libraries\CMSIS\CM3\DeviceSupport -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\arm -I ..\Libraries\STM32F10x_StdPeriph_Driver\inc -I ..\Libraries\STM32_USB-FS-Device_Driver\inc -I ..\BSP\LD_Driver -I ..\BSP\usart -I ..\BSP\delay -I ..\BSP\dma -I ..\BSP\timer -I ..\BSP\usb_user -I ..\BSP\sd_card -I ..\FATFS -I ..\FATFS\option-I.\RTE\_STM32-LD3320-I"D:\Program Files (x86)\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include"-I"D:\Program Files (x86)\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include"-D__UVISION_VERSION="526" -D_RTE_ -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o .\obj\core_cm3.o --omf_browse .\obj\core_cm3.crf --depend .\obj\core_cm3.d)
+I (D:\Program Files (x86)\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599EDB3E)
+F (..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\system_stm32f10x.c)(0x4D783CB0)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I ..\user -I ..\Libraries -I ..\Libraries\CMSIS -I ..\Libraries\CMSIS\CM3 -I ..\Libraries\CMSIS\CM3\CoreSupport -I ..\Libraries\CMSIS\CM3\DeviceSupport -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\arm -I ..\Libraries\STM32F10x_StdPeriph_Driver\inc -I ..\Libraries\STM32_USB-FS-Device_Driver\inc -I ..\BSP\LD_Driver -I ..\BSP\usart -I ..\BSP\delay -I ..\BSP\dma -I ..\BSP\timer -I ..\BSP\usb_user -I ..\BSP\sd_card -I ..\FATFS -I ..\FATFS\option-I.\RTE\_STM32-LD3320-I"D:\Program Files (x86)\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include"-I"D:\Program Files (x86)\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include"-D__UVISION_VERSION="526" -D_RTE_ -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o .\obj\system_stm32f10x.o --omf_browse .\obj\system_stm32f10x.crf --depend .\obj\system_stm32f10x.d)
+I (..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\stm32f10x.h)(0x4D783CB4)
+I (..\Libraries\CMSIS\CM3\CoreSupport\core_cm3.h)(0x4D523B58)
+I (D:\Program Files (x86)\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599EDB3E)
+I (..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\system_stm32f10x.h)(0x4D783CAA)
+I (..\user\stm32f10x_conf.h)(0x5CB1A7F1)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_dma.h)(0x4D783BB4)
+I (..\user\stm32f10x.h)(0x5CB1F3FB)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_exti.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_gpio.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_rcc.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_sdio.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_spi.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_tim.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_usart.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h)(0x4D783BB4)
+F (..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\arm\startup_stm32f10x_hd.s)(0x4D783CDE)(--cpu Cortex-M3 -g --apcs=interwork -I.\RTE\_STM32-LD3320-I"D:\Program Files (x86)\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include"-I"D:\Program Files (x86)\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include"--pd "__UVISION_VERSION SETA 526" --pd "_RTE_ SETA 1" --pd "STM32F10X_HD SETA 1"--list .\list\startup_stm32f10x_hd.lst --xref -o .\obj\startup_stm32f10x_hd.o --depend .\obj\startup_stm32f10x_hd.d)
+F (..\Libraries\STM32F10x_StdPeriph_Driver\src\misc.c)(0x4D783BB4)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I ..\user -I ..\Libraries -I ..\Libraries\CMSIS -I ..\Libraries\CMSIS\CM3 -I ..\Libraries\CMSIS\CM3\CoreSupport -I ..\Libraries\CMSIS\CM3\DeviceSupport -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\arm -I ..\Libraries\STM32F10x_StdPeriph_Driver\inc -I ..\Libraries\STM32_USB-FS-Device_Driver\inc -I ..\BSP\LD_Driver -I ..\BSP\usart -I ..\BSP\delay -I ..\BSP\dma -I ..\BSP\timer -I ..\BSP\usb_user -I ..\BSP\sd_card -I ..\FATFS -I ..\FATFS\option-I.\RTE\_STM32-LD3320-I"D:\Program Files (x86)\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include"-I"D:\Program Files (x86)\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include"-D__UVISION_VERSION="526" -D_RTE_ -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o .\obj\misc.o --omf_browse .\obj\misc.crf --depend .\obj\misc.d)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h)(0x4D783BB4)
+I (..\user\stm32f10x.h)(0x5CB1F3FB)
+I (..\Libraries\CMSIS\CM3\CoreSupport\core_cm3.h)(0x4D523B58)
+I (D:\Program Files (x86)\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599EDB3E)
+I (..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\system_stm32f10x.h)(0x4D783CAA)
+I (..\user\stm32f10x_conf.h)(0x5CB1A7F1)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_dma.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_exti.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_gpio.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_rcc.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_sdio.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_spi.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_tim.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_usart.h)(0x4D783BB4)
+F (..\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_usart.c)(0x4D783BB4)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I ..\user -I ..\Libraries -I ..\Libraries\CMSIS -I ..\Libraries\CMSIS\CM3 -I ..\Libraries\CMSIS\CM3\CoreSupport -I ..\Libraries\CMSIS\CM3\DeviceSupport -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\arm -I ..\Libraries\STM32F10x_StdPeriph_Driver\inc -I ..\Libraries\STM32_USB-FS-Device_Driver\inc -I ..\BSP\LD_Driver -I ..\BSP\usart -I ..\BSP\delay -I ..\BSP\dma -I ..\BSP\timer -I ..\BSP\usb_user -I ..\BSP\sd_card -I ..\FATFS -I ..\FATFS\option-I.\RTE\_STM32-LD3320-I"D:\Program Files (x86)\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include"-I"D:\Program Files (x86)\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include"-D__UVISION_VERSION="526" -D_RTE_ -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o .\obj\stm32f10x_usart.o --omf_browse .\obj\stm32f10x_usart.crf --depend .\obj\stm32f10x_usart.d)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_usart.h)(0x4D783BB4)
+I (..\user\stm32f10x.h)(0x5CB1F3FB)
+I (..\Libraries\CMSIS\CM3\CoreSupport\core_cm3.h)(0x4D523B58)
+I (D:\Program Files (x86)\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599EDB3E)
+I (..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\system_stm32f10x.h)(0x4D783CAA)
+I (..\user\stm32f10x_conf.h)(0x5CB1A7F1)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_dma.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_exti.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_gpio.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_rcc.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_sdio.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_spi.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_tim.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h)(0x4D783BB4)
+F (..\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_tim.c)(0x4D783BB4)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I ..\user -I ..\Libraries -I ..\Libraries\CMSIS -I ..\Libraries\CMSIS\CM3 -I ..\Libraries\CMSIS\CM3\CoreSupport -I ..\Libraries\CMSIS\CM3\DeviceSupport -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\arm -I ..\Libraries\STM32F10x_StdPeriph_Driver\inc -I ..\Libraries\STM32_USB-FS-Device_Driver\inc -I ..\BSP\LD_Driver -I ..\BSP\usart -I ..\BSP\delay -I ..\BSP\dma -I ..\BSP\timer -I ..\BSP\usb_user -I ..\BSP\sd_card -I ..\FATFS -I ..\FATFS\option-I.\RTE\_STM32-LD3320-I"D:\Program Files (x86)\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include"-I"D:\Program Files (x86)\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include"-D__UVISION_VERSION="526" -D_RTE_ -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o .\obj\stm32f10x_tim.o --omf_browse .\obj\stm32f10x_tim.crf --depend .\obj\stm32f10x_tim.d)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_tim.h)(0x4D783BB4)
+I (..\user\stm32f10x.h)(0x5CB1F3FB)
+I (..\Libraries\CMSIS\CM3\CoreSupport\core_cm3.h)(0x4D523B58)
+I (D:\Program Files (x86)\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599EDB3E)
+I (..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\system_stm32f10x.h)(0x4D783CAA)
+I (..\user\stm32f10x_conf.h)(0x5CB1A7F1)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_dma.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_exti.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_gpio.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_rcc.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_sdio.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_spi.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_usart.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h)(0x4D783BB4)
+F (..\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_sdio.c)(0x4D783BB4)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I ..\user -I ..\Libraries -I ..\Libraries\CMSIS -I ..\Libraries\CMSIS\CM3 -I ..\Libraries\CMSIS\CM3\CoreSupport -I ..\Libraries\CMSIS\CM3\DeviceSupport -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\arm -I ..\Libraries\STM32F10x_StdPeriph_Driver\inc -I ..\Libraries\STM32_USB-FS-Device_Driver\inc -I ..\BSP\LD_Driver -I ..\BSP\usart -I ..\BSP\delay -I ..\BSP\dma -I ..\BSP\timer -I ..\BSP\usb_user -I ..\BSP\sd_card -I ..\FATFS -I ..\FATFS\option-I.\RTE\_STM32-LD3320-I"D:\Program Files (x86)\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include"-I"D:\Program Files (x86)\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include"-D__UVISION_VERSION="526" -D_RTE_ -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o .\obj\stm32f10x_sdio.o --omf_browse .\obj\stm32f10x_sdio.crf --depend .\obj\stm32f10x_sdio.d)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_sdio.h)(0x4D783BB4)
+I (..\user\stm32f10x.h)(0x5CB1F3FB)
+I (..\Libraries\CMSIS\CM3\CoreSupport\core_cm3.h)(0x4D523B58)
+I (D:\Program Files (x86)\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599EDB3E)
+I (..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\system_stm32f10x.h)(0x4D783CAA)
+I (..\user\stm32f10x_conf.h)(0x5CB1A7F1)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_dma.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_exti.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_gpio.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_rcc.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_spi.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_tim.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_usart.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h)(0x4D783BB4)
+F (..\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_exti.c)(0x4D783BB4)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I ..\user -I ..\Libraries -I ..\Libraries\CMSIS -I ..\Libraries\CMSIS\CM3 -I ..\Libraries\CMSIS\CM3\CoreSupport -I ..\Libraries\CMSIS\CM3\DeviceSupport -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\arm -I ..\Libraries\STM32F10x_StdPeriph_Driver\inc -I ..\Libraries\STM32_USB-FS-Device_Driver\inc -I ..\BSP\LD_Driver -I ..\BSP\usart -I ..\BSP\delay -I ..\BSP\dma -I ..\BSP\timer -I ..\BSP\usb_user -I ..\BSP\sd_card -I ..\FATFS -I ..\FATFS\option-I.\RTE\_STM32-LD3320-I"D:\Program Files (x86)\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include"-I"D:\Program Files (x86)\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include"-D__UVISION_VERSION="526" -D_RTE_ -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o .\obj\stm32f10x_exti.o --omf_browse .\obj\stm32f10x_exti.crf --depend .\obj\stm32f10x_exti.d)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_exti.h)(0x4D783BB4)
+I (..\user\stm32f10x.h)(0x5CB1F3FB)
+I (..\Libraries\CMSIS\CM3\CoreSupport\core_cm3.h)(0x4D523B58)
+I (D:\Program Files (x86)\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599EDB3E)
+I (..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\system_stm32f10x.h)(0x4D783CAA)
+I (..\user\stm32f10x_conf.h)(0x5CB1A7F1)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_dma.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_gpio.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_rcc.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_sdio.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_spi.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_tim.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_usart.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h)(0x4D783BB4)
+F (..\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c)(0x4D79EEC6)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I ..\user -I ..\Libraries -I ..\Libraries\CMSIS -I ..\Libraries\CMSIS\CM3 -I ..\Libraries\CMSIS\CM3\CoreSupport -I ..\Libraries\CMSIS\CM3\DeviceSupport -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\arm -I ..\Libraries\STM32F10x_StdPeriph_Driver\inc -I ..\Libraries\STM32_USB-FS-Device_Driver\inc -I ..\BSP\LD_Driver -I ..\BSP\usart -I ..\BSP\delay -I ..\BSP\dma -I ..\BSP\timer -I ..\BSP\usb_user -I ..\BSP\sd_card -I ..\FATFS -I ..\FATFS\option-I.\RTE\_STM32-LD3320-I"D:\Program Files (x86)\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include"-I"D:\Program Files (x86)\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include"-D__UVISION_VERSION="526" -D_RTE_ -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o .\obj\stm32f10x_gpio.o --omf_browse .\obj\stm32f10x_gpio.crf --depend .\obj\stm32f10x_gpio.d)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_gpio.h)(0x4D783BB4)
+I (..\user\stm32f10x.h)(0x5CB1F3FB)
+I (..\Libraries\CMSIS\CM3\CoreSupport\core_cm3.h)(0x4D523B58)
+I (D:\Program Files (x86)\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599EDB3E)
+I (..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\system_stm32f10x.h)(0x4D783CAA)
+I (..\user\stm32f10x_conf.h)(0x5CB1A7F1)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_dma.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_exti.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_rcc.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_sdio.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_spi.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_tim.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_usart.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h)(0x4D783BB4)
+F (..\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_i2c.c)(0x4D783BB4)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I ..\user -I ..\Libraries -I ..\Libraries\CMSIS -I ..\Libraries\CMSIS\CM3 -I ..\Libraries\CMSIS\CM3\CoreSupport -I ..\Libraries\CMSIS\CM3\DeviceSupport -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\arm -I ..\Libraries\STM32F10x_StdPeriph_Driver\inc -I ..\Libraries\STM32_USB-FS-Device_Driver\inc -I ..\BSP\LD_Driver -I ..\BSP\usart -I ..\BSP\delay -I ..\BSP\dma -I ..\BSP\timer -I ..\BSP\usb_user -I ..\BSP\sd_card -I ..\FATFS -I ..\FATFS\option-I.\RTE\_STM32-LD3320-I"D:\Program Files (x86)\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include"-I"D:\Program Files (x86)\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include"-D__UVISION_VERSION="526" -D_RTE_ -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o .\obj\stm32f10x_i2c.o --omf_browse .\obj\stm32f10x_i2c.crf --depend .\obj\stm32f10x_i2c.d)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_i2c.h)(0x4D783BB4)
+I (..\user\stm32f10x.h)(0x5CB1F3FB)
+I (..\Libraries\CMSIS\CM3\CoreSupport\core_cm3.h)(0x4D523B58)
+I (D:\Program Files (x86)\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599EDB3E)
+I (..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\system_stm32f10x.h)(0x4D783CAA)
+I (..\user\stm32f10x_conf.h)(0x5CB1A7F1)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_dma.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_exti.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_gpio.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_rcc.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_sdio.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_spi.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_tim.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_usart.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h)(0x4D783BB4)
+F (..\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.c)(0x4D783BB4)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I ..\user -I ..\Libraries -I ..\Libraries\CMSIS -I ..\Libraries\CMSIS\CM3 -I ..\Libraries\CMSIS\CM3\CoreSupport -I ..\Libraries\CMSIS\CM3\DeviceSupport -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\arm -I ..\Libraries\STM32F10x_StdPeriph_Driver\inc -I ..\Libraries\STM32_USB-FS-Device_Driver\inc -I ..\BSP\LD_Driver -I ..\BSP\usart -I ..\BSP\delay -I ..\BSP\dma -I ..\BSP\timer -I ..\BSP\usb_user -I ..\BSP\sd_card -I ..\FATFS -I ..\FATFS\option-I.\RTE\_STM32-LD3320-I"D:\Program Files (x86)\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include"-I"D:\Program Files (x86)\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include"-D__UVISION_VERSION="526" -D_RTE_ -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o .\obj\stm32f10x_rcc.o --omf_browse .\obj\stm32f10x_rcc.crf --depend .\obj\stm32f10x_rcc.d)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_rcc.h)(0x4D783BB4)
+I (..\user\stm32f10x.h)(0x5CB1F3FB)
+I (..\Libraries\CMSIS\CM3\CoreSupport\core_cm3.h)(0x4D523B58)
+I (D:\Program Files (x86)\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599EDB3E)
+I (..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\system_stm32f10x.h)(0x4D783CAA)
+I (..\user\stm32f10x_conf.h)(0x5CB1A7F1)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_dma.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_exti.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_gpio.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_sdio.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_spi.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_tim.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_usart.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h)(0x4D783BB4)
+F (..\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_spi.c)(0x4D783BB4)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I ..\user -I ..\Libraries -I ..\Libraries\CMSIS -I ..\Libraries\CMSIS\CM3 -I ..\Libraries\CMSIS\CM3\CoreSupport -I ..\Libraries\CMSIS\CM3\DeviceSupport -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\arm -I ..\Libraries\STM32F10x_StdPeriph_Driver\inc -I ..\Libraries\STM32_USB-FS-Device_Driver\inc -I ..\BSP\LD_Driver -I ..\BSP\usart -I ..\BSP\delay -I ..\BSP\dma -I ..\BSP\timer -I ..\BSP\usb_user -I ..\BSP\sd_card -I ..\FATFS -I ..\FATFS\option-I.\RTE\_STM32-LD3320-I"D:\Program Files (x86)\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include"-I"D:\Program Files (x86)\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include"-D__UVISION_VERSION="526" -D_RTE_ -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o .\obj\stm32f10x_spi.o --omf_browse .\obj\stm32f10x_spi.crf --depend .\obj\stm32f10x_spi.d)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_spi.h)(0x4D783BB4)
+I (..\user\stm32f10x.h)(0x5CB1F3FB)
+I (..\Libraries\CMSIS\CM3\CoreSupport\core_cm3.h)(0x4D523B58)
+I (D:\Program Files (x86)\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599EDB3E)
+I (..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\system_stm32f10x.h)(0x4D783CAA)
+I (..\user\stm32f10x_conf.h)(0x5CB1A7F1)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_dma.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_exti.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_gpio.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_rcc.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_sdio.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_tim.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_usart.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h)(0x4D783BB4)
+F (..\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_dma.c)(0x4D783BB4)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I ..\user -I ..\Libraries -I ..\Libraries\CMSIS -I ..\Libraries\CMSIS\CM3 -I ..\Libraries\CMSIS\CM3\CoreSupport -I ..\Libraries\CMSIS\CM3\DeviceSupport -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\arm -I ..\Libraries\STM32F10x_StdPeriph_Driver\inc -I ..\Libraries\STM32_USB-FS-Device_Driver\inc -I ..\BSP\LD_Driver -I ..\BSP\usart -I ..\BSP\delay -I ..\BSP\dma -I ..\BSP\timer -I ..\BSP\usb_user -I ..\BSP\sd_card -I ..\FATFS -I ..\FATFS\option-I.\RTE\_STM32-LD3320-I"D:\Program Files (x86)\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include"-I"D:\Program Files (x86)\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include"-D__UVISION_VERSION="526" -D_RTE_ -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o .\obj\stm32f10x_dma.o --omf_browse .\obj\stm32f10x_dma.crf --depend .\obj\stm32f10x_dma.d)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_dma.h)(0x4D783BB4)
+I (..\user\stm32f10x.h)(0x5CB1F3FB)
+I (..\Libraries\CMSIS\CM3\CoreSupport\core_cm3.h)(0x4D523B58)
+I (D:\Program Files (x86)\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599EDB3E)
+I (..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\system_stm32f10x.h)(0x4D783CAA)
+I (..\user\stm32f10x_conf.h)(0x5CB1A7F1)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_exti.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_gpio.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_rcc.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_sdio.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_spi.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_tim.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_usart.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h)(0x4D783BB4)
+F (..\Libraries\STM32_USB-FS-Device_Driver\src\usb_core.c)(0x49F2B1AE)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I ..\user -I ..\Libraries -I ..\Libraries\CMSIS -I ..\Libraries\CMSIS\CM3 -I ..\Libraries\CMSIS\CM3\CoreSupport -I ..\Libraries\CMSIS\CM3\DeviceSupport -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\arm -I ..\Libraries\STM32F10x_StdPeriph_Driver\inc -I ..\Libraries\STM32_USB-FS-Device_Driver\inc -I ..\BSP\LD_Driver -I ..\BSP\usart -I ..\BSP\delay -I ..\BSP\dma -I ..\BSP\timer -I ..\BSP\usb_user -I ..\BSP\sd_card -I ..\FATFS -I ..\FATFS\option-I.\RTE\_STM32-LD3320-I"D:\Program Files (x86)\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include"-I"D:\Program Files (x86)\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include"-D__UVISION_VERSION="526" -D_RTE_ -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o .\obj\usb_core.o --omf_browse .\obj\usb_core.crf --depend .\obj\usb_core.d)
+I (..\Libraries\STM32_USB-FS-Device_Driver\inc\usb_lib.h)(0x49F2B1AE)
+I (..\user\stm32f10x.h)(0x5CB1F3FB)
+I (..\Libraries\CMSIS\CM3\CoreSupport\core_cm3.h)(0x4D523B58)
+I (D:\Program Files (x86)\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599EDB3E)
+I (..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\system_stm32f10x.h)(0x4D783CAA)
+I (..\user\stm32f10x_conf.h)(0x5CB1A7F1)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_dma.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_exti.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_gpio.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_rcc.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_sdio.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_spi.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_tim.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_usart.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h)(0x4D783BB4)
+I (..\Libraries\STM32_USB-FS-Device_Driver\inc\usb_type.h)(0x49F2B1AE)
+I (..\BSP\usb_user\usb_conf.h)(0x49F2B1B4)
+I (..\Libraries\STM32_USB-FS-Device_Driver\inc\usb_regs.h)(0x49F2B1AE)
+I (..\Libraries\STM32_USB-FS-Device_Driver\inc\usb_def.h)(0x49F2B1AE)
+I (..\Libraries\STM32_USB-FS-Device_Driver\inc\usb_core.h)(0x49F2B1AE)
+I (..\Libraries\STM32_USB-FS-Device_Driver\inc\usb_init.h)(0x49F2B1AE)
+I (..\Libraries\STM32_USB-FS-Device_Driver\inc\usb_mem.h)(0x49F2B1AE)
+I (..\Libraries\STM32_USB-FS-Device_Driver\inc\usb_int.h)(0x49F2B1AE)
+F (..\Libraries\STM32_USB-FS-Device_Driver\src\usb_init.c)(0x49F2B1AE)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I ..\user -I ..\Libraries -I ..\Libraries\CMSIS -I ..\Libraries\CMSIS\CM3 -I ..\Libraries\CMSIS\CM3\CoreSupport -I ..\Libraries\CMSIS\CM3\DeviceSupport -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\arm -I ..\Libraries\STM32F10x_StdPeriph_Driver\inc -I ..\Libraries\STM32_USB-FS-Device_Driver\inc -I ..\BSP\LD_Driver -I ..\BSP\usart -I ..\BSP\delay -I ..\BSP\dma -I ..\BSP\timer -I ..\BSP\usb_user -I ..\BSP\sd_card -I ..\FATFS -I ..\FATFS\option-I.\RTE\_STM32-LD3320-I"D:\Program Files (x86)\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include"-I"D:\Program Files (x86)\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include"-D__UVISION_VERSION="526" -D_RTE_ -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o .\obj\usb_init.o --omf_browse .\obj\usb_init.crf --depend .\obj\usb_init.d)
+I (..\Libraries\STM32_USB-FS-Device_Driver\inc\usb_lib.h)(0x49F2B1AE)
+I (..\user\stm32f10x.h)(0x5CB1F3FB)
+I (..\Libraries\CMSIS\CM3\CoreSupport\core_cm3.h)(0x4D523B58)
+I (D:\Program Files (x86)\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599EDB3E)
+I (..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\system_stm32f10x.h)(0x4D783CAA)
+I (..\user\stm32f10x_conf.h)(0x5CB1A7F1)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_dma.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_exti.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_gpio.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_rcc.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_sdio.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_spi.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_tim.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_usart.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h)(0x4D783BB4)
+I (..\Libraries\STM32_USB-FS-Device_Driver\inc\usb_type.h)(0x49F2B1AE)
+I (..\BSP\usb_user\usb_conf.h)(0x49F2B1B4)
+I (..\Libraries\STM32_USB-FS-Device_Driver\inc\usb_regs.h)(0x49F2B1AE)
+I (..\Libraries\STM32_USB-FS-Device_Driver\inc\usb_def.h)(0x49F2B1AE)
+I (..\Libraries\STM32_USB-FS-Device_Driver\inc\usb_core.h)(0x49F2B1AE)
+I (..\Libraries\STM32_USB-FS-Device_Driver\inc\usb_init.h)(0x49F2B1AE)
+I (..\Libraries\STM32_USB-FS-Device_Driver\inc\usb_mem.h)(0x49F2B1AE)
+I (..\Libraries\STM32_USB-FS-Device_Driver\inc\usb_int.h)(0x49F2B1AE)
+F (..\Libraries\STM32_USB-FS-Device_Driver\src\usb_int.c)(0x49F2B1AE)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I ..\user -I ..\Libraries -I ..\Libraries\CMSIS -I ..\Libraries\CMSIS\CM3 -I ..\Libraries\CMSIS\CM3\CoreSupport -I ..\Libraries\CMSIS\CM3\DeviceSupport -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\arm -I ..\Libraries\STM32F10x_StdPeriph_Driver\inc -I ..\Libraries\STM32_USB-FS-Device_Driver\inc -I ..\BSP\LD_Driver -I ..\BSP\usart -I ..\BSP\delay -I ..\BSP\dma -I ..\BSP\timer -I ..\BSP\usb_user -I ..\BSP\sd_card -I ..\FATFS -I ..\FATFS\option-I.\RTE\_STM32-LD3320-I"D:\Program Files (x86)\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include"-I"D:\Program Files (x86)\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include"-D__UVISION_VERSION="526" -D_RTE_ -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o .\obj\usb_int.o --omf_browse .\obj\usb_int.crf --depend .\obj\usb_int.d)
+I (..\Libraries\STM32_USB-FS-Device_Driver\inc\usb_lib.h)(0x49F2B1AE)
+I (..\user\stm32f10x.h)(0x5CB1F3FB)
+I (..\Libraries\CMSIS\CM3\CoreSupport\core_cm3.h)(0x4D523B58)
+I (D:\Program Files (x86)\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599EDB3E)
+I (..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\system_stm32f10x.h)(0x4D783CAA)
+I (..\user\stm32f10x_conf.h)(0x5CB1A7F1)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_dma.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_exti.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_gpio.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_rcc.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_sdio.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_spi.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_tim.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_usart.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h)(0x4D783BB4)
+I (..\Libraries\STM32_USB-FS-Device_Driver\inc\usb_type.h)(0x49F2B1AE)
+I (..\BSP\usb_user\usb_conf.h)(0x49F2B1B4)
+I (..\Libraries\STM32_USB-FS-Device_Driver\inc\usb_regs.h)(0x49F2B1AE)
+I (..\Libraries\STM32_USB-FS-Device_Driver\inc\usb_def.h)(0x49F2B1AE)
+I (..\Libraries\STM32_USB-FS-Device_Driver\inc\usb_core.h)(0x49F2B1AE)
+I (..\Libraries\STM32_USB-FS-Device_Driver\inc\usb_init.h)(0x49F2B1AE)
+I (..\Libraries\STM32_USB-FS-Device_Driver\inc\usb_mem.h)(0x49F2B1AE)
+I (..\Libraries\STM32_USB-FS-Device_Driver\inc\usb_int.h)(0x49F2B1AE)
+F (..\Libraries\STM32_USB-FS-Device_Driver\src\usb_mem.c)(0x49F2B1AE)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I ..\user -I ..\Libraries -I ..\Libraries\CMSIS -I ..\Libraries\CMSIS\CM3 -I ..\Libraries\CMSIS\CM3\CoreSupport -I ..\Libraries\CMSIS\CM3\DeviceSupport -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\arm -I ..\Libraries\STM32F10x_StdPeriph_Driver\inc -I ..\Libraries\STM32_USB-FS-Device_Driver\inc -I ..\BSP\LD_Driver -I ..\BSP\usart -I ..\BSP\delay -I ..\BSP\dma -I ..\BSP\timer -I ..\BSP\usb_user -I ..\BSP\sd_card -I ..\FATFS -I ..\FATFS\option-I.\RTE\_STM32-LD3320-I"D:\Program Files (x86)\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include"-I"D:\Program Files (x86)\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include"-D__UVISION_VERSION="526" -D_RTE_ -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o .\obj\usb_mem.o --omf_browse .\obj\usb_mem.crf --depend .\obj\usb_mem.d)
+I (..\Libraries\STM32_USB-FS-Device_Driver\inc\usb_lib.h)(0x49F2B1AE)
+I (..\user\stm32f10x.h)(0x5CB1F3FB)
+I (..\Libraries\CMSIS\CM3\CoreSupport\core_cm3.h)(0x4D523B58)
+I (D:\Program Files (x86)\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599EDB3E)
+I (..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\system_stm32f10x.h)(0x4D783CAA)
+I (..\user\stm32f10x_conf.h)(0x5CB1A7F1)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_dma.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_exti.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_gpio.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_rcc.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_sdio.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_spi.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_tim.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_usart.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h)(0x4D783BB4)
+I (..\Libraries\STM32_USB-FS-Device_Driver\inc\usb_type.h)(0x49F2B1AE)
+I (..\BSP\usb_user\usb_conf.h)(0x49F2B1B4)
+I (..\Libraries\STM32_USB-FS-Device_Driver\inc\usb_regs.h)(0x49F2B1AE)
+I (..\Libraries\STM32_USB-FS-Device_Driver\inc\usb_def.h)(0x49F2B1AE)
+I (..\Libraries\STM32_USB-FS-Device_Driver\inc\usb_core.h)(0x49F2B1AE)
+I (..\Libraries\STM32_USB-FS-Device_Driver\inc\usb_init.h)(0x49F2B1AE)
+I (..\Libraries\STM32_USB-FS-Device_Driver\inc\usb_mem.h)(0x49F2B1AE)
+I (..\Libraries\STM32_USB-FS-Device_Driver\inc\usb_int.h)(0x49F2B1AE)
+F (..\Libraries\STM32_USB-FS-Device_Driver\src\usb_regs.c)(0x49F2B1AE)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I ..\user -I ..\Libraries -I ..\Libraries\CMSIS -I ..\Libraries\CMSIS\CM3 -I ..\Libraries\CMSIS\CM3\CoreSupport -I ..\Libraries\CMSIS\CM3\DeviceSupport -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\arm -I ..\Libraries\STM32F10x_StdPeriph_Driver\inc -I ..\Libraries\STM32_USB-FS-Device_Driver\inc -I ..\BSP\LD_Driver -I ..\BSP\usart -I ..\BSP\delay -I ..\BSP\dma -I ..\BSP\timer -I ..\BSP\usb_user -I ..\BSP\sd_card -I ..\FATFS -I ..\FATFS\option-I.\RTE\_STM32-LD3320-I"D:\Program Files (x86)\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include"-I"D:\Program Files (x86)\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include"-D__UVISION_VERSION="526" -D_RTE_ -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o .\obj\usb_regs.o --omf_browse .\obj\usb_regs.crf --depend .\obj\usb_regs.d)
+I (..\Libraries\STM32_USB-FS-Device_Driver\inc\usb_lib.h)(0x49F2B1AE)
+I (..\user\stm32f10x.h)(0x5CB1F3FB)
+I (..\Libraries\CMSIS\CM3\CoreSupport\core_cm3.h)(0x4D523B58)
+I (D:\Program Files (x86)\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599EDB3E)
+I (..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\system_stm32f10x.h)(0x4D783CAA)
+I (..\user\stm32f10x_conf.h)(0x5CB1A7F1)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_dma.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_exti.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_gpio.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_rcc.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_sdio.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_spi.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_tim.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_usart.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h)(0x4D783BB4)
+I (..\Libraries\STM32_USB-FS-Device_Driver\inc\usb_type.h)(0x49F2B1AE)
+I (..\BSP\usb_user\usb_conf.h)(0x49F2B1B4)
+I (..\Libraries\STM32_USB-FS-Device_Driver\inc\usb_regs.h)(0x49F2B1AE)
+I (..\Libraries\STM32_USB-FS-Device_Driver\inc\usb_def.h)(0x49F2B1AE)
+I (..\Libraries\STM32_USB-FS-Device_Driver\inc\usb_core.h)(0x49F2B1AE)
+I (..\Libraries\STM32_USB-FS-Device_Driver\inc\usb_init.h)(0x49F2B1AE)
+I (..\Libraries\STM32_USB-FS-Device_Driver\inc\usb_mem.h)(0x49F2B1AE)
+I (..\Libraries\STM32_USB-FS-Device_Driver\inc\usb_int.h)(0x49F2B1AE)
+F (..\BSP\usb_user\hw_config.c)(0x4FA5EA2F)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I ..\user -I ..\Libraries -I ..\Libraries\CMSIS -I ..\Libraries\CMSIS\CM3 -I ..\Libraries\CMSIS\CM3\CoreSupport -I ..\Libraries\CMSIS\CM3\DeviceSupport -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\arm -I ..\Libraries\STM32F10x_StdPeriph_Driver\inc -I ..\Libraries\STM32_USB-FS-Device_Driver\inc -I ..\BSP\LD_Driver -I ..\BSP\usart -I ..\BSP\delay -I ..\BSP\dma -I ..\BSP\timer -I ..\BSP\usb_user -I ..\BSP\sd_card -I ..\FATFS -I ..\FATFS\option-I.\RTE\_STM32-LD3320-I"D:\Program Files (x86)\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include"-I"D:\Program Files (x86)\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include"-D__UVISION_VERSION="526" -D_RTE_ -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o .\obj\hw_config.o --omf_browse .\obj\hw_config.crf --depend .\obj\hw_config.d)
+I (..\user\stm32f10x_it.h)(0x5CB19075)
+I (..\user\stm32f10x.h)(0x5CB1F3FB)
+I (..\Libraries\CMSIS\CM3\CoreSupport\core_cm3.h)(0x4D523B58)
+I (D:\Program Files (x86)\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599EDB3E)
+I (..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\system_stm32f10x.h)(0x4D783CAA)
+I (..\user\stm32f10x_conf.h)(0x5CB1A7F1)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_dma.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_exti.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_gpio.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_rcc.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_sdio.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_spi.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_tim.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_usart.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h)(0x4D783BB4)
+I (..\BSP\usb_user\hw_config.h)(0x4FA5EABE)
+I (..\BSP\usb_user\mass_mal.h)(0x49F2B1B4)
+I (..\BSP\usb_user\usb_desc.h)(0x49F2B1B4)
+I (..\BSP\usb_user\usb_pwr.h)(0x49F2B1B4)
+I (..\Libraries\STM32_USB-FS-Device_Driver\inc\usb_core.h)(0x49F2B1AE)
+F (..\BSP\usb_user\mass_mal.c)(0x5CADEB42)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I ..\user -I ..\Libraries -I ..\Libraries\CMSIS -I ..\Libraries\CMSIS\CM3 -I ..\Libraries\CMSIS\CM3\CoreSupport -I ..\Libraries\CMSIS\CM3\DeviceSupport -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\arm -I ..\Libraries\STM32F10x_StdPeriph_Driver\inc -I ..\Libraries\STM32_USB-FS-Device_Driver\inc -I ..\BSP\LD_Driver -I ..\BSP\usart -I ..\BSP\delay -I ..\BSP\dma -I ..\BSP\timer -I ..\BSP\usb_user -I ..\BSP\sd_card -I ..\FATFS -I ..\FATFS\option-I.\RTE\_STM32-LD3320-I"D:\Program Files (x86)\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include"-I"D:\Program Files (x86)\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include"-D__UVISION_VERSION="526" -D_RTE_ -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o .\obj\mass_mal.o --omf_browse .\obj\mass_mal.crf --depend .\obj\mass_mal.d)
+I (..\user\platform_config.h)(0x5CADE789)
+I (..\user\stm32f10x.h)(0x5CB1F3FB)
+I (..\Libraries\CMSIS\CM3\CoreSupport\core_cm3.h)(0x4D523B58)
+I (D:\Program Files (x86)\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599EDB3E)
+I (..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\system_stm32f10x.h)(0x4D783CAA)
+I (..\user\stm32f10x_conf.h)(0x5CB1A7F1)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_dma.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_exti.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_gpio.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_rcc.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_sdio.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_spi.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_tim.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_usart.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h)(0x4D783BB4)
+I (..\BSP\sd_card\sdio_sdcard.h)(0x4EC74924)
+I (D:\Program Files (x86)\Keil_v5\ARM\ARMCC\include\stdio.h)(0x599EDB3C)
+I (..\BSP\usb_user\mass_mal.h)(0x49F2B1B4)
+F (..\BSP\usb_user\memory.c)(0x49F2B1B4)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I ..\user -I ..\Libraries -I ..\Libraries\CMSIS -I ..\Libraries\CMSIS\CM3 -I ..\Libraries\CMSIS\CM3\CoreSupport -I ..\Libraries\CMSIS\CM3\DeviceSupport -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\arm -I ..\Libraries\STM32F10x_StdPeriph_Driver\inc -I ..\Libraries\STM32_USB-FS-Device_Driver\inc -I ..\BSP\LD_Driver -I ..\BSP\usart -I ..\BSP\delay -I ..\BSP\dma -I ..\BSP\timer -I ..\BSP\usb_user -I ..\BSP\sd_card -I ..\FATFS -I ..\FATFS\option-I.\RTE\_STM32-LD3320-I"D:\Program Files (x86)\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include"-I"D:\Program Files (x86)\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include"-D__UVISION_VERSION="526" -D_RTE_ -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o .\obj\memory.o --omf_browse .\obj\memory.crf --depend .\obj\memory.d)
+I (..\BSP\usb_user\memory.h)(0x49F2B1B4)
+I (..\user\stm32f10x.h)(0x5CB1F3FB)
+I (..\Libraries\CMSIS\CM3\CoreSupport\core_cm3.h)(0x4D523B58)
+I (D:\Program Files (x86)\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599EDB3E)
+I (..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\system_stm32f10x.h)(0x4D783CAA)
+I (..\user\stm32f10x_conf.h)(0x5CB1A7F1)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_dma.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_exti.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_gpio.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_rcc.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_sdio.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_spi.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_tim.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_usart.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h)(0x4D783BB4)
+I (..\BSP\usb_user\usb_scsi.h)(0x49F2B1B4)
+I (..\BSP\usb_user\usb_bot.h)(0x49F2B1B4)
+I (..\Libraries\STM32_USB-FS-Device_Driver\inc\usb_regs.h)(0x49F2B1AE)
+I (..\Libraries\STM32_USB-FS-Device_Driver\inc\usb_mem.h)(0x49F2B1AE)
+I (..\BSP\usb_user\usb_conf.h)(0x49F2B1B4)
+I (..\BSP\usb_user\hw_config.h)(0x4FA5EABE)
+I (..\BSP\usb_user\mass_mal.h)(0x49F2B1B4)
+F (..\BSP\usb_user\msd.c)(0x4FA5EA92)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I ..\user -I ..\Libraries -I ..\Libraries\CMSIS -I ..\Libraries\CMSIS\CM3 -I ..\Libraries\CMSIS\CM3\CoreSupport -I ..\Libraries\CMSIS\CM3\DeviceSupport -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\arm -I ..\Libraries\STM32F10x_StdPeriph_Driver\inc -I ..\Libraries\STM32_USB-FS-Device_Driver\inc -I ..\BSP\LD_Driver -I ..\BSP\usart -I ..\BSP\delay -I ..\BSP\dma -I ..\BSP\timer -I ..\BSP\usb_user -I ..\BSP\sd_card -I ..\FATFS -I ..\FATFS\option-I.\RTE\_STM32-LD3320-I"D:\Program Files (x86)\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include"-I"D:\Program Files (x86)\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include"-D__UVISION_VERSION="526" -D_RTE_ -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o .\obj\msd.o --omf_browse .\obj\msd.crf --depend .\obj\msd.d)
+I (..\BSP\usb_user\msd.h)(0x49F2B1B4)
+I (..\user\stm32f10x.h)(0x5CB1F3FB)
+I (..\Libraries\CMSIS\CM3\CoreSupport\core_cm3.h)(0x4D523B58)
+I (D:\Program Files (x86)\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599EDB3E)
+I (..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\system_stm32f10x.h)(0x4D783CAA)
+I (..\user\stm32f10x_conf.h)(0x5CB1A7F1)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_dma.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_exti.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_gpio.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_rcc.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_sdio.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_spi.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_tim.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_usart.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h)(0x4D783BB4)
+F (..\BSP\usb_user\scsi_data.c)(0x49F2B1B6)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I ..\user -I ..\Libraries -I ..\Libraries\CMSIS -I ..\Libraries\CMSIS\CM3 -I ..\Libraries\CMSIS\CM3\CoreSupport -I ..\Libraries\CMSIS\CM3\DeviceSupport -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\arm -I ..\Libraries\STM32F10x_StdPeriph_Driver\inc -I ..\Libraries\STM32_USB-FS-Device_Driver\inc -I ..\BSP\LD_Driver -I ..\BSP\usart -I ..\BSP\delay -I ..\BSP\dma -I ..\BSP\timer -I ..\BSP\usb_user -I ..\BSP\sd_card -I ..\FATFS -I ..\FATFS\option-I.\RTE\_STM32-LD3320-I"D:\Program Files (x86)\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include"-I"D:\Program Files (x86)\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include"-D__UVISION_VERSION="526" -D_RTE_ -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o .\obj\scsi_data.o --omf_browse .\obj\scsi_data.crf --depend .\obj\scsi_data.d)
+I (..\BSP\usb_user\usb_scsi.h)(0x49F2B1B4)
+I (..\user\stm32f10x.h)(0x5CB1F3FB)
+I (..\Libraries\CMSIS\CM3\CoreSupport\core_cm3.h)(0x4D523B58)
+I (D:\Program Files (x86)\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599EDB3E)
+I (..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\system_stm32f10x.h)(0x4D783CAA)
+I (..\user\stm32f10x_conf.h)(0x5CB1A7F1)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_dma.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_exti.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_gpio.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_rcc.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_sdio.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_spi.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_tim.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_usart.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h)(0x4D783BB4)
+I (..\BSP\usb_user\memory.h)(0x49F2B1B4)
+F (..\BSP\usb_user\usb_bot.c)(0x49F2B1B6)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I ..\user -I ..\Libraries -I ..\Libraries\CMSIS -I ..\Libraries\CMSIS\CM3 -I ..\Libraries\CMSIS\CM3\CoreSupport -I ..\Libraries\CMSIS\CM3\DeviceSupport -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\arm -I ..\Libraries\STM32F10x_StdPeriph_Driver\inc -I ..\Libraries\STM32_USB-FS-Device_Driver\inc -I ..\BSP\LD_Driver -I ..\BSP\usart -I ..\BSP\delay -I ..\BSP\dma -I ..\BSP\timer -I ..\BSP\usb_user -I ..\BSP\sd_card -I ..\FATFS -I ..\FATFS\option-I.\RTE\_STM32-LD3320-I"D:\Program Files (x86)\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include"-I"D:\Program Files (x86)\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include"-D__UVISION_VERSION="526" -D_RTE_ -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o .\obj\usb_bot.o --omf_browse .\obj\usb_bot.crf --depend .\obj\usb_bot.d)
+I (..\BSP\usb_user\usb_scsi.h)(0x49F2B1B4)
+I (..\user\stm32f10x.h)(0x5CB1F3FB)
+I (..\Libraries\CMSIS\CM3\CoreSupport\core_cm3.h)(0x4D523B58)
+I (D:\Program Files (x86)\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599EDB3E)
+I (..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\system_stm32f10x.h)(0x4D783CAA)
+I (..\user\stm32f10x_conf.h)(0x5CB1A7F1)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_dma.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_exti.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_gpio.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_rcc.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_sdio.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_spi.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_tim.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_usart.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h)(0x4D783BB4)
+I (..\BSP\usb_user\hw_config.h)(0x4FA5EABE)
+I (..\Libraries\STM32_USB-FS-Device_Driver\inc\usb_regs.h)(0x49F2B1AE)
+I (..\Libraries\STM32_USB-FS-Device_Driver\inc\usb_mem.h)(0x49F2B1AE)
+I (..\BSP\usb_user\usb_conf.h)(0x49F2B1B4)
+I (..\BSP\usb_user\usb_bot.h)(0x49F2B1B4)
+I (..\BSP\usb_user\memory.h)(0x49F2B1B4)
+F (..\BSP\usb_user\usb_desc.c)(0x4D1597FE)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I ..\user -I ..\Libraries -I ..\Libraries\CMSIS -I ..\Libraries\CMSIS\CM3 -I ..\Libraries\CMSIS\CM3\CoreSupport -I ..\Libraries\CMSIS\CM3\DeviceSupport -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\arm -I ..\Libraries\STM32F10x_StdPeriph_Driver\inc -I ..\Libraries\STM32_USB-FS-Device_Driver\inc -I ..\BSP\LD_Driver -I ..\BSP\usart -I ..\BSP\delay -I ..\BSP\dma -I ..\BSP\timer -I ..\BSP\usb_user -I ..\BSP\sd_card -I ..\FATFS -I ..\FATFS\option-I.\RTE\_STM32-LD3320-I"D:\Program Files (x86)\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include"-I"D:\Program Files (x86)\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include"-D__UVISION_VERSION="526" -D_RTE_ -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o .\obj\usb_desc.o --omf_browse .\obj\usb_desc.crf --depend .\obj\usb_desc.d)
+I (..\BSP\usb_user\usb_desc.h)(0x49F2B1B4)
+I (..\user\stm32f10x.h)(0x5CB1F3FB)
+I (..\Libraries\CMSIS\CM3\CoreSupport\core_cm3.h)(0x4D523B58)
+I (D:\Program Files (x86)\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599EDB3E)
+I (..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\system_stm32f10x.h)(0x4D783CAA)
+I (..\user\stm32f10x_conf.h)(0x5CB1A7F1)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_dma.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_exti.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_gpio.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_rcc.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_sdio.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_spi.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_tim.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_usart.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h)(0x4D783BB4)
+F (..\BSP\usb_user\usb_endp.c)(0x49F2B1B6)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I ..\user -I ..\Libraries -I ..\Libraries\CMSIS -I ..\Libraries\CMSIS\CM3 -I ..\Libraries\CMSIS\CM3\CoreSupport -I ..\Libraries\CMSIS\CM3\DeviceSupport -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\arm -I ..\Libraries\STM32F10x_StdPeriph_Driver\inc -I ..\Libraries\STM32_USB-FS-Device_Driver\inc -I ..\BSP\LD_Driver -I ..\BSP\usart -I ..\BSP\delay -I ..\BSP\dma -I ..\BSP\timer -I ..\BSP\usb_user -I ..\BSP\sd_card -I ..\FATFS -I ..\FATFS\option-I.\RTE\_STM32-LD3320-I"D:\Program Files (x86)\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include"-I"D:\Program Files (x86)\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include"-D__UVISION_VERSION="526" -D_RTE_ -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o .\obj\usb_endp.o --omf_browse .\obj\usb_endp.crf --depend .\obj\usb_endp.d)
+I (..\Libraries\STM32_USB-FS-Device_Driver\inc\usb_lib.h)(0x49F2B1AE)
+I (..\user\stm32f10x.h)(0x5CB1F3FB)
+I (..\Libraries\CMSIS\CM3\CoreSupport\core_cm3.h)(0x4D523B58)
+I (D:\Program Files (x86)\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599EDB3E)
+I (..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\system_stm32f10x.h)(0x4D783CAA)
+I (..\user\stm32f10x_conf.h)(0x5CB1A7F1)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_dma.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_exti.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_gpio.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_rcc.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_sdio.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_spi.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_tim.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_usart.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h)(0x4D783BB4)
+I (..\Libraries\STM32_USB-FS-Device_Driver\inc\usb_type.h)(0x49F2B1AE)
+I (..\BSP\usb_user\usb_conf.h)(0x49F2B1B4)
+I (..\Libraries\STM32_USB-FS-Device_Driver\inc\usb_regs.h)(0x49F2B1AE)
+I (..\Libraries\STM32_USB-FS-Device_Driver\inc\usb_def.h)(0x49F2B1AE)
+I (..\Libraries\STM32_USB-FS-Device_Driver\inc\usb_core.h)(0x49F2B1AE)
+I (..\Libraries\STM32_USB-FS-Device_Driver\inc\usb_init.h)(0x49F2B1AE)
+I (..\Libraries\STM32_USB-FS-Device_Driver\inc\usb_mem.h)(0x49F2B1AE)
+I (..\Libraries\STM32_USB-FS-Device_Driver\inc\usb_int.h)(0x49F2B1AE)
+I (..\BSP\usb_user\usb_bot.h)(0x49F2B1B4)
+I (..\BSP\usb_user\usb_istr.h)(0x49F2B1B4)
+F (..\BSP\usb_user\usb_istr.c)(0x49F2B1B6)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I ..\user -I ..\Libraries -I ..\Libraries\CMSIS -I ..\Libraries\CMSIS\CM3 -I ..\Libraries\CMSIS\CM3\CoreSupport -I ..\Libraries\CMSIS\CM3\DeviceSupport -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\arm -I ..\Libraries\STM32F10x_StdPeriph_Driver\inc -I ..\Libraries\STM32_USB-FS-Device_Driver\inc -I ..\BSP\LD_Driver -I ..\BSP\usart -I ..\BSP\delay -I ..\BSP\dma -I ..\BSP\timer -I ..\BSP\usb_user -I ..\BSP\sd_card -I ..\FATFS -I ..\FATFS\option-I.\RTE\_STM32-LD3320-I"D:\Program Files (x86)\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include"-I"D:\Program Files (x86)\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include"-D__UVISION_VERSION="526" -D_RTE_ -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o .\obj\usb_istr.o --omf_browse .\obj\usb_istr.crf --depend .\obj\usb_istr.d)
+I (..\user\stm32f10x.h)(0x5CB1F3FB)
+I (..\Libraries\CMSIS\CM3\CoreSupport\core_cm3.h)(0x4D523B58)
+I (D:\Program Files (x86)\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599EDB3E)
+I (..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\system_stm32f10x.h)(0x4D783CAA)
+I (..\user\stm32f10x_conf.h)(0x5CB1A7F1)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_dma.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_exti.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_gpio.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_rcc.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_sdio.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_spi.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_tim.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_usart.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h)(0x4D783BB4)
+I (..\Libraries\STM32_USB-FS-Device_Driver\inc\usb_type.h)(0x49F2B1AE)
+I (..\BSP\usb_user\usb_conf.h)(0x49F2B1B4)
+I (..\Libraries\STM32_USB-FS-Device_Driver\inc\usb_regs.h)(0x49F2B1AE)
+I (..\BSP\usb_user\usb_pwr.h)(0x49F2B1B4)
+I (..\Libraries\STM32_USB-FS-Device_Driver\inc\usb_core.h)(0x49F2B1AE)
+I (..\BSP\usb_user\usb_istr.h)(0x49F2B1B4)
+I (..\Libraries\STM32_USB-FS-Device_Driver\inc\usb_init.h)(0x49F2B1AE)
+I (..\Libraries\STM32_USB-FS-Device_Driver\inc\usb_int.h)(0x49F2B1AE)
+F (..\BSP\usb_user\usb_prop.c)(0x4AD07678)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I ..\user -I ..\Libraries -I ..\Libraries\CMSIS -I ..\Libraries\CMSIS\CM3 -I ..\Libraries\CMSIS\CM3\CoreSupport -I ..\Libraries\CMSIS\CM3\DeviceSupport -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\arm -I ..\Libraries\STM32F10x_StdPeriph_Driver\inc -I ..\Libraries\STM32_USB-FS-Device_Driver\inc -I ..\BSP\LD_Driver -I ..\BSP\usart -I ..\BSP\delay -I ..\BSP\dma -I ..\BSP\timer -I ..\BSP\usb_user -I ..\BSP\sd_card -I ..\FATFS -I ..\FATFS\option-I.\RTE\_STM32-LD3320-I"D:\Program Files (x86)\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include"-I"D:\Program Files (x86)\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include"-D__UVISION_VERSION="526" -D_RTE_ -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o .\obj\usb_prop.o --omf_browse .\obj\usb_prop.crf --depend .\obj\usb_prop.d)
+I (..\Libraries\STM32_USB-FS-Device_Driver\inc\usb_lib.h)(0x49F2B1AE)
+I (..\user\stm32f10x.h)(0x5CB1F3FB)
+I (..\Libraries\CMSIS\CM3\CoreSupport\core_cm3.h)(0x4D523B58)
+I (D:\Program Files (x86)\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599EDB3E)
+I (..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\system_stm32f10x.h)(0x4D783CAA)
+I (..\user\stm32f10x_conf.h)(0x5CB1A7F1)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_dma.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_exti.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_gpio.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_rcc.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_sdio.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_spi.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_tim.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_usart.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h)(0x4D783BB4)
+I (..\Libraries\STM32_USB-FS-Device_Driver\inc\usb_type.h)(0x49F2B1AE)
+I (..\BSP\usb_user\usb_conf.h)(0x49F2B1B4)
+I (..\Libraries\STM32_USB-FS-Device_Driver\inc\usb_regs.h)(0x49F2B1AE)
+I (..\Libraries\STM32_USB-FS-Device_Driver\inc\usb_def.h)(0x49F2B1AE)
+I (..\Libraries\STM32_USB-FS-Device_Driver\inc\usb_core.h)(0x49F2B1AE)
+I (..\Libraries\STM32_USB-FS-Device_Driver\inc\usb_init.h)(0x49F2B1AE)
+I (..\Libraries\STM32_USB-FS-Device_Driver\inc\usb_mem.h)(0x49F2B1AE)
+I (..\Libraries\STM32_USB-FS-Device_Driver\inc\usb_int.h)(0x49F2B1AE)
+I (..\BSP\usb_user\usb_desc.h)(0x49F2B1B4)
+I (..\BSP\usb_user\usb_pwr.h)(0x49F2B1B4)
+I (..\BSP\usb_user\usb_bot.h)(0x49F2B1B4)
+I (..\BSP\usb_user\hw_config.h)(0x4FA5EABE)
+I (..\BSP\usb_user\memory.h)(0x49F2B1B4)
+I (..\BSP\usb_user\mass_mal.h)(0x49F2B1B4)
+I (..\BSP\usb_user\usb_prop.h)(0x49F2B1B4)
+F (..\BSP\usb_user\usb_pwr.c)(0x49F2B1B6)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I ..\user -I ..\Libraries -I ..\Libraries\CMSIS -I ..\Libraries\CMSIS\CM3 -I ..\Libraries\CMSIS\CM3\CoreSupport -I ..\Libraries\CMSIS\CM3\DeviceSupport -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\arm -I ..\Libraries\STM32F10x_StdPeriph_Driver\inc -I ..\Libraries\STM32_USB-FS-Device_Driver\inc -I ..\BSP\LD_Driver -I ..\BSP\usart -I ..\BSP\delay -I ..\BSP\dma -I ..\BSP\timer -I ..\BSP\usb_user -I ..\BSP\sd_card -I ..\FATFS -I ..\FATFS\option-I.\RTE\_STM32-LD3320-I"D:\Program Files (x86)\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include"-I"D:\Program Files (x86)\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include"-D__UVISION_VERSION="526" -D_RTE_ -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o .\obj\usb_pwr.o --omf_browse .\obj\usb_pwr.crf --depend .\obj\usb_pwr.d)
+I (..\user\stm32f10x.h)(0x5CB1F3FB)
+I (..\Libraries\CMSIS\CM3\CoreSupport\core_cm3.h)(0x4D523B58)
+I (D:\Program Files (x86)\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599EDB3E)
+I (..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\system_stm32f10x.h)(0x4D783CAA)
+I (..\user\stm32f10x_conf.h)(0x5CB1A7F1)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_dma.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_exti.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_gpio.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_rcc.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_sdio.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_spi.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_tim.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_usart.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h)(0x4D783BB4)
+I (..\Libraries\STM32_USB-FS-Device_Driver\inc\usb_lib.h)(0x49F2B1AE)
+I (..\Libraries\STM32_USB-FS-Device_Driver\inc\usb_type.h)(0x49F2B1AE)
+I (..\BSP\usb_user\usb_conf.h)(0x49F2B1B4)
+I (..\Libraries\STM32_USB-FS-Device_Driver\inc\usb_regs.h)(0x49F2B1AE)
+I (..\Libraries\STM32_USB-FS-Device_Driver\inc\usb_def.h)(0x49F2B1AE)
+I (..\Libraries\STM32_USB-FS-Device_Driver\inc\usb_core.h)(0x49F2B1AE)
+I (..\Libraries\STM32_USB-FS-Device_Driver\inc\usb_init.h)(0x49F2B1AE)
+I (..\Libraries\STM32_USB-FS-Device_Driver\inc\usb_mem.h)(0x49F2B1AE)
+I (..\Libraries\STM32_USB-FS-Device_Driver\inc\usb_int.h)(0x49F2B1AE)
+I (..\BSP\usb_user\usb_pwr.h)(0x49F2B1B4)
+I (..\BSP\usb_user\hw_config.h)(0x4FA5EABE)
+F (..\BSP\usb_user\usb_scsi.c)(0x4EC49904)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I ..\user -I ..\Libraries -I ..\Libraries\CMSIS -I ..\Libraries\CMSIS\CM3 -I ..\Libraries\CMSIS\CM3\CoreSupport -I ..\Libraries\CMSIS\CM3\DeviceSupport -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\arm -I ..\Libraries\STM32F10x_StdPeriph_Driver\inc -I ..\Libraries\STM32_USB-FS-Device_Driver\inc -I ..\BSP\LD_Driver -I ..\BSP\usart -I ..\BSP\delay -I ..\BSP\dma -I ..\BSP\timer -I ..\BSP\usb_user -I ..\BSP\sd_card -I ..\FATFS -I ..\FATFS\option-I.\RTE\_STM32-LD3320-I"D:\Program Files (x86)\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include"-I"D:\Program Files (x86)\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include"-D__UVISION_VERSION="526" -D_RTE_ -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o .\obj\usb_scsi.o --omf_browse .\obj\usb_scsi.crf --depend .\obj\usb_scsi.d)
+I (..\BSP\usb_user\hw_config.h)(0x4FA5EABE)
+I (..\user\stm32f10x.h)(0x5CB1F3FB)
+I (..\Libraries\CMSIS\CM3\CoreSupport\core_cm3.h)(0x4D523B58)
+I (D:\Program Files (x86)\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599EDB3E)
+I (..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\system_stm32f10x.h)(0x4D783CAA)
+I (..\user\stm32f10x_conf.h)(0x5CB1A7F1)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_dma.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_exti.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_gpio.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_rcc.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_sdio.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_spi.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_tim.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_usart.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h)(0x4D783BB4)
+I (..\BSP\usb_user\usb_scsi.h)(0x49F2B1B4)
+I (..\BSP\usb_user\mass_mal.h)(0x49F2B1B4)
+I (..\BSP\usb_user\usb_bot.h)(0x49F2B1B4)
+I (..\Libraries\STM32_USB-FS-Device_Driver\inc\usb_regs.h)(0x49F2B1AE)
+I (..\BSP\usb_user\memory.h)(0x49F2B1B4)
+I (..\user\platform_config.h)(0x5CADE789)
+F (..\FATFS\diskio.c)(0x4EC76F9A)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I ..\user -I ..\Libraries -I ..\Libraries\CMSIS -I ..\Libraries\CMSIS\CM3 -I ..\Libraries\CMSIS\CM3\CoreSupport -I ..\Libraries\CMSIS\CM3\DeviceSupport -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\arm -I ..\Libraries\STM32F10x_StdPeriph_Driver\inc -I ..\Libraries\STM32_USB-FS-Device_Driver\inc -I ..\BSP\LD_Driver -I ..\BSP\usart -I ..\BSP\delay -I ..\BSP\dma -I ..\BSP\timer -I ..\BSP\usb_user -I ..\BSP\sd_card -I ..\FATFS -I ..\FATFS\option-I.\RTE\_STM32-LD3320-I"D:\Program Files (x86)\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include"-I"D:\Program Files (x86)\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include"-D__UVISION_VERSION="526" -D_RTE_ -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o .\obj\diskio.o --omf_browse .\obj\diskio.crf --depend .\obj\diskio.d)
+I (D:\Program Files (x86)\Keil_v5\ARM\ARMCC\include\string.h)(0x599EDB3C)
+I (..\FATFS\diskio.h)(0x4C6932A0)
+I (..\FATFS\integer.h)(0x4BD31212)
+I (..\BSP\sd_card\sdio_sdcard.h)(0x4EC74924)
+I (..\user\stm32f10x.h)(0x5CB1F3FB)
+I (..\Libraries\CMSIS\CM3\CoreSupport\core_cm3.h)(0x4D523B58)
+I (D:\Program Files (x86)\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599EDB3E)
+I (..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\system_stm32f10x.h)(0x4D783CAA)
+I (..\user\stm32f10x_conf.h)(0x5CB1A7F1)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_dma.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_exti.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_gpio.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_rcc.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_sdio.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_spi.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_tim.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_usart.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h)(0x4D783BB4)
+F (..\FATFS\fatfs_posix.c)(0x4ECA044C)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I ..\user -I ..\Libraries -I ..\Libraries\CMSIS -I ..\Libraries\CMSIS\CM3 -I ..\Libraries\CMSIS\CM3\CoreSupport -I ..\Libraries\CMSIS\CM3\DeviceSupport -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\arm -I ..\Libraries\STM32F10x_StdPeriph_Driver\inc -I ..\Libraries\STM32_USB-FS-Device_Driver\inc -I ..\BSP\LD_Driver -I ..\BSP\usart -I ..\BSP\delay -I ..\BSP\dma -I ..\BSP\timer -I ..\BSP\usb_user -I ..\BSP\sd_card -I ..\FATFS -I ..\FATFS\option-I.\RTE\_STM32-LD3320-I"D:\Program Files (x86)\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include"-I"D:\Program Files (x86)\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include"-D__UVISION_VERSION="526" -D_RTE_ -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o .\obj\fatfs_posix.o --omf_browse .\obj\fatfs_posix.crf --depend .\obj\fatfs_posix.d)
+I (D:\Program Files (x86)\Keil_v5\ARM\ARMCC\include\string.h)(0x599EDB3C)
+I (D:\Program Files (x86)\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x599EDB3C)
+I (D:\Program Files (x86)\Keil_v5\ARM\ARMCC\include\stdio.h)(0x599EDB3C)
+I (..\FATFS\ff.h)(0x4E950DD4)
+I (..\FATFS\integer.h)(0x4BD31212)
+I (..\FATFS\ffconf.h)(0x4EF1C7E0)
+I (..\FATFS\fatfs_posix.h)(0x4EC9F2FA)
+F (..\FATFS\ff.c)(0x4EC7354C)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I ..\user -I ..\Libraries -I ..\Libraries\CMSIS -I ..\Libraries\CMSIS\CM3 -I ..\Libraries\CMSIS\CM3\CoreSupport -I ..\Libraries\CMSIS\CM3\DeviceSupport -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\arm -I ..\Libraries\STM32F10x_StdPeriph_Driver\inc -I ..\Libraries\STM32_USB-FS-Device_Driver\inc -I ..\BSP\LD_Driver -I ..\BSP\usart -I ..\BSP\delay -I ..\BSP\dma -I ..\BSP\timer -I ..\BSP\usb_user -I ..\BSP\sd_card -I ..\FATFS -I ..\FATFS\option-I.\RTE\_STM32-LD3320-I"D:\Program Files (x86)\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include"-I"D:\Program Files (x86)\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include"-D__UVISION_VERSION="526" -D_RTE_ -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o .\obj\ff.o --omf_browse .\obj\ff.crf --depend .\obj\ff.d)
+I (..\FATFS\ff.h)(0x4E950DD4)
+I (..\FATFS\integer.h)(0x4BD31212)
+I (..\FATFS\ffconf.h)(0x4EF1C7E0)
+I (..\FATFS\diskio.h)(0x4C6932A0)
+F (..\FATFS\option\cc936.c)(0x4BD9537E)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I ..\user -I ..\Libraries -I ..\Libraries\CMSIS -I ..\Libraries\CMSIS\CM3 -I ..\Libraries\CMSIS\CM3\CoreSupport -I ..\Libraries\CMSIS\CM3\DeviceSupport -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\arm -I ..\Libraries\STM32F10x_StdPeriph_Driver\inc -I ..\Libraries\STM32_USB-FS-Device_Driver\inc -I ..\BSP\LD_Driver -I ..\BSP\usart -I ..\BSP\delay -I ..\BSP\dma -I ..\BSP\timer -I ..\BSP\usb_user -I ..\BSP\sd_card -I ..\FATFS -I ..\FATFS\option-I.\RTE\_STM32-LD3320-I"D:\Program Files (x86)\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include"-I"D:\Program Files (x86)\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include"-D__UVISION_VERSION="526" -D_RTE_ -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o .\obj\cc936.o --omf_browse .\obj\cc936.crf --depend .\obj\cc936.d)
+I (..\FATFS\option\../ff.h)(0x4E950DD4)
+I (..\FATFS\option\../integer.h)(0x4BD31212)
+I (..\FATFS\option\../ffconf.h)(0x4EF1C7E0)
+F (..\user\LEDtest.C)(0x5CB20341)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I ..\user -I ..\Libraries -I ..\Libraries\CMSIS -I ..\Libraries\CMSIS\CM3 -I ..\Libraries\CMSIS\CM3\CoreSupport -I ..\Libraries\CMSIS\CM3\DeviceSupport -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\arm -I ..\Libraries\STM32F10x_StdPeriph_Driver\inc -I ..\Libraries\STM32_USB-FS-Device_Driver\inc -I ..\BSP\LD_Driver -I ..\BSP\usart -I ..\BSP\delay -I ..\BSP\dma -I ..\BSP\timer -I ..\BSP\usb_user -I ..\BSP\sd_card -I ..\FATFS -I ..\FATFS\option-I.\RTE\_STM32-LD3320-I"D:\Program Files (x86)\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include"-I"D:\Program Files (x86)\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include"-D__UVISION_VERSION="526" -D_RTE_ -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o .\obj\ledtest.o --omf_browse .\obj\ledtest.crf --depend .\obj\ledtest.d)
+I (..\user\includes.h)(0x5CB20CA0)
+I (..\user\stm32f10x.h)(0x5CB1F3FB)
+I (..\Libraries\CMSIS\CM3\CoreSupport\core_cm3.h)(0x4D523B58)
+I (D:\Program Files (x86)\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599EDB3E)
+I (..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\system_stm32f10x.h)(0x4D783CAA)
+I (..\user\stm32f10x_conf.h)(0x5CB1A7F1)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_dma.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_exti.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_gpio.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_rcc.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_sdio.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_spi.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_tim.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_usart.h)(0x4D783BB4)
+I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h)(0x4D783BB4)
+I (..\BSP\LD_Driver\LDchip.h)(0x5CB20C62)
+I (..\BSP\LD_Driver\Reg_RW.h)(0x5CB1924B)
+I (..\user\LEDtest.h)(0x5CB19257)
+I (..\BSP\usart\usart.h)(0x5CAD67B7)
+I (D:\Program Files (x86)\Keil_v5\ARM\ARMCC\include\stdio.h)(0x599EDB3C)
+I (..\BSP\delay\delay.h)(0x560D4AC8)
+I (..\FATFS\ff.h)(0x4E950DD4)
+I (..\FATFS\integer.h)(0x4BD31212)
+I (..\FATFS\ffconf.h)(0x4EF1C7E0)
+I (..\FATFS\diskio.h)(0x4C6932A0)
+I (..\FATFS\fatfs_posix.h)(0x4EC9F2FA)
+I (D:\Program Files (x86)\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x599EDB3C)
+I (..\BSP\sd_card\sdio_sdcard.h)(0x4EC74924)
