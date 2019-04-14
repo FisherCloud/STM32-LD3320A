@@ -2,8 +2,6 @@
  * 文件名  ：timer.c
  * 描述    ：通用定时器2中断初始化
  * 作者    ：zhuoyingxingyu
- * 淘宝    ：源地工作室http://vcc-gnd.taobao.com/
- * 论坛地址：极客园地-嵌入式开发论坛http://vcc-gnd.com/
  * 版本更新: 2016-04-08
  * 硬件连接: 无
  * 调试方式：J-Link-OB

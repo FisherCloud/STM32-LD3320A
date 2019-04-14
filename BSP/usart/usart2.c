@@ -2,8 +2,6 @@
  * 文件名  ：usart2.c
  * 描述    ：串口2的配置和串口2中断处理
  * 作者    ：zhuoyingxingyu
- * 淘宝    ：源地工作室http://vcc-gnd.taobao.com/
- * 论坛地址：极客园地-嵌入式开发论坛http://vcc-gnd.com/
  * 版本更新: 2016-04-08
  * 硬件连接: TX->PA2;RX->PA3
  * 调试方式：J-Link-OB
