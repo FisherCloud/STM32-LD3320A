@@ -21,11 +21,9 @@
  * P1/SDO   PB4
  * P0/SDI   PB5
  * IRQ      PC1
- * A0				PB7
+ * A0		PB7
  * RD       PA0
 *****************************************/
-
-
 
 /************************************************************************************
 //	nAsrStatus 用来在main主程序中表示程序运行的状态，不是LD3320芯片内部的状态寄存器
@@ -45,6 +43,192 @@ void LD3320_EXTI_Cfg(void);
 void LD3320_Spi_cfg(void);
 void LD3320_GPIO_Cfg(void);
 void LED_gpio_cfg(void);
+void LD_Process(uint8 index);
+void USB_OTG();
+
+//======================================================================
+// 音量
+#define val 5
+// 识别处理函数
+void LD_Process(uint8 index)
+{
+    printf("\r\n识别码:%d\r\n", index);
+
+    switch(index)		   /*对结果执行相关操作,客户修改*/
+    {
+    case  0:
+        printf("“流水灯”命令识别成功\r\n");
+        PlayDemoSound_mp3("开台灯.mp3", val);
+        Glide_LED();
+        break;
+
+    case  1:
+        printf("“闪烁”命令识别成功\r\n");
+        PlayDemoSound_mp3("开台灯.mp3", val);
+        Flicker_LED();
+        break;
+
+    case  2:
+        printf("“按键触发”命令识别成功\r\n");
+        PlayDemoSound_mp3("开台灯.mp3", val);
+        Key_LED();
+        break;
+
+    case  3:
+        printf("“全灭”命令识别成功\r\n");
+        PlayDemoSound_mp3("关灯.mp3", val);
+        Off_LED();
+        break;
+
+    case  4:
+        printf("“开灯”命令识别成功\r\n");
+        PlayDemoSound_mp3("开灯.mp3", val);
+        GPIO_ResetBits(GPIOC, GPIO_Pin_2);
+        break;
+
+    case  5:
+        printf("“关灯”命令识别成功\r\n");
+        PlayDemoSound_mp3("关灯.mp3", val);
+        GPIO_SetBits(GPIOC, GPIO_Pin_2);
+        break;
+
+    case  6:
+        break;
+
+    case  7:
+        break;
+
+    case  8:
+        break;
+
+    case  9:
+        break;
+
+    case 10:
+        break;
+
+    case 11:
+        break;
+
+    case 12:
+        break;
+
+    case 13:
+        break;
+
+    case 14:
+        break;
+
+    case 15:
+        break;
+
+    case 16:
+        break;
+
+    case 17:
+        break;
+
+    case 18:
+        break;
+
+    case 19:
+        break;
+
+    case 20:
+        break;
+
+    case 21:
+        break;
+
+    case 22:
+        break;
+
+    case 23:
+        break;
+
+    case 24:
+        break;
+
+    case 25:
+        break;
+
+    case 26:
+        break;
+
+    case 27:
+        break;
+
+    case 28:
+        break;
+
+    case 29:
+        break;
+
+    case 30:
+        break;
+
+    case 31:
+        break;
+
+    case 32:
+        break;
+
+    case 33:
+        break;
+
+    case 34:
+        break;
+
+    case 35:
+        break;
+
+    case 36:
+        break;
+
+    case 37:
+        break;
+
+    case 38:
+        break;
+
+    case 39:
+        break;
+
+    case 40:
+        break;
+
+    case 41:
+        break;
+
+    case 42:
+        break;
+
+    case 43:
+        break;
+
+    case 44:
+        break;
+
+    case 45:
+        break;
+
+    case 46:
+        break;
+
+    case 47:
+        break;
+
+    case 48:
+        break;
+
+    case 49:
+        break;
+
+    default:
+        break;
+    }
+}
+//==============================================================
 
 /***********************************************************
 * 名    称： LD3320_main(void)
@@ -59,17 +243,6 @@ void  LD3320_main(void)
 {
     uint8 nAsrRes = 0;
 
-    printf("基于单片机的智能语音控制系统\r\n");
-    printf("口令：\r\n");
-    printf("1、流水灯\r\n");
-    printf("2、闪烁\r\n");
-    printf("3、按键触发\r\n");
-    printf("4、全灭\r\n");
-    printf("5、开灯\r\n");
-    printf("6、关灯\r\n");
-
-    //PlayDemoSound_mp3("YS-0.5介绍.mp3", 5);
-
     nAsrStatus = LD_ASR_NONE;		//	初始状态：没有在作ASR
 
     while(1)
@@ -78,6 +251,8 @@ void  LD3320_main(void)
         {
             continue;    //	bMp3Play 是定义的一个全局变量用来记录MP3播放的状态，不是LD3320芯片内部的寄存器
         }
+		
+		USB_OTG();
 
         switch(nAsrStatus)
         {
@@ -98,41 +273,8 @@ void  LD3320_main(void)
         case LD_ASR_FOUNDOK:
 
             nAsrRes = LD_GetResult();	//	一次ASR识别流程结束，去取ASR识别结果
-            delay_ms(100);
 
-            printf("\r\n识别码:%d\r\n", nAsrRes);
-
-            switch(nAsrRes)		   /*对结果执行相关操作,客户修改*/
-            {
-            case CODE_LSD:			/*命令“流水灯”*/
-                printf("“流水灯”命令识别成功\r\n");
-                break;
-
-            case CODE_SS:	 /*命令“闪烁”*/
-                printf("“闪烁”命令识别成功\r\n");
-                break;
-
-            case CODE_AJCF:		/*命令“按键触发”*/
-
-                printf("“按键触发”命令识别成功\r\n");
-                break;
-
-            case CODE_QM:		/*命令“全灭”*/
-
-                printf("“全灭”命令识别成功\r\n");
-                break;
-
-            case CODE_LED1_ON:		/* 开灯命令 */
-                printf("“开灯”命令识别成功\r\n");
-                break;
-
-            case CODE_LED1_OFF:		/* 关灯命令 */
-                printf("“关灯”命令识别成功\r\n");
-                break;
-
-            default:
-                break;
-            }
+            LD_Process(nAsrRes);
 
             nAsrStatus = LD_ASR_NONE;
             break;
@@ -143,11 +285,40 @@ void  LD3320_main(void)
             break;
         }//switch
 
-        //开发板测试延时部分（用户可删除）
-        Board_text(nAsrRes);
     }// while
 
 }
+
+// U盘模式
+void USB_OTG()
+{
+    if(key_user2_GETVALUE() == 0)
+    {
+
+        GPIO_Config();
+        USB_Configured_LED();//设置USB接口的LED指示灯状态
+        /*MAL配置 */
+        MAL_Config();
+
+        /*中断配置 */
+        Interrupts_Config();
+
+        /*USB接口初始化*/
+        Set_USBClock();//设置USB接口时钟
+
+        USB_Init();//USB接口初始化
+
+        while(bDeviceState != CONFIGURED);
+
+        USB_Configured_LED();//设置USB接口的LED指示灯状态
+
+        //禁止所有外部中断.只能用U盘.
+        EXTI_DeInit();
+
+        while(1);
+    }
+}
+
 /***********************************************************
 * 名    称：LD3320_Init(void)
 * 功    能：模块驱动端口初始配置
@@ -161,46 +332,8 @@ void LD3320_Init(void)
     LD3320_GPIO_Cfg();
     LD3320_EXTI_Cfg();
     LD3320_Spi_cfg();
-    LED_gpio_cfg();
 
     LD_reset();
-}
-
-/***********************************************************
-* 名    称： void Delay_( int i)
-* 功    能： 短延时
-* 入口参数：
-* 出口参数：
-* 说    明：
-* 调用方法：
-**********************************************************/
-void Delay_(int i)
-{
-    while(i--)
-    {
-
-    }
-}
-/***********************************************************
-* 名    称：	LD3320_delay(unsigned long uldata)
-* 功    能：	长延时函数
-* 入口参数：
-* 出口参数：
-* 说    明：
-* 调用方法：
-**********************************************************/
-void  LD3320_delay(unsigned long uldata)
-{
-    unsigned int j  =  0;
-    unsigned int g  =  0;
-
-    for(j = 0; j < 5; j++)
-    {
-        for(g = 0; g < uldata; g++)
-        {
-            Delay_(120);
-        }
-    }
 }
 
 /***********************************************************
@@ -219,21 +352,21 @@ uint8 RunASR(void)
     for(i = 0; i < 5; i++)			//	防止由于硬件原因导致LD3320芯片工作不正常，所以一共尝试5次启动ASR识别流程
     {
         LD_AsrStart();			//初始化ASR
-        LD3320_delay(100);
+        delay_ms(50);
 
         if(LD_AsrAddFixed() == 0)	//添加关键词语到LD3320芯片中
         {
             LD_reset();			//	LD3320芯片内部出现不正常，立即重启LD3320芯片
-            LD3320_delay(50);			//	并从初始化开始重新ASR识别流程
+            delay_ms(50);			//	并从初始化开始重新ASR识别流程
             continue;
         }
 
-        LD3320_delay(10);
+        delay_ms(10);
 
         if(LD_AsrRun() == 0)
         {
             LD_reset();			//	LD3320芯片内部出现不正常，立即重启LD3320芯片
-            LD3320_delay(50);			//	并从初始化开始重新ASR识别流程
+            delay_ms(50);			//	并从初始化开始重新ASR识别流程
             continue;
         }
 
@@ -369,42 +502,3 @@ void LD3320_EXTI_Cfg(void)
     NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
     NVIC_Init(&NVIC_InitStructure);
 }
-
-
-/***********************************************************
-* 名    称：  EXTI1_IRQHandler(void)
-* 功    能： 外部中断函数
-* 入口参数：
-* 出口参数：
-* 说    明：
-* 调用方法：
-**********************************************************/
-void EXTI1_IRQHandler(void)
-{
-    if(EXTI_GetITStatus(EXTI_Line1) != RESET)
-    {
-        ProcessInt0();
-        //printf( "进入中断\r\n");	/*text........................*/
-        EXTI_ClearFlag(EXTI_Line1);
-        EXTI_ClearITPendingBit(EXTI_Line1);
-    }
-}
-/***********************************************************
-* 名    称：void LED_gpio_cfg(void)
-* 功    能：LED端口配置
-* 入口参数：
-* 出口参数：
-* 说    明：
-* 调用方法：
-**********************************************************/
-void LED_gpio_cfg(void)
-{
-    GPIO_InitTypeDef GPIO_InitStructure;
-    GPIO_InitStructure.GPIO_Pin = GPIO_Pin_3 | GPIO_Pin_2;
-    GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
-    GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;
-    GPIO_Init(GPIOC, &GPIO_InitStructure);
-    GPIO_SetBits(GPIOC, GPIO_Pin_3);
-    GPIO_SetBits(GPIOC, GPIO_Pin_2);
-}
-

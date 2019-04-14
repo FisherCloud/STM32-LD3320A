@@ -15,7 +15,7 @@
 //===========================================================================
 // 添加识别码
 
-#define DATE_A 6    /*数组二维数值*/
+#define DATE_A 6    	/*数组二维数值*/
 #define DATE_B 20		/*数组一维数值*/
 
 uint8  sRecog[DATE_A][DATE_B] =
@@ -27,15 +27,6 @@ uint8  sRecog[DATE_A][DATE_B] =
     "kai deng", \
     "guan deng"
 };	/*添加关键词，用户修改*/
-uint8  pCode[DATE_A] =
-{
-    CODE_LSD, \
-    CODE_SS, \
-    CODE_AJCF, \
-    CODE_QM, \
-    CODE_LED1_ON, \
-    CODE_LED1_OFF
-};	/*添加识别码，用户修改*/
 
 //=========================================================================
 
@@ -58,15 +49,15 @@ extern uint8  nAsrStatus;
 void LD_reset(void)
 {
     LD_RST_H();
-    LD3320_delay(100);
+    delay_ms(100);
     LD_RST_L();
-    LD3320_delay(100);
+    delay_ms(100);
     LD_RST_H();
-    LD3320_delay(100);
+    delay_ms(100);
     LD_CS_L();
-    LD3320_delay(100);
+    delay_ms(100);
     LD_CS_H();
-    LD3320_delay(100);
+    delay_ms(100);
 }
 
 /***********************************************************
@@ -82,13 +73,13 @@ void LD_Init_Common(void)
 
     LD_ReadReg(0x06);
     LD_WriteReg(0x17, 0x35);
-    LD3320_delay(5);
+    delay_ms(5);
     LD_ReadReg(0x06);
 
     LD_WriteReg(0x89, 0x03);
-    LD3320_delay(5);
+    delay_ms(5);
     LD_WriteReg(0xCF, 0x43);
-    LD3320_delay(5);
+    delay_ms(5);
     LD_WriteReg(0xCB, 0x02);
 
     /*PLL setting*/
@@ -109,11 +100,11 @@ void LD_Init_Common(void)
         LD_WriteReg(0x1D, LD_PLL_ASR_1D);
     }
 
-    LD3320_delay(5);
+    delay_ms(5);
 
     LD_WriteReg(0xCD, 0x04);
     LD_WriteReg(0x17, 0x4c);
-    LD3320_delay(1);
+    delay_ms(1);
     LD_WriteReg(0xB9, 0x00);
     LD_WriteReg(0xCF, 0x4F);
     LD_WriteReg(0x6F, 0xFF);
@@ -134,7 +125,7 @@ void LD_Init_ASR(void)
 
     LD_WriteReg(0xBD, 0x00);
     LD_WriteReg(0x17, 0x48);
-    LD3320_delay(5);
+    delay_ms(5);
     LD_WriteReg(0x3C, 0x80);
     LD_WriteReg(0x3E, 0x07);
     LD_WriteReg(0x38, 0xff);
@@ -143,7 +134,7 @@ void LD_Init_ASR(void)
     LD_WriteReg(0x42, 8);
     LD_WriteReg(0x44, 0);
     LD_WriteReg(0x46, 8);
-    LD3320_delay(1);
+    delay_ms(1);
 }
 
 //==================================================================
@@ -154,7 +145,7 @@ void LD_Init_MP3(void)	//播放初始化
 
     LD_WriteReg(0xBD, 0x02);	  //内部增益控制 初始化时写入FFH
     LD_WriteReg(0x17, 0x48);	//写48H可以激活DSP
-    delay_ms(100);
+    delay_ms(10);
 
     LD_WriteReg(0x85, 0x52); 	//内部反馈设置 初始化时写入52H
     LD_WriteReg(0x8F, 0x00);  	//LineOut(线路输出)选择 初始化时写入00H
@@ -162,10 +153,10 @@ void LD_Init_MP3(void)	//播放初始化
     LD_WriteReg(0x83, 0x00);	//耳机右音量 设置为00H为最大音量
     LD_WriteReg(0x8E, 0xff);	//喇叭输出音量  本寄存器设置为00H为最大音量	此处声音关闭
     LD_WriteReg(0x8D, 0xff);	//内部增益控制 初始化时写入FFH
-    delay_ms(100);
+    delay_ms(1);
     LD_WriteReg(0x87, 0xff);	//模拟电路控制 MP3播放初始化时写 FFH
     LD_WriteReg(0x89, 0xff);   //模拟电路控制 MP3播放时写 FFH
-    delay_ms(100);
+    delay_ms(1);
     LD_WriteReg(0x22, 0x00);   //FIFO_DATA下限低8位
     LD_WriteReg(0x23, 0x00);	//FIFO_DATA下限高8位
     LD_WriteReg(0x20, 0xef);   //FIFO_DATA上限低8位
@@ -189,7 +180,7 @@ void LD_play()
     }
 
     fill_the_fifo();
-//	LD_ReloadMp3Data();
+	//LD_ReloadMp3Data();
 
     LD_WriteReg(0xBA, 0x00);
     LD_WriteReg(0x17, 0x48);
@@ -227,6 +218,46 @@ void fill_the_fifo(void)
 
 }
 
+//LD_ReloadMp3Data（）函数的功能是送入数据，不同的硬件结构
+//可能需要改写这一部分。例如有的系统可能使用大容量的 RAM，取数
+//据就会很方便。这里是根据串行 FLASH 存储器的接口写的函数，使用
+//的是 SPI 协议。
+//void LD_ReloadMp3Data()
+//{
+//uint32 nCurMp3Pos;
+//uint8 val;
+//uint8 k;
+//nCurMp3Pos = nMp3StartPos + nMp3Pos;
+//FLASH_CS=1;
+//FLASH_CLK=0;
+//FLASH_CS=0;
+//IO_Send_Byte(W25P_FastReadData); /* read command */
+//IO_Send_Byte(((nCurMp3Pos & 0xFFFFFF) >> 16)); /* send 3 
+//address bytes */
+//IO_Send_Byte(((nCurMp3Pos & 0xFFFF) >> 8));
+//IO_Send_Byte(nCurMp3Pos & 0xFF);
+//IO_Send_Byte(0xFF);
+//ucStatus = LD_ReadReg(0x06);
+// info@icroute.com
+//27
+//while ( !(ucStatus&MASK_FIFO_STATUS_AFULL) && 
+//(nMp3Pos<nMp3Size) )
+//{
+//val=0;
+//for(k=0;k<8;k++)
+//{
+//FLASH_CLK=0;
+//val<<=1;
+//FLASH_CLK=1;
+//val|=FLASH_DO;
+//}
+//LD_WriteReg(0x01,val);
+//nMp3Pos++;
+//ucStatus = LD_ReadReg(0x06);
+//}
+//FLASH_CS=1;
+//FLASH_CLK=0;
+//}
 
 //=================================================================
 
@@ -332,7 +363,7 @@ void ProcessInt0(void)
         LD_WriteReg(0x02, ucLowInt) ;
     }
 
-    //LD3320_delay(1);
+    //delay_ms(1);
 
 }
 
@@ -436,7 +467,7 @@ uint8 LD_Check_ASRBusyFlag_b2(void)
             break;
         }
 
-        LD3320_delay(10);
+        delay_ms(10);
     }
 
     return flag;
@@ -467,9 +498,9 @@ uint8 LD_AsrRun(void)
     LD_WriteReg(0x1C, 0x09);
     LD_WriteReg(0xBD, 0x20);
     LD_WriteReg(0x08, 0x01);
-    LD3320_delay(5);
+    delay_ms(1);
     LD_WriteReg(0x08, 0x00);
-    LD3320_delay(5);
+    delay_ms(1);
 
     if(LD_Check_ASRBusyFlag_b2() == 0)
     {
@@ -479,11 +510,11 @@ uint8 LD_AsrRun(void)
     LD_WriteReg(0xB2, 0xff);
     LD_WriteReg(0x37, 0x06);
     LD_WriteReg(0x37, 0x06);
-    LD3320_delay(5);
+    delay_ms(5);
     LD_WriteReg(0x1C, 0x0b);
     LD_WriteReg(0x29, 0x10);
-
     LD_WriteReg(0xBD, 0x00);
+	
     return 1;
 }
 
@@ -511,12 +542,12 @@ uint8 LD_AsrAddFixed(void)
             break;
         }
 
-        LD_WriteReg(0xc1, pCode[k]);
+        LD_WriteReg(0xc1, k);
         LD_WriteReg(0xc3, 0);
         LD_WriteReg(0x08, 0x04);
-        LD3320_delay(1);
+        delay_ms(1);
         LD_WriteReg(0x08, 0x00);
-        LD3320_delay(1);
+        delay_ms(1);
 
         for(nAsrAddLength = 0; nAsrAddLength < DATE_B; nAsrAddLength++)
         {
@@ -531,7 +562,6 @@ uint8 LD_AsrAddFixed(void)
         LD_WriteReg(0xb9, nAsrAddLength);
         LD_WriteReg(0xb2, 0xff);
         LD_WriteReg(0x37, 0x04);
-//		LD_WriteReg(0x37, 0x04);
     }
 
     return flag;
@@ -549,6 +579,4 @@ uint8 LD_GetResult(void)
 {
     return LD_ReadReg(0xc5);
 }
-
-
 

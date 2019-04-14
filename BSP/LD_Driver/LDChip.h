@@ -79,7 +79,5 @@ extern uint32 nMp3Pos;
 extern uint8 bMp3Play;
 extern uint8 nLD_Mode;
 
-void  LD3320_delay(unsigned long uldata);
-
 #define MIC_VOL 0x43
 #endif

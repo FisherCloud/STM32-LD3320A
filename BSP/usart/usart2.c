@@ -83,17 +83,6 @@ void NVIC_Config2(void)
     NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;					//IRQ通道使能
     NVIC_Init(&NVIC_InitStructure);	//根据指定的参数初始化VIC寄存器
 }
-/**
- * @file   USART2_IRQHandler
- * @brief  中断处理函数
- * @param  无
- * @retval 无
- */
-void USART2_IRQHandler(void)        //串口2中断服务程序
-{
-    USART2_RX_BUF[USART2_RX_STA] = USART2->DR;
-    USART2_RX_STA++;
-}
 
 #endif
 

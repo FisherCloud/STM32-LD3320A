@@ -52,3 +52,17 @@ void delay_ms(u16 nms)
         delay_us(1000);
     }
 }
+
+/**
+ * @file   delay_s
+ * @brief  秒延时
+ * @param  延时时间
+ * @retval 无
+ */
+void delay_s(u16 ns)
+{
+    while(ns--)
+    {
+        delay_ms(1000);
+    }
+}

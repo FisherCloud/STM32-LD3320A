@@ -28,34 +28,42 @@ extern void LD3320_Init(void);
 int main(void)
 {
     /* System Clocks Configuration */
-	SYSTICK_Init();
-	delay_ms(500);
-    
-	USART1_Config(115200); //USART 配置
-	
-	LD3320_Init();
-	
-//	{
-//        FATFS fs;
-//        SD_CardInfo SDCardInfo;
+    SYSTICK_Init();
+    delay_ms(50);
 
-//        /* SD卡接口初始化	 */
-//        SD_Init();
-//        /* 获取SD卡信息 */
-//        SD_GetCardInfo(&SDCardInfo);
-//        SD_SelectDeselect((uint32_t)(SDCardInfo.RCA << 16));
-//        /* 设置SDIO接口数据宽度 */
-//        SD_EnableWideBusOperation(SDIO_BusWide_4b);
-//        /* 设置工作模式 */
-//        SD_SetDeviceMode(SD_DMA_MODE);
-//        /* 文件系统FATFS 初始化 */
-//        disk_initialize(0);
-//        /* 将SD卡挂载到驱动器0 */
-//        f_mount(0, &fs);
-//	}
-	
-	printf("初始化完成\r\n");
-	
+    USART1_Config(115200); //USART 配置
+    LD3320_Init();
+	LED_gpio_cfg();
+
+    {
+        FATFS fs;
+        SD_CardInfo SDCardInfo;
+
+        /* SD卡接口初始化	 */
+        if(SD_Init() == SD_ERROR)
+        {
+            printf("SD卡接口初始化失败\r\n");
+        };
+
+        /* 文件系统FATFS 初始化 */
+        disk_initialize(0);
+
+        /* 将SD卡挂载到驱动器0 */
+        f_mount(0, &fs);
+    }
+
+    printf("基于单片机的智能语音控制系统\r\n");
+    printf("初始化完成\r\n");
+    printf("口令：\r\n");
+    printf("0、流水灯\r\n");
+    printf("1、闪烁\r\n");
+    printf("2、按键触发\r\n");
+    printf("3、全灭\r\n");
+    printf("4、开灯\r\n");
+    printf("5、关灯\r\n");
+
+    PlayDemoSound_mp3("启动系统.mp3", 5);
+
     LD3320_main();		   //LD3320执行函数
 
     NVIC_SystemReset();

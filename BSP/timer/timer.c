@@ -9,8 +9,6 @@
  * 调试方式：J-Link-OB
 ********************************************************************************/
 #include "timer.h"
-//#include "led.h"
-#include "usart2.h"
 void TimerNvic_Config(void);
 /**
  * @file   TimerNvic_Config
@@ -56,29 +54,4 @@ void TIM2_Config(u16 arr, u16 psc)
     TIM_Cmd(TIM2, DISABLE);        //关闭TIM2
     TimerNvic_Config();	//中断优先级NVIC设置
 }
-
-
-/**
- * @file   TIM2_IRQHandler
- * @brief  定时器2中断处理函数
- * @param  无
- * @retval 无
- */
-void TIM2_IRQHandler(void)
-{
-    USART2_RX_STA |= 1 << 15;
-    TIM_Cmd(TIM2, DISABLE);                        //关闭TIM3
-    TIM_ClearITPendingBit(TIM2, TIM_IT_Update);  //清除TIMx更新中断标志
-}
-
-
-
-
-
-
-
-
-
-
-
 

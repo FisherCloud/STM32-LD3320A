@@ -19,6 +19,11 @@
 #include "LEDtest.h"
 #include "usart.h"
 #include "delay.h"
+#include "timer.h"
+#include "dma.h"
+#include "usart2.h"
+#include "timer3.h"
+#include "user_key.h"
 
 #include "ff.h"
 #include "ffconf.h"
@@ -26,16 +31,9 @@
 #include "fatfs_posix.h"
 
 #include "sdio_sdcard.h"
-
-//识别码
-#define CODE_LSD		1	 /*流水灯*/
-#define CODE_SS	  		2	 /*闪烁*/
-#define CODE_AJCF		3	 /*按键触发*/
-#define CODE_QM	  		4	 /*全灭*/
-#define CODE_LED1_ON	5
-#define CODE_LED1_OFF	6
-
-extern void PrintCom(USART_TypeDef* USARTx, uint8_t *Data);
+#include "usb_lib.h"
+#include "hw_config.h"
+#include "usb_pwr.h"
 
 #endif
 
