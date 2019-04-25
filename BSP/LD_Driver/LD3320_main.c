@@ -21,7 +21,7 @@
 //	LD_ASR_FOUNDZERO:	表示一次识别流程结束后，没有识别结果
 //	LD_ASR_ERROR:		表示一次识别流程中LD3320芯片内部出现不正确的状态
 *********************************************************************************/
-uint8 nAsrStatus = 0;
+
 
 void LD3320_Init(void);
 
@@ -31,192 +31,7 @@ void LD3320_EXTI_Cfg(void);
 void LD3320_Spi_cfg(void);
 void LD3320_GPIO_Cfg(void);
 void LED_gpio_cfg(void);
-void LD_Process(uint8 index);
 void USB_OTG();
-
-//======================================================================
-// 音量
-#define val 5
-// 识别处理函数
-void LD_Process(uint8 index)
-{
-    printf("\r\n识别码:%d\r\n", index);
-
-    switch(index)		   /*对结果执行相关操作,客户修改*/
-    {
-    case  0:
-        printf("“流水灯”命令识别成功\r\n");
-        PlayDemoSound_mp3("开台灯.mp3", val);
-        Glide_LED();
-        break;
-
-    case  1:
-        printf("“闪烁”命令识别成功\r\n");
-        PlayDemoSound_mp3("开台灯.mp3", val);
-        Flicker_LED();
-        break;
-
-    case  2:
-        printf("“按键触发”命令识别成功\r\n");
-        PlayDemoSound_mp3("开台灯.mp3", val);
-        Key_LED();
-        break;
-
-    case  3:
-        printf("“全灭”命令识别成功\r\n");
-        PlayDemoSound_mp3("关灯.mp3", val);
-        Off_LED();
-        break;
-
-    case  4:
-        printf("“开灯”命令识别成功\r\n");
-        PlayDemoSound_mp3("开灯.mp3", val);
-        GPIO_ResetBits(GPIOC, GPIO_Pin_2);
-        break;
-
-    case  5:
-        printf("“关灯”命令识别成功\r\n");
-        PlayDemoSound_mp3("关灯.mp3", val);
-        GPIO_SetBits(GPIOC, GPIO_Pin_2);
-        break;
-
-    case  6:
-        break;
-
-    case  7:
-        break;
-
-    case  8:
-        break;
-
-    case  9:
-        break;
-
-    case 10:
-        break;
-
-    case 11:
-        break;
-
-    case 12:
-        break;
-
-    case 13:
-        break;
-
-    case 14:
-        break;
-
-    case 15:
-        break;
-
-    case 16:
-        break;
-
-    case 17:
-        break;
-
-    case 18:
-        break;
-
-    case 19:
-        break;
-
-    case 20:
-        break;
-
-    case 21:
-        break;
-
-    case 22:
-        break;
-
-    case 23:
-        break;
-
-    case 24:
-        break;
-
-    case 25:
-        break;
-
-    case 26:
-        break;
-
-    case 27:
-        break;
-
-    case 28:
-        break;
-
-    case 29:
-        break;
-
-    case 30:
-        break;
-
-    case 31:
-        break;
-
-    case 32:
-        break;
-
-    case 33:
-        break;
-
-    case 34:
-        break;
-
-    case 35:
-        break;
-
-    case 36:
-        break;
-
-    case 37:
-        break;
-
-    case 38:
-        break;
-
-    case 39:
-        break;
-
-    case 40:
-        break;
-
-    case 41:
-        break;
-
-    case 42:
-        break;
-
-    case 43:
-        break;
-
-    case 44:
-        break;
-
-    case 45:
-        break;
-
-    case 46:
-        break;
-
-    case 47:
-        break;
-
-    case 48:
-        break;
-
-    case 49:
-        break;
-
-    default:
-        break;
-    }
-}
-//==============================================================
 
 /***********************************************************
 * 名    称： LD3320_main(void)
@@ -227,55 +42,55 @@ void LD_Process(uint8 index)
 * 调用方法：
 **********************************************************/
 
-void  LD3320_main(void)
-{
-    uint8 nAsrRes = 0;
+//void  LD3320_main(void)
+//{
+//    uint8 nAsrRes = 0;
 
-    nAsrStatus = LD_ASR_NONE;		//	初始状态：没有在作ASR
+//    nAsrStatus = LD_ASR_NONE;		//	初始状态：没有在作ASR
 
-    while(1)
-    {
-        if(bMp3Play != 0)			//	如果还在播放MP3中，则等待，直到MP3播放完毕 即bMp3Play==0
-        {
-            continue;    //	bMp3Play 是定义的一个全局变量用来记录MP3播放的状态，不是LD3320芯片内部的寄存器
-        }
-		
-		USB_OTG();
+//    while(1)
+//    {
+//        if(bMp3Play != 0)			//	如果还在播放MP3中，则等待，直到MP3播放完毕 即bMp3Play==0
+//        {
+//            continue;    //	bMp3Play 是定义的一个全局变量用来记录MP3播放的状态，不是LD3320芯片内部的寄存器
+//        }
+//		
+//		USB_OTG();
 
-        switch(nAsrStatus)
-        {
-        case LD_ASR_RUNING:
-        case LD_ASR_ERROR:
-            break;
+//        switch(nAsrStatus)
+//        {
+//        case LD_ASR_RUNING:
+//        case LD_ASR_ERROR:
+//            break;
 
-        case LD_ASR_NONE:
-            nAsrStatus = LD_ASR_RUNING;
+//        case LD_ASR_NONE:
+//            nAsrStatus = LD_ASR_RUNING;
 
-            if(RunASR() == 0)	//	启动一次ASR识别流程：ASR初始化，ASR添加关键词语，启动ASR运算
-            {
-                nAsrStatus = LD_ASR_ERROR;
-            }
+//            if(RunASR() == 0)	//	启动一次ASR识别流程：ASR初始化，ASR添加关键词语，启动ASR运算
+//            {
+//                nAsrStatus = LD_ASR_ERROR;
+//            }
 
-            break;
+//            break;
 
-        case LD_ASR_FOUNDOK:
+//        case LD_ASR_FOUNDOK:
 
-            nAsrRes = LD_GetResult();	//	一次ASR识别流程结束，去取ASR识别结果
+//            nAsrRes = LD_GetResult();	//	一次ASR识别流程结束，去取ASR识别结果
 
-            LD_Process(nAsrRes);
+//            LD_Process(nAsrRes);
 
-            nAsrStatus = LD_ASR_NONE;
-            break;
+//            nAsrStatus = LD_ASR_NONE;
+//            break;
 
-        case LD_ASR_FOUNDZERO:
-        default:
-            nAsrStatus = LD_ASR_NONE;
-            break;
-        }//switch
+//        case LD_ASR_FOUNDZERO:
+//        default:
+//            nAsrStatus = LD_ASR_NONE;
+//            break;
+//        }//switch
 
-    }// while
+//    }// while
 
-}
+//}
 
 // U盘模式
 void USB_OTG()

@@ -217,7 +217,7 @@ void USB_LP_CAN1_RX0_IRQHandler(void)
 void TIM2_IRQHandler(void)
 {
     USART2_RX_STA |= 1 << 15;
-    TIM_Cmd(TIM2, DISABLE);                        //关闭TIM3
+    TIM_Cmd(TIM2, DISABLE);                        //关闭TIM2
     TIM_ClearITPendingBit(TIM2, TIM_IT_Update);  //清除TIMx更新中断标志
 }
 
@@ -232,7 +232,14 @@ void TIM3_IRQHandler(void)   //TIM3中断
     if(TIM_GetITStatus(TIM3, TIM_IT_Update) != RESET)   //检查TIM3更新中断发生与否
     {
         TIM_ClearITPendingBit(TIM3, TIM_IT_Update);    //清除TIMx更新中断标志
-		// 下面添加自己的处理程序
+        // 下面添加自己的处理程序
+//		Delay_BaseCount();
+//        //UART1_Timer();
+//        UART2_Timer();
+//        WIFI_Status(BUFF_SOURCE);
+//        //Sensor_Schedule();
+//        TimeForUpload();
+//        Mqtt_Ping();
     }
 }
 
@@ -245,70 +252,13 @@ void TIM3_IRQHandler(void)   //TIM3中断
   * @param  None
   * @retval : None
   */
-/**
- * @file   USART1_IRQHandler
- * @brief  串口1中断服务程序
- * @param  无
- * @retval 无
- */
-void USART1_IRQHandler(void)
-{
-    u8 Res;
 
-    if(USART_GetITStatus(USART1, USART_IT_RXNE) != RESET)  //接收中断(接收到的数据必须是0x0d 0x0a结尾)
-    {
-        Res = USART_ReceiveData(USART1); //(USART1->DR);	//读取接收到的数据
-
-        if((USART_RX_STA & 0x8000) == 0) //接收未完成
-        {
-            if(USART_RX_STA & 0x4000) //接收到了0x0d
-            {
-                if(Res != 0x0a)
-                {
-                    USART_RX_STA = 0;    //接收错误,重新开始
-                }
-                else
-                {
-                    USART_RX_STA |= 0x8000;    //接收完成了
-                }
-            }
-            else //还没收到0X0D
-            {
-                if(Res == 0x0d)
-                {
-                    USART_RX_STA |= 0x4000;
-                }
-                else
-                {
-                    USART_RX_BUF[USART_RX_STA & 0X3FFF] = Res ;
-                    USART_RX_STA++;
-
-                    if(USART_RX_STA > (USART_REC_LEN - 1))
-                    {
-                        USART_RX_STA = 0;    //接收数据错误,重新开始接收
-                    }
-                }
-            }
-        }
-    }
-}
 
 /**
   * @brief  This function handles USART2 global interrupt request.
   * @param  None
   * @retval : None
   */
-/**
- * @file   USART2_IRQHandler
- * @brief  中断处理函数
- * @param  无
- * @retval 无
- */
-void USART2_IRQHandler(void)        //串口2中断服务程序
-{
-    USART2_RX_BUF[USART2_RX_STA] = USART2->DR;
-    USART2_RX_STA++;
-}
 
 /******************************************************************************/
 /*                 STM32F10x Peripherals Interrupt Handlers                   */

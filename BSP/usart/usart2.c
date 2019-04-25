@@ -9,7 +9,9 @@
 #include "usart2.h"
 #include "dma.h"
 #include "timer.h"
+
 void NVIC_Config2(void);
+
 #if EN_USART2_RX   //如果使能了串口2接收
 //串口2中断服务程序
 //注意,读取USARTx->SR能避免莫名其妙的错误
@@ -18,6 +20,7 @@ u8 USART2_RX_BUF[USART2_REC_LEN];     //接收缓冲,最大USART2_REC_LEN个字节.
 //bit15，	接收完成标志
 //bit14~0，	接收到的有效字节数目
 u16 USART2_RX_STA = 0;                //接收状态标记
+u8  USART2_DATA_FLAG = 0;             //数据透传标记
 
 /**
   * @file   USART2_Config
@@ -43,7 +46,6 @@ void USART2_Config(u32 bound)
     GPIO_InitStructure.GPIO_Pin = GPIO_Pin_3;
     GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IN_FLOATING;//浮空输入
     GPIO_Init(GPIOA, &GPIO_InitStructure);  //初始化PA3
-
     //USART 初始化设置
     USART_InitStructure.USART_BaudRate = bound;//波特率;
     USART_InitStructure.USART_WordLength = USART_WordLength_8b;//数据位：8位
@@ -52,16 +54,15 @@ void USART2_Config(u32 bound)
     USART_InitStructure.USART_HardwareFlowControl = USART_HardwareFlowControl_None;//无流控制
     USART_InitStructure.USART_Mode = USART_Mode_Rx | USART_Mode_Tx;	//使能接收和发送引脚
     USART_Init(USART2, &USART_InitStructure);     //初始化串口
-
-
     USART_Cmd(USART2, ENABLE);                    //使能串口
+
 
     USART_DMACmd(USART2, USART_DMAReq_Tx, ENABLE); //使能串口2的DMA发送
     MYDMA_Config(DMA1_Channel7, (u32)&USART2->DR, (u32)USART2_TX_BUF, USART2_TRS_LEN); //DMA1通道7,外设为串口2,存储器为USART2_TX_BUF,长度USART2_TRS_LEN.
     USART_ITConfig(USART2, USART_IT_RXNE, ENABLE);//开启中断
-    TIM2_Config(100 - 1, 7200 - 1); //10ms的定时周期
-    NVIC_Config2();
+    TIM2_Config(100 - 1, 7200 - 1); //20ms的定时周期
     USART2_RX_STA = 0;
+    NVIC_Config2();
 }
 /**
  * @file   NVIC_Config2
@@ -80,6 +81,33 @@ void NVIC_Config2(void)
     NVIC_InitStructure.NVIC_IRQChannelSubPriority = 2;			//子优先级2
     NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;					//IRQ通道使能
     NVIC_Init(&NVIC_InitStructure);	//根据指定的参数初始化VIC寄存器
+}
+
+/**
+ * @file   USART2_IRQHandler
+ * @brief  中断处理函数
+ * @param  无
+ * @retval 无
+ */
+void USART2_IRQHandler(void)        //串口2中断服务程序
+{
+    if(USART2_DATA_FLAG == 0)
+    {
+        USART2_RX_BUF[USART2_RX_STA] = USART2->DR;
+        USART2_RX_STA++;
+    }
+    else
+    {
+        USART2_RX_BUF[USART2_RX_STA] = USART2->DR;
+        TIM_SetCounter(TIM2, 0);
+
+        if(USART2_RX_STA == 0)
+        {
+            TIM_Cmd(TIM2, ENABLE);    //使能TIM3
+        }
+
+        USART2_RX_STA++;
+    }
 }
 
 #endif
@@ -104,10 +132,3 @@ void u2_printf(char* fmt, ...)
 
     while(DMA1_Channel7->CNDTR != 0);	//等待通道7传输完成
 }
-
-#pragma pack()
-
-
-
-
-
