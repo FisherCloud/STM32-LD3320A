@@ -741,14 +741,14 @@ u8 ESP8266_Ping(char *IP, u8 time)
 /**
  * @file  ESP8266_Connect_Server
  * @brief 连接TCP服务器，并进入透传模式
-* @param
-*					ip：服务器ip
-*					port：服务器端口号
-* @retval 1：服务器未开启
-*					2：已与服务器建立链接
-*					3：超时错误
-*					4：透传超时
-*					0：透传成功
+ * @param
+ *					ip：服务器ip
+ *					port：服务器端口号
+ * @retval 1：服务器未开启
+ *					2：已与服务器建立链接
+ *					3：超时错误
+ *					4：透传超时
+ *					0：透传成功
  */
 u8 ESP8266_Connect_Server(u8 *ip, u16 port, u16 timeout)
 {

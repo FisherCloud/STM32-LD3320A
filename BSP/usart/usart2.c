@@ -103,7 +103,7 @@ void USART2_IRQHandler(void)        //串口2中断服务程序
 
         if(USART2_RX_STA == 0)
         {
-            TIM_Cmd(TIM2, ENABLE);    //使能TIM3
+            TIM_Cmd(TIM2, ENABLE);    //使能TIM2
         }
 
         USART2_RX_STA++;

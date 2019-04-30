@@ -33,4 +33,3 @@ void Relay_GPIO_Config(void)
     GPIO_Init(Relay_GPIO_PORT, &GPIO_InitStructure);//调用库函数，初始化GPIO
 }
 
-

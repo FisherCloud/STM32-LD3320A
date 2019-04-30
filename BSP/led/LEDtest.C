@@ -31,13 +31,13 @@ void LED_gpio_cfg(void)
 void Glide_LED(void)
 {
     GPIO_SetBits(GPIOC, GPIO_Pin_3);
-    delay_ms(50);
+    delay_ms(200);
     GPIO_SetBits(GPIOC, GPIO_Pin_2);
-    delay_ms(50);
+    delay_ms(200);
     GPIO_ResetBits(GPIOC, GPIO_Pin_3);
-    delay_ms(50);
+    delay_ms(200);
     GPIO_ResetBits(GPIOC, GPIO_Pin_2);
-    delay_ms(50);
+    delay_ms(200);
 
 }
 
@@ -53,10 +53,10 @@ void Flicker_LED(void)
 {
     GPIO_ResetBits(GPIOC, GPIO_Pin_3);
     GPIO_ResetBits(GPIOC, GPIO_Pin_2);
-    delay_ms(50);
+    delay_ms(200);
     GPIO_SetBits(GPIOC, GPIO_Pin_3);
     GPIO_SetBits(GPIOC, GPIO_Pin_2);
-    delay_ms(50);
+    delay_ms(200);
 }
 
 /***********************************************************
@@ -99,27 +99,27 @@ void Board_text(uint8 Code_Val)
 {
     switch(Code_Val)		   /*对结果执行相关操作,客户修改*/
     {
-    case 1:			/*命令“流水灯”*/
+    case 0:			/*命令“流水灯”*/
         Glide_LED();
         break;
 
-    case 2:	 /*命令“闪烁”*/
+    case 1:	 /*命令“闪烁”*/
         Flicker_LED();
         break;
 
-    case 3:		/*命令“按键触发”*/
+    case 2:		/*命令“按键触发”*/
         Key_LED();
         break;
 
-    case 4:		/*命令“全灭”*/
+    case 3:		/*命令“全灭”*/
         Off_LED();
         break;
 	
-	case 5:		/* 开灯命令 */
+	case 4:		/* 开灯命令 */
 		GPIO_ResetBits(GPIOC, GPIO_Pin_2);
 		break;
 	
-	case 6:		/* 关灯命令 */
+	case 5:		/* 关灯命令 */
 		GPIO_SetBits(GPIOC, GPIO_Pin_2);
 		break;
 

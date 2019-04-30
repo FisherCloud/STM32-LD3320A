@@ -22,9 +22,10 @@
   ******************************************************************************
  */
 #include "includes.h"
+#include "bmp.h"
 
 // 音量
-#define val 2
+#define val 10
 
 /* Private function prototypes -----------------------------------------------*/
 
@@ -46,8 +47,9 @@ uint8 nAsrStatus = 0;
 **********************************************************/
 int main(void)
 {
-    uint8 nAsrRes = 0;
+    uint8 nAsrRes = -1;
 
+	
     /* System Clocks Configuration */
     SYSTICK_Init();
     delay_ms(50);
@@ -56,33 +58,33 @@ int main(void)
     USART2_Config(115200);
     LD3320_Init();
     LED_gpio_cfg();
+    Relay_GPIO_Config();
+    Relay_ControlON();
 
-    {
-        FATFS fs;
-        SD_CardInfo SDCardInfo;
+    OLED_Init();
+    OLED_DrawBMP(0, 0, 128, 8, BMP1);
 
-        /* SD卡接口初始化	 */
-        if(SD_Init() == SD_ERROR)
-        {
-            printf("SD卡接口初始化失败\r\n");
-        };
+    TIM3_Int_Init(10, 7200 - 1); /* 72M/7200 = 10K,  10/10K = 1/1000 = 1ms */
 
-        /* 文件系统FATFS 初始化 */
-        disk_initialize(0);
+//    {
+//        FATFS fs;
+//        SD_CardInfo SDCardInfo;
 
-        /* 将SD卡挂载到驱动器0 */
-        f_mount(0, &fs);
-    }
+//        /* SD卡接口初始化	 */
+//        if(SD_Init() == SD_ERROR)
+//        {
+//            printf("SD卡接口初始化失败\r\n");
+//        };
+
+//        /* 文件系统FATFS 初始化 */
+//        disk_initialize(0);
+
+//        /* 将SD卡挂载到驱动器0 */
+//        f_mount(0, &fs);
+//    }
 
     printf("基于单片机的智能语音控制系统\r\n");
-    printf("初始化完成\r\n");
-    printf("口令：\r\n");
-    printf("0、流水灯\r\n");
-    printf("1、闪烁\r\n");
-    printf("2、按键触发\r\n");
-    printf("3、全灭\r\n");
-    printf("4、开灯\r\n");
-    printf("5、关灯\r\n");
+    printf("初始化......\r\n");
 
 //    {
 //        u8 ip_buff[12];
@@ -106,7 +108,16 @@ int main(void)
 
 //    }
 
-    PlayDemoSound_mp3("启动系统.mp3", val);
+    printf("初始化完成\r\n");
+    printf("口令：\r\n");
+    printf("0、流水灯\r\n");
+    printf("1、闪烁\r\n");
+    printf("2、按键触发\r\n");
+    printf("3、全灭\r\n");
+    printf("4、开灯\r\n");
+    printf("5、关灯\r\n");
+
+    //PlayDemoSound_mp3("启动系统.mp3", val);
 
     nAsrStatus = LD_ASR_NONE;		//	初始状态：没有在作ASR
 
@@ -117,7 +128,7 @@ int main(void)
             continue;    //	bMp3Play 是定义的一个全局变量用来记录MP3播放的状态，不是LD3320芯片内部的寄存器
         }
 
-        USB_OTG();
+        //USB_OTG();
 
         switch(nAsrStatus)
         {
@@ -151,6 +162,22 @@ int main(void)
         }//switch
 
 
+        Board_text(nAsrRes);
+
+        //Mqtt Handle.
+        if(ESP8266_Ping("119.23.61.148", 50) == 0)
+        {
+            if(Mqtt.LinkFlag == false)//Connect part
+            {
+                Mqtt_Connect();
+            }
+            else
+            {
+                Mqtt_DATA_handle();
+                Upload_Handle();
+            }
+        }
+
     }// while
 
     //NVIC_SystemReset();
@@ -168,37 +195,37 @@ void LD_Process(uint8 index)
     {
     case  0:
         printf("“流水灯”命令识别成功\r\n");
-        PlayDemoSound_mp3("开台灯.mp3", val);
+        //PlayDemoSound_mp3("开台灯.mp3", val);
         Glide_LED();
         break;
 
     case  1:
         printf("“闪烁”命令识别成功\r\n");
-        PlayDemoSound_mp3("开台灯.mp3", val);
+        //PlayDemoSound_mp3("开台灯.mp3", val);
         Flicker_LED();
         break;
 
     case  2:
         printf("“按键触发”命令识别成功\r\n");
-        PlayDemoSound_mp3("开台灯.mp3", val);
+        //PlayDemoSound_mp3("开台灯.mp3", val);
         Key_LED();
         break;
 
     case  3:
         printf("“全灭”命令识别成功\r\n");
-        PlayDemoSound_mp3("关灯.mp3", val);
+        //PlayDemoSound_mp3("关灯.mp3", val);
         Off_LED();
         break;
 
     case  4:
         printf("“开灯”命令识别成功\r\n");
-        PlayDemoSound_mp3("开灯.mp3", val);
+        //PlayDemoSound_mp3("开灯.mp3", val);
         GPIO_ResetBits(GPIOC, GPIO_Pin_2);
         break;
 
     case  5:
         printf("“关灯”命令识别成功\r\n");
-        PlayDemoSound_mp3("关灯.mp3", val);
+        //PlayDemoSound_mp3("关灯.mp3", val);
         GPIO_SetBits(GPIOC, GPIO_Pin_2);
         break;
 
