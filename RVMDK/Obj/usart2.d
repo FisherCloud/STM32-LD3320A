@@ -21,13 +21,18 @@
 .\obj\usart2.o: D:\Program Files (x86)\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 .\obj\usart2.o: D:\Program Files (x86)\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
 .\obj\usart2.o: D:\Program Files (x86)\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
+.\obj\usart2.o: ..\BSP\oled\oled.h
+.\obj\usart2.o: ..\BSP\sys\sys.h
+.\obj\usart2.o: ..\BSP\relay\Relay.h
+.\obj\usart2.o: ..\BSP\led\led.h
+.\obj\usart2.o: ..\BSP\delay\delay.h
+.\obj\usart2.o: ..\BSP\buzzer\buzzer.h
+.\obj\usart2.o: ..\BSP\ds18b20\ds18b20.h
 .\obj\usart2.o: ..\BSP\LD_Driver\LDchip.h
 .\obj\usart2.o: ..\BSP\LD_Driver\Reg_RW.h
-.\obj\usart2.o: ..\BSP\led\LEDtest.h
 .\obj\usart2.o: ..\BSP\dma\dma.h
 .\obj\usart2.o: ..\BSP\usart\usart.h
 .\obj\usart2.o: ..\BSP\usart\usart2.h
-.\obj\usart2.o: ..\BSP\delay\delay.h
 .\obj\usart2.o: ..\BSP\timer\timer.h
 .\obj\usart2.o: ..\BSP\timer\timer3.h
 .\obj\usart2.o: ..\BSP\KEY\user_key.h
@@ -48,22 +53,5 @@
 .\obj\usart2.o: ..\Libraries\STM32_USB-FS-Device_Driver\inc\usb_int.h
 .\obj\usart2.o: ..\BSP\usb_user\hw_config.h
 .\obj\usart2.o: ..\BSP\usb_user\usb_pwr.h
-.\obj\usart2.o: ..\BSP\MQTT\TCPinterface.h
-.\obj\usart2.o: ..\user\includes.h
 .\obj\usart2.o: ..\BSP\ESP8266\ESP8266.h
-.\obj\usart2.o: ..\BSP\ESP8266\TCP_ESP8266.h
-.\obj\usart2.o: ..\BSP\MQTT\mqtt.h
-.\obj\usart2.o: ..\BSP\MQTT\lib\MQTTPacket.h
-.\obj\usart2.o: ..\BSP\MQTT\lib\MQTTConnect.h
-.\obj\usart2.o: ..\BSP\MQTT\lib\MQTTPublish.h
-.\obj\usart2.o: ..\BSP\MQTT\lib\MQTTSubscribe.h
-.\obj\usart2.o: ..\BSP\MQTT\lib\MQTTUnsubscribe.h
-.\obj\usart2.o: ..\BSP\MQTT\lib\MQTTFormat.h
-.\obj\usart2.o: ..\BSP\MQTT\lib\StackTrace.h
-.\obj\usart2.o: ..\BSP\MQTT\lib\MQTTPacket.h
-.\obj\usart2.o: ..\BSP\MQTT\handle.h
-.\obj\usart2.o: ..\BSP\cjson\cJSON.h
-.\obj\usart2.o: D:\Program Files (x86)\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
-.\obj\usart2.o: ..\BSP\oled\oled.h
-.\obj\usart2.o: ..\BSP\sys\sys.h
-.\obj\usart2.o: ..\BSP\relay\Relay.h
+.\obj\usart2.o: ..\BSP\ESP8266\at.h

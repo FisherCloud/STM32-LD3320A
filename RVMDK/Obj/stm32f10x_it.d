@@ -20,14 +20,19 @@
 .\obj\stm32f10x_it.o: D:\Program Files (x86)\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 .\obj\stm32f10x_it.o: D:\Program Files (x86)\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
 .\obj\stm32f10x_it.o: D:\Program Files (x86)\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
+.\obj\stm32f10x_it.o: ..\BSP\oled\oled.h
+.\obj\stm32f10x_it.o: ..\BSP\sys\sys.h
+.\obj\stm32f10x_it.o: ..\BSP\relay\Relay.h
+.\obj\stm32f10x_it.o: ..\BSP\led\led.h
+.\obj\stm32f10x_it.o: ..\BSP\delay\delay.h
+.\obj\stm32f10x_it.o: ..\BSP\buzzer\buzzer.h
+.\obj\stm32f10x_it.o: ..\BSP\ds18b20\ds18b20.h
 .\obj\stm32f10x_it.o: ..\BSP\LD_Driver\LDchip.h
 .\obj\stm32f10x_it.o: ..\BSP\LD_Driver\Reg_RW.h
-.\obj\stm32f10x_it.o: ..\BSP\led\LEDtest.h
 .\obj\stm32f10x_it.o: ..\BSP\dma\dma.h
 .\obj\stm32f10x_it.o: ..\BSP\usart\usart.h
 .\obj\stm32f10x_it.o: ..\BSP\usart\usart2.h
 .\obj\stm32f10x_it.o: ..\user\includes.h
-.\obj\stm32f10x_it.o: ..\BSP\delay\delay.h
 .\obj\stm32f10x_it.o: ..\BSP\timer\timer.h
 .\obj\stm32f10x_it.o: ..\BSP\timer\timer3.h
 .\obj\stm32f10x_it.o: ..\BSP\KEY\user_key.h
@@ -48,21 +53,5 @@
 .\obj\stm32f10x_it.o: ..\Libraries\STM32_USB-FS-Device_Driver\inc\usb_int.h
 .\obj\stm32f10x_it.o: ..\BSP\usb_user\hw_config.h
 .\obj\stm32f10x_it.o: ..\BSP\usb_user\usb_pwr.h
-.\obj\stm32f10x_it.o: ..\BSP\MQTT\TCPinterface.h
 .\obj\stm32f10x_it.o: ..\BSP\ESP8266\ESP8266.h
-.\obj\stm32f10x_it.o: ..\BSP\ESP8266\TCP_ESP8266.h
-.\obj\stm32f10x_it.o: ..\BSP\MQTT\mqtt.h
-.\obj\stm32f10x_it.o: ..\BSP\MQTT\lib\MQTTPacket.h
-.\obj\stm32f10x_it.o: ..\BSP\MQTT\lib\MQTTConnect.h
-.\obj\stm32f10x_it.o: ..\BSP\MQTT\lib\MQTTPublish.h
-.\obj\stm32f10x_it.o: ..\BSP\MQTT\lib\MQTTSubscribe.h
-.\obj\stm32f10x_it.o: ..\BSP\MQTT\lib\MQTTUnsubscribe.h
-.\obj\stm32f10x_it.o: ..\BSP\MQTT\lib\MQTTFormat.h
-.\obj\stm32f10x_it.o: ..\BSP\MQTT\lib\StackTrace.h
-.\obj\stm32f10x_it.o: ..\BSP\MQTT\lib\MQTTPacket.h
-.\obj\stm32f10x_it.o: ..\BSP\MQTT\handle.h
-.\obj\stm32f10x_it.o: ..\BSP\cjson\cJSON.h
-.\obj\stm32f10x_it.o: D:\Program Files (x86)\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
-.\obj\stm32f10x_it.o: ..\BSP\oled\oled.h
-.\obj\stm32f10x_it.o: ..\BSP\sys\sys.h
-.\obj\stm32f10x_it.o: ..\BSP\relay\Relay.h
+.\obj\stm32f10x_it.o: ..\BSP\ESP8266\at.h

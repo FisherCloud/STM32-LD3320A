@@ -31,7 +31,7 @@ void LD3320_EXTI_Cfg(void);
 void LD3320_Spi_cfg(void);
 void LD3320_GPIO_Cfg(void);
 void LED_gpio_cfg(void);
-void USB_OTG();
+void USB_OTG(void);
 
 /***********************************************************
 * 名    称： LD3320_main(void)
@@ -54,7 +54,7 @@ void USB_OTG();
 //        {
 //            continue;    //	bMp3Play 是定义的一个全局变量用来记录MP3播放的状态，不是LD3320芯片内部的寄存器
 //        }
-//		
+//
 //		USB_OTG();
 
 //        switch(nAsrStatus)
@@ -93,7 +93,7 @@ void USB_OTG();
 //}
 
 // U盘模式
-void USB_OTG()
+void USB_OTG(void)
 {
     if(key_user2_GETVALUE() == 0)
     {

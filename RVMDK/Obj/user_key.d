@@ -20,14 +20,19 @@
 .\obj\user_key.o: D:\Program Files (x86)\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 .\obj\user_key.o: D:\Program Files (x86)\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
 .\obj\user_key.o: D:\Program Files (x86)\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
+.\obj\user_key.o: ..\BSP\oled\oled.h
+.\obj\user_key.o: ..\BSP\sys\sys.h
+.\obj\user_key.o: ..\BSP\relay\Relay.h
+.\obj\user_key.o: ..\BSP\led\led.h
+.\obj\user_key.o: ..\BSP\delay\delay.h
+.\obj\user_key.o: ..\BSP\buzzer\buzzer.h
+.\obj\user_key.o: ..\BSP\ds18b20\ds18b20.h
 .\obj\user_key.o: ..\BSP\LD_Driver\LDchip.h
 .\obj\user_key.o: ..\BSP\LD_Driver\Reg_RW.h
-.\obj\user_key.o: ..\BSP\led\LEDtest.h
 .\obj\user_key.o: ..\BSP\dma\dma.h
 .\obj\user_key.o: ..\BSP\usart\usart.h
 .\obj\user_key.o: ..\BSP\usart\usart2.h
 .\obj\user_key.o: ..\user\includes.h
-.\obj\user_key.o: ..\BSP\delay\delay.h
 .\obj\user_key.o: ..\BSP\timer\timer.h
 .\obj\user_key.o: ..\BSP\timer\timer3.h
 .\obj\user_key.o: ..\BSP\KEY\user_key.h
@@ -48,21 +53,5 @@
 .\obj\user_key.o: ..\Libraries\STM32_USB-FS-Device_Driver\inc\usb_int.h
 .\obj\user_key.o: ..\BSP\usb_user\hw_config.h
 .\obj\user_key.o: ..\BSP\usb_user\usb_pwr.h
-.\obj\user_key.o: ..\BSP\MQTT\TCPinterface.h
 .\obj\user_key.o: ..\BSP\ESP8266\ESP8266.h
-.\obj\user_key.o: ..\BSP\ESP8266\TCP_ESP8266.h
-.\obj\user_key.o: ..\BSP\MQTT\mqtt.h
-.\obj\user_key.o: ..\BSP\MQTT\lib\MQTTPacket.h
-.\obj\user_key.o: ..\BSP\MQTT\lib\MQTTConnect.h
-.\obj\user_key.o: ..\BSP\MQTT\lib\MQTTPublish.h
-.\obj\user_key.o: ..\BSP\MQTT\lib\MQTTSubscribe.h
-.\obj\user_key.o: ..\BSP\MQTT\lib\MQTTUnsubscribe.h
-.\obj\user_key.o: ..\BSP\MQTT\lib\MQTTFormat.h
-.\obj\user_key.o: ..\BSP\MQTT\lib\StackTrace.h
-.\obj\user_key.o: ..\BSP\MQTT\lib\MQTTPacket.h
-.\obj\user_key.o: ..\BSP\MQTT\handle.h
-.\obj\user_key.o: ..\BSP\cjson\cJSON.h
-.\obj\user_key.o: D:\Program Files (x86)\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
-.\obj\user_key.o: ..\BSP\oled\oled.h
-.\obj\user_key.o: ..\BSP\sys\sys.h
-.\obj\user_key.o: ..\BSP\relay\Relay.h
+.\obj\user_key.o: ..\BSP\ESP8266\at.h

@@ -45,26 +45,198 @@ void LED_GPIO_Config(void)
 }
 
 /**
+ * @file   LEDX_Set
+ * @brief  LED打开
+ * @param  ledx:1--PC2;2--PC3;3--PC4
+ * @retval 无
+ */
+void LEDX_On(uint8_t ledx)
+{
+    switch(ledx)
+    {
+    case 1:
+        GPIO_ResetBits(LED1_GPIO_PORT, LED1_GPIO_PIN);
+        break;
+
+    case 2:
+        GPIO_ResetBits(LED2_GPIO_PORT, LED2_GPIO_PIN);
+        break;
+
+    case 3:
+        GPIO_ResetBits(LED3_GPIO_PORT, LED3_GPIO_PIN);
+        break;
+
+    default:
+        // none
+        break;
+    }
+}
+
+/**
+ * @file   LEDX_Off
+ * @brief  LED关闭
+ * @param  ledx:1--PC2;2--PC3;3--PC4
+ * @retval 无
+ */
+void LEDX_Off(uint8_t ledx)
+{
+    switch(ledx)
+    {
+    case 1:
+        GPIO_SetBits(LED1_GPIO_PORT, LED1_GPIO_PIN);
+        break;
+
+    case 2:
+        GPIO_SetBits(LED2_GPIO_PORT, LED2_GPIO_PIN);
+        break;
+
+    case 3:
+        GPIO_SetBits(LED3_GPIO_PORT, LED3_GPIO_PIN);
+        break;
+
+    default:
+        // none
+        break;
+    }
+}
+
+/**
  * @file   LEDXToggle
  * @brief  LED亮灭翻转
- * @param  ledx:1--PC13;2--PB0;3--PB1
+ * @param  ledx:1--PC2;2--PC3;3--PC4
  * @retval 无
  */
 void LEDXToggle(uint8_t ledx)
 {
-    if(ledx == 1)
+    switch(ledx)
     {
+    case 1:
         LED1_GPIO_PORT->ODR ^= LED1_GPIO_PIN;
-    }
-    else if(ledx == 2)
-    {
+        break;
+
+    case 2:
         LED2_GPIO_PORT->ODR ^= LED2_GPIO_PIN;
-    }
-    else
-    {
+        break;
+
+    case 3:
         LED3_GPIO_PORT->ODR ^= LED3_GPIO_PIN;
+        break;
+
+    default:
+        // none
+        break;
     }
-
-
 }
 
+/**
+ * @file   Glide_LED
+ * @brief  LED流水灯
+ * @param  ledx:1--PC2;2--PC3;3--PC4
+ * @retval 无
+ */
+void Glide_LED(void)
+{
+    LEDXToggle(1);
+    delay_ms(200);
+    LEDXToggle(2);
+    delay_ms(200);
+    LEDXToggle(3);
+    delay_ms(200);
+}
+
+/**
+ * @file   Flicker_LED
+ * @brief  LED闪烁
+ * @param
+ * @retval 无
+ */
+void Flicker_LED(void)
+{
+    LEDXToggle(1);
+    LEDXToggle(2);
+    LEDXToggle(3);
+    delay_ms(200);
+}
+
+/**
+* @file   On_LED
+* @brief  LED全部打开
+* @param
+* @retval 无
+*/
+void On_LED(void)
+{
+    LEDX_On(1);
+    LEDX_On(2);
+    LEDX_On(3);
+}
+
+/**
+* @file   Off_LED
+* @brief  LED全部关闭
+* @param
+* @retval 无
+*/
+void Off_LED(void)
+{
+    LEDX_Off(1);
+    LEDX_Off(2);
+    LEDX_Off(3);
+}
+
+/**
+* @file   LED_Handle
+* @brief  LED处理函数
+* @param
+* @retval 无
+*/
+void LED_Handle(uint8_t code)
+{
+    switch(code)
+    {
+    case 1: // 打开客厅灯
+        LEDX_On(1);
+        break;
+
+    case 2: // 关闭客厅灯
+        LEDX_Off(1);
+        break;
+
+    case 3: // 打开卧室灯
+        LEDX_On(2);
+        break;
+
+    case 4: // 关闭卧室灯
+        LEDX_Off(2);
+        break;
+
+    case 5: // 打开厨房灯
+        LEDX_On(3);
+        break;
+
+    case 6: // 关闭厨房灯
+        LEDX_Off(3);
+        break;
+
+    case 7: // 打开所有灯
+        On_LED();
+        break;
+
+    case 8: // 关闭所有灯
+        Off_LED();
+        break;
+
+    case 9: // 流水灯
+        Glide_LED();
+        break;
+
+    case 10: // 闪烁
+        Flicker_LED();
+        break;
+
+    default:
+        // none
+        break;
+    }
+
+}

@@ -31,5 +31,7 @@ void Relay_GPIO_Config(void)
     GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP; //设置引脚模式为推免输出模式
     GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;//设置引脚速度为50MHZ
     GPIO_Init(Relay_GPIO_PORT, &GPIO_InitStructure);//调用库函数，初始化GPIO
+	
+	GPIO_SetBits(Relay_GPIO_PORT, Relay_GPIO_PIN);
 }
 

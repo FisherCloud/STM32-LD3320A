@@ -233,9 +233,9 @@ void TIM3_IRQHandler(void)   //TIM3中断
     {
         TIM_ClearITPendingBit(TIM3, TIM_IT_Update);    //清除TIMx更新中断标志
         // 下面添加自己的处理程序
-        ESP8266_Ping("119.23.61.148", 50);
-        Mqtt_Ping();
-        TimeForUpload();
+//        ESP8266_Ping("119.23.61.148", 50);
+//        Mqtt_Ping();
+//        TimeForUpload();
     }
 }
 

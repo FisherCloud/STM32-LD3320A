@@ -20,14 +20,19 @@
 .\obj\ldchip.o: D:\Program Files (x86)\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 .\obj\ldchip.o: D:\Program Files (x86)\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
 .\obj\ldchip.o: D:\Program Files (x86)\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
+.\obj\ldchip.o: ..\BSP\oled\oled.h
+.\obj\ldchip.o: ..\BSP\sys\sys.h
+.\obj\ldchip.o: ..\BSP\relay\Relay.h
+.\obj\ldchip.o: ..\BSP\led\led.h
+.\obj\ldchip.o: ..\BSP\delay\delay.h
+.\obj\ldchip.o: ..\BSP\buzzer\buzzer.h
+.\obj\ldchip.o: ..\BSP\ds18b20\ds18b20.h
 .\obj\ldchip.o: ..\BSP\LD_Driver\LDchip.h
 .\obj\ldchip.o: ..\BSP\LD_Driver\Reg_RW.h
-.\obj\ldchip.o: ..\BSP\led\LEDtest.h
 .\obj\ldchip.o: ..\BSP\dma\dma.h
 .\obj\ldchip.o: ..\BSP\usart\usart.h
 .\obj\ldchip.o: ..\BSP\usart\usart2.h
 .\obj\ldchip.o: ..\user\includes.h
-.\obj\ldchip.o: ..\BSP\delay\delay.h
 .\obj\ldchip.o: ..\BSP\timer\timer.h
 .\obj\ldchip.o: ..\BSP\timer\timer3.h
 .\obj\ldchip.o: ..\BSP\KEY\user_key.h
@@ -48,21 +53,5 @@
 .\obj\ldchip.o: ..\Libraries\STM32_USB-FS-Device_Driver\inc\usb_int.h
 .\obj\ldchip.o: ..\BSP\usb_user\hw_config.h
 .\obj\ldchip.o: ..\BSP\usb_user\usb_pwr.h
-.\obj\ldchip.o: ..\BSP\MQTT\TCPinterface.h
 .\obj\ldchip.o: ..\BSP\ESP8266\ESP8266.h
-.\obj\ldchip.o: ..\BSP\ESP8266\TCP_ESP8266.h
-.\obj\ldchip.o: ..\BSP\MQTT\mqtt.h
-.\obj\ldchip.o: ..\BSP\MQTT\lib\MQTTPacket.h
-.\obj\ldchip.o: ..\BSP\MQTT\lib\MQTTConnect.h
-.\obj\ldchip.o: ..\BSP\MQTT\lib\MQTTPublish.h
-.\obj\ldchip.o: ..\BSP\MQTT\lib\MQTTSubscribe.h
-.\obj\ldchip.o: ..\BSP\MQTT\lib\MQTTUnsubscribe.h
-.\obj\ldchip.o: ..\BSP\MQTT\lib\MQTTFormat.h
-.\obj\ldchip.o: ..\BSP\MQTT\lib\StackTrace.h
-.\obj\ldchip.o: ..\BSP\MQTT\lib\MQTTPacket.h
-.\obj\ldchip.o: ..\BSP\MQTT\handle.h
-.\obj\ldchip.o: ..\BSP\cjson\cJSON.h
-.\obj\ldchip.o: D:\Program Files (x86)\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
-.\obj\ldchip.o: ..\BSP\oled\oled.h
-.\obj\ldchip.o: ..\BSP\sys\sys.h
-.\obj\ldchip.o: ..\BSP\relay\Relay.h
+.\obj\ldchip.o: ..\BSP\ESP8266\at.h

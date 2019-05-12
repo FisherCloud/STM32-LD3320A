@@ -5,17 +5,17 @@
 
 //#define AP_SSID  "PandoraBox"    //无线路由ssid
 //#define AP_PASS  "woshiyuxin"   //密码
-#define AP_SSID  "506super"    //无线路由ssid
-#define AP_PASS  "jkxy1234"   //密码
-//#define AP_SSID  "MI9"    //无线路由ssid
-//#define AP_PASS  "woshiyuxin"   //密码
+//#define AP_SSID  "506super"    //无线路由ssid
+//#define AP_PASS  "jkxy1234"   //密码
+#define AP_SSID  "MI9"    //无线路由ssid
+#define AP_PASS  "woshiyuxin"   //密码
 
 #define SSID  "ESP8266"    //ssid
 #define PASS  "012345678"           //密码
 #define AP_ECN   WPA_WPA2_PSK       //WPA_WPA2_PSK加密方式
 
-//#define SERVER_IP    "119.23.61.148"    //服务器IP
-//#define SERVER_PORT   61613             //服务器端口号
+#define SERVER_IP    "119.23.61.148"    //服务器IP
+#define SERVER_PORT   5050             //服务器端口号
 
 #define OPEN            0
 #define WEP             1
@@ -46,7 +46,7 @@ u8 ESP8266_Connect_Mode(u8 mode);
 u8 ESP8266_TransMode(u8 mode);
 
 u8 ESP8266_Connect_Server(u8 *ip, u16 port, u16 timeout);
-u8 ESP8266_Disconnect_Server( u16 timeout);
+u8 ESP8266_Disconnect_Server(u16 timeout);
 
 void ESP8266_Exit_Transfer(u16 timeout);
 

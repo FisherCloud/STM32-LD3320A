@@ -28,14 +28,14 @@
  * A0				PB7
  * RD				PA0
 *****************************************/
-#define LD_RST_H() GPIO_SetBits(GPIOB, GPIO_Pin_6)
-#define LD_RST_L() GPIO_ResetBits(GPIOB, GPIO_Pin_6)
+#define LD_RST_H() 		GPIO_SetBits(GPIOB, GPIO_Pin_6)
+#define LD_RST_L() 		GPIO_ResetBits(GPIOB, GPIO_Pin_6)
 
-#define LD_CS_H()	GPIO_SetBits(GPIOB, GPIO_Pin_8)
-#define LD_CS_L()	GPIO_ResetBits(GPIOB, GPIO_Pin_8)
+#define LD_CS_H()		GPIO_SetBits(GPIOB, GPIO_Pin_8)
+#define LD_CS_L()		GPIO_ResetBits(GPIOB, GPIO_Pin_8)
 
-#define LD_SPIS_H()  GPIO_SetBits(GPIOB, GPIO_Pin_9)
-#define LD_SPIS_L()  GPIO_ResetBits(GPIOB, GPIO_Pin_9)
+#define LD_SPIS_H()  	GPIO_SetBits(GPIOB, GPIO_Pin_9)
+#define LD_SPIS_L()  	GPIO_ResetBits(GPIOB, GPIO_Pin_9)
 
 /****************************************************************
 º¯ÊýÃû£º LD_WriteReg

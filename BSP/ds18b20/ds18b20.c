@@ -20,9 +20,9 @@
 void DS18B20_Rst(void)
 {
     DS18B20_IO_OUT(); //SET  OUTPUT
-    DS18B20_DQ_OUT(0); //À­µÍDQ
+    DS18B20_DQ_OUT = 0; //À­µÍDQ
     delay_us(750);    //À­µÍ750us
-    DS18B20_DQ_OUT(1); //DQ=1
+    DS18B20_DQ_OUT = 1; //DQ=1
     delay_us(15);     //15US
 }
 /**
@@ -75,9 +75,9 @@ u8 DS18B20_Read_Bit(void) 			 // read one bit
 {
     u8 data;
     DS18B20_IO_OUT();//SET  OUTPUT
-    DS18B20_DQ_OUT(0);
+    DS18B20_DQ_OUT = 0;
     delay_us(2);
-    DS18B20_DQ_OUT(1);
+    DS18B20_DQ_OUT = 1;
     DS18B20_IO_IN();//SET  INPUT
     delay_us(12);
 
@@ -132,16 +132,16 @@ void DS18B20_Write_Byte(u8 dat)
 
         if(testb)
         {
-            DS18B20_DQ_OUT(0);// Write 1
+            DS18B20_DQ_OUT = 0; // Write 1
             delay_us(2);
-            DS18B20_DQ_OUT(1);
+            DS18B20_DQ_OUT = 1;
             delay_us(60);
         }
         else
         {
-            DS18B20_DQ_OUT(0);// Write 0
+            DS18B20_DQ_OUT = 0; // Write 0
             delay_us(60);
-            DS18B20_DQ_OUT(1);
+            DS18B20_DQ_OUT = 1;
             delay_us(2);
         }
     }

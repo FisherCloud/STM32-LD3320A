@@ -22,7 +22,6 @@
 .\obj\ledtest.o: D:\Program Files (x86)\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
 .\obj\ledtest.o: ..\BSP\LD_Driver\LDchip.h
 .\obj\ledtest.o: ..\BSP\LD_Driver\Reg_RW.h
-.\obj\ledtest.o: ..\BSP\led\LEDtest.h
 .\obj\ledtest.o: ..\BSP\dma\dma.h
 .\obj\ledtest.o: ..\BSP\usart\usart.h
 .\obj\ledtest.o: ..\BSP\usart\usart2.h
@@ -48,21 +47,8 @@
 .\obj\ledtest.o: ..\Libraries\STM32_USB-FS-Device_Driver\inc\usb_int.h
 .\obj\ledtest.o: ..\BSP\usb_user\hw_config.h
 .\obj\ledtest.o: ..\BSP\usb_user\usb_pwr.h
-.\obj\ledtest.o: ..\BSP\MQTT\TCPinterface.h
 .\obj\ledtest.o: ..\BSP\ESP8266\ESP8266.h
-.\obj\ledtest.o: ..\BSP\ESP8266\TCP_ESP8266.h
-.\obj\ledtest.o: ..\BSP\MQTT\mqtt.h
-.\obj\ledtest.o: ..\BSP\MQTT\lib\MQTTPacket.h
-.\obj\ledtest.o: ..\BSP\MQTT\lib\MQTTConnect.h
-.\obj\ledtest.o: ..\BSP\MQTT\lib\MQTTPublish.h
-.\obj\ledtest.o: ..\BSP\MQTT\lib\MQTTSubscribe.h
-.\obj\ledtest.o: ..\BSP\MQTT\lib\MQTTUnsubscribe.h
-.\obj\ledtest.o: ..\BSP\MQTT\lib\MQTTFormat.h
-.\obj\ledtest.o: ..\BSP\MQTT\lib\StackTrace.h
-.\obj\ledtest.o: ..\BSP\MQTT\lib\MQTTPacket.h
-.\obj\ledtest.o: ..\BSP\MQTT\handle.h
-.\obj\ledtest.o: ..\BSP\cjson\cJSON.h
-.\obj\ledtest.o: D:\Program Files (x86)\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
 .\obj\ledtest.o: ..\BSP\oled\oled.h
 .\obj\ledtest.o: ..\BSP\sys\sys.h
 .\obj\ledtest.o: ..\BSP\relay\Relay.h
+.\obj\ledtest.o: ..\BSP\led\led.h

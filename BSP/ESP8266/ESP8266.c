@@ -178,27 +178,27 @@ u8 ESP8266_STA_TCPCLient(void)
 
     delay_ms(100);
     printf("ESP8266连接服务器中... ...\r\n");
-    //res = ESP8266_Connect_Server(SERVER_IP, SERVER_PORT, 50); //连接TCP服务器,并进入透传，超时时间5s，失败返回7
+    res = ESP8266_Connect_Server(SERVER_IP, SERVER_PORT, 50); //连接TCP服务器,并进入透传，超时时间5s，失败返回7
 
-    switch(res)
-    {
-    case 0 :
-        break;
+//    switch(res)
+//    {
+//    case 0 :
+//        break;
 
-    case 1 :
-        return 7;
+//    case 1 :
+//        return 7;
 
-    case 2 :
-        return 8;
+//    case 2 :
+//        return 8;
 
-    case 3 :
-        return 9;
+//    case 3 :
+//        return 9;
 
-    case 4 :
-        return 10;
-    }
+//    case 4 :
+//        return 10;
+//    }
 
-    return 0;
+    return res;
 }
 /**
  * @file   ESP8266_STA_TCPServer
@@ -230,7 +230,7 @@ u8 ESP8266_AP_TCPServer(void)
 
     delay_ms(100);
     printf("ESP8266准备设置AP参数\r\n");
-    printf("SSID：STM32103+ESP8266\r\n");
+    printf("SSID：ESP8266\r\n");
     printf("密码：012345678\r\n");
     printf("加密方式：WPA_WPA2_PSK\r\n");
 
@@ -822,7 +822,7 @@ u8 ESP8266_Disconnect_Server(u16 timeout)
 {
     //u8 i = 0, tmp = 0;
     u2_printf("AT+CIPCLOSE\r\n");
-	delay_ms(timeout * 1000);
+    delay_ms(timeout * 1000);
 
 //    for(i = 0; i < timeout; i++)
 //    {
@@ -870,7 +870,7 @@ void ESP8266_Exit_Transfer(u16 timeout)
     DHCP设置
 */
 u8 ESP8266_DHCP_Setup(void)
-{    
+{
     return ESP8266_SendCmd_OK((u8 *)"AT+CWDHCP=1,1", 300);  //暂时只做STA模式开启DHCP
 }
 
@@ -897,22 +897,26 @@ u8 ESP8266_Connect_Mode(u8 mode)
 u8 ESP8266_TransMode(u8 mode)
 {
     bool tmp;
-    
+
     switch(mode)
     {
-        case 0://非透传模式
-			tmp = ESP8266_SendCmd_OK((u8 *)"AT+CIPMODE=0", 300);
+    case 0://非透传模式
+        tmp = ESP8266_SendCmd_OK((u8 *)"AT+CIPMODE=0", 300);
         break;
-        case 1://透传模式
-			if( ESP8266_SendCmd_OK((u8 *)"AT+CIPMODE=1", 300) == true)
-			{
-				tmp = ESP8266_SendCmd_OK((u8 *)"AT+CIPSEND", 1000);
-			}
-			else
-				tmp = false;
+
+    case 1://透传模式
+        if(ESP8266_SendCmd_OK((u8 *)"AT+CIPMODE=1", 300) == true)
+        {
+            tmp = ESP8266_SendCmd_OK((u8 *)"AT+CIPSEND", 1000);
+        }
+        else
+        {
+            tmp = false;
+        }
+
         break;
     }
-     
+
     return tmp;
 }
 

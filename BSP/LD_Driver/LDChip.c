@@ -3,17 +3,31 @@
 //===========================================================================
 // 添加识别码
 
-#define DATE_A 6    	/*数组二维数值*/
-#define DATE_B 20		/*数组一维数值*/
+#define DATE_A 20    	/*数组二维数值*/
+#define DATE_B 24		/*数组一维数值*/
 
 uint8  sRecog[DATE_A][DATE_B] =
 {
-    "liu shui deng", \
-    "shan shuo", \
-    "an jian chu fa", \
-    "quan mie", \
-    "kai deng", \
-    "guan deng"
+	"xiao ding dang",
+    "da kai ke ting deng",
+    "guan bi ke ting deng",
+    "da kai wo shi deng",
+    "guan bi wo shi deng",
+    "da kai chu fang deng",
+    "guan bi chu fang deng",
+	"da kai suo you deng",
+	"guan bi suo you deng",
+	"liu shui deng",
+	"shan shuo",
+	"kai men",
+	"guan men",
+	"dang qian wen du",
+	"bo fang yin yue",
+	"tui xia",
+	"ni hui shang tian ma",
+	"jiang ge xiao hua",
+	"da kai jing bao",
+	"guan bi jing bao"
 };	/*添加关键词，用户修改*/
 
 //=========================================================================
@@ -131,7 +145,7 @@ void LD_Init_MP3(void)	//播放初始化
     nLD_Mode = LD_MODE_MP3;	   //当前进行MP3播放
     LD_Init_Common();		   //通用初始化
 
-    LD_WriteReg(0xBD, 0x02);	  //内部增益控制 初始化时写入FFH
+    LD_WriteReg(0xBD, 0x02);	//内部增益控制 初始化时写入FFH
     LD_WriteReg(0x17, 0x48);	//写48H可以激活DSP
     delay_ms(10);
 
@@ -168,7 +182,7 @@ void LD_play()
     }
 
     fill_the_fifo();
-	//LD_ReloadMp3Data();
+    //LD_ReloadMp3Data();
 
     LD_WriteReg(0xBA, 0x00);
     LD_WriteReg(0x17, 0x48);
@@ -220,7 +234,7 @@ void fill_the_fifo(void)
 //FLASH_CLK=0;
 //FLASH_CS=0;
 //IO_Send_Byte(W25P_FastReadData); /* read command */
-//IO_Send_Byte(((nCurMp3Pos & 0xFFFFFF) >> 16)); /* send 3 
+//IO_Send_Byte(((nCurMp3Pos & 0xFFFFFF) >> 16)); /* send 3
 //address bytes */
 //IO_Send_Byte(((nCurMp3Pos & 0xFFFF) >> 8));
 //IO_Send_Byte(nCurMp3Pos & 0xFF);
@@ -228,7 +242,7 @@ void fill_the_fifo(void)
 //ucStatus = LD_ReadReg(0x06);
 // info@icroute.com
 //27
-//while ( !(ucStatus&MASK_FIFO_STATUS_AFULL) && 
+//while ( !(ucStatus&MASK_FIFO_STATUS_AFULL) &&
 //(nMp3Pos<nMp3Size) )
 //{
 //val=0;
@@ -502,7 +516,7 @@ uint8 LD_AsrRun(void)
     LD_WriteReg(0x1C, 0x0b);
     LD_WriteReg(0x29, 0x10);
     LD_WriteReg(0xBD, 0x00);
-	
+
     return 1;
 }
 

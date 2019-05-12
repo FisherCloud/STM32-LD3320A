@@ -20,14 +20,19 @@
 .\obj\ld3320_main.o: D:\Program Files (x86)\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 .\obj\ld3320_main.o: D:\Program Files (x86)\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
 .\obj\ld3320_main.o: D:\Program Files (x86)\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
+.\obj\ld3320_main.o: ..\BSP\oled\oled.h
+.\obj\ld3320_main.o: ..\BSP\sys\sys.h
+.\obj\ld3320_main.o: ..\BSP\relay\Relay.h
+.\obj\ld3320_main.o: ..\BSP\led\led.h
+.\obj\ld3320_main.o: ..\BSP\delay\delay.h
+.\obj\ld3320_main.o: ..\BSP\buzzer\buzzer.h
+.\obj\ld3320_main.o: ..\BSP\ds18b20\ds18b20.h
 .\obj\ld3320_main.o: ..\BSP\LD_Driver\LDchip.h
 .\obj\ld3320_main.o: ..\BSP\LD_Driver\Reg_RW.h
-.\obj\ld3320_main.o: ..\BSP\led\LEDtest.h
 .\obj\ld3320_main.o: ..\BSP\dma\dma.h
 .\obj\ld3320_main.o: ..\BSP\usart\usart.h
 .\obj\ld3320_main.o: ..\BSP\usart\usart2.h
 .\obj\ld3320_main.o: ..\user\includes.h
-.\obj\ld3320_main.o: ..\BSP\delay\delay.h
 .\obj\ld3320_main.o: ..\BSP\timer\timer.h
 .\obj\ld3320_main.o: ..\BSP\timer\timer3.h
 .\obj\ld3320_main.o: ..\BSP\KEY\user_key.h
@@ -48,21 +53,5 @@
 .\obj\ld3320_main.o: ..\Libraries\STM32_USB-FS-Device_Driver\inc\usb_int.h
 .\obj\ld3320_main.o: ..\BSP\usb_user\hw_config.h
 .\obj\ld3320_main.o: ..\BSP\usb_user\usb_pwr.h
-.\obj\ld3320_main.o: ..\BSP\MQTT\TCPinterface.h
 .\obj\ld3320_main.o: ..\BSP\ESP8266\ESP8266.h
-.\obj\ld3320_main.o: ..\BSP\ESP8266\TCP_ESP8266.h
-.\obj\ld3320_main.o: ..\BSP\MQTT\mqtt.h
-.\obj\ld3320_main.o: ..\BSP\MQTT\lib\MQTTPacket.h
-.\obj\ld3320_main.o: ..\BSP\MQTT\lib\MQTTConnect.h
-.\obj\ld3320_main.o: ..\BSP\MQTT\lib\MQTTPublish.h
-.\obj\ld3320_main.o: ..\BSP\MQTT\lib\MQTTSubscribe.h
-.\obj\ld3320_main.o: ..\BSP\MQTT\lib\MQTTUnsubscribe.h
-.\obj\ld3320_main.o: ..\BSP\MQTT\lib\MQTTFormat.h
-.\obj\ld3320_main.o: ..\BSP\MQTT\lib\StackTrace.h
-.\obj\ld3320_main.o: ..\BSP\MQTT\lib\MQTTPacket.h
-.\obj\ld3320_main.o: ..\BSP\MQTT\handle.h
-.\obj\ld3320_main.o: ..\BSP\cjson\cJSON.h
-.\obj\ld3320_main.o: D:\Program Files (x86)\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
-.\obj\ld3320_main.o: ..\BSP\oled\oled.h
-.\obj\ld3320_main.o: ..\BSP\sys\sys.h
-.\obj\ld3320_main.o: ..\BSP\relay\Relay.h
+.\obj\ld3320_main.o: ..\BSP\ESP8266\at.h

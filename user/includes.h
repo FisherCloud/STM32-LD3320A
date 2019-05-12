@@ -21,17 +21,15 @@
 #include <stdlib.h>
 #include <stdarg.h>
 
-typedef struct
-{
-    uint8_t count;
-    enum {IDLE = 0, ACTIVE} status;
-    uint8_t index;
-    uint8_t Buf[255];
-} UART_REV_STRUCT;
+#include "oled.h"
+#include "Relay.h"
+#include "led.h"
+#include "buzzer.h"
+#include "ds18b20.h"
 
+#include "sys.h"
 #include "LDchip.h"
 #include "Reg_RW.h"
-#include "LEDtest.h"
 #include "dma.h"
 #include "usart.h"
 #include "usart2.h"
@@ -50,22 +48,22 @@ typedef struct
 #include "hw_config.h"
 #include "usb_pwr.h"
 
-///*  Interface   */
-#include "TCPinterface.h"
+/////*  Interface   */
+//#include "TCPinterface.h"
 
 ////ESP8266
 #include "ESP8266.h"
+#include "at.h"
 //#include "bsp_esp8266.h"
-#include "TCP_ESP8266.h"
+//#include "TCP_ESP8266.h"
 
 //Lib
-#include "mqtt.h"
-#include "MQTTPacket.h"
-#include "handle.h"
-#include "cJSON.h"
+//#include "mqtt.h"
+//#include "MQTTPacket.h"
+//#include "handle.h"
+//#include "cJSON.h"
 
-#include "oled.h"
-#include "Relay.h"
+
 
 #endif
 

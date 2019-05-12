@@ -39,11 +39,11 @@
 *******************************************************************************/
 void Set_USBClock(void)
 {
-  /* USBCLK = PLLCLK */
-  RCC_USBCLKConfig(RCC_USBCLKSource_PLLCLK_1Div5);
+    /* USBCLK = PLLCLK */
+    RCC_USBCLKConfig(RCC_USBCLKSource_PLLCLK_1Div5);
 
-  /* Enable USB clock */
-  RCC_APB1PeriphClockCmd(RCC_APB1Periph_USB, ENABLE);
+    /* Enable USB clock */
+    RCC_APB1PeriphClockCmd(RCC_APB1Periph_USB, ENABLE);
 }
 
 /*******************************************************************************
@@ -54,8 +54,8 @@ void Set_USBClock(void)
 *******************************************************************************/
 void Enter_LowPowerMode(void)
 {
-  /* Set the device state to suspend */
-  bDeviceState = SUSPENDED;
+    /* Set the device state to suspend */
+    bDeviceState = SUSPENDED;
 }
 
 /*******************************************************************************
@@ -66,18 +66,18 @@ void Enter_LowPowerMode(void)
 *******************************************************************************/
 void Leave_LowPowerMode(void)
 {
-  DEVICE_INFO *pInfo = &Device_Info;
+    DEVICE_INFO *pInfo = &Device_Info;
 
-  /* Set the device state to the correct state */
-  if (pInfo->Current_Configuration != 0)
-  {
-    /* Device configured */
-    bDeviceState = CONFIGURED;
-  }
-  else
-  {
-    bDeviceState = ATTACHED;
-  }
+    /* Set the device state to the correct state */
+    if(pInfo->Current_Configuration != 0)
+    {
+        /* Device configured */
+        bDeviceState = CONFIGURED;
+    }
+    else
+    {
+        bDeviceState = ATTACHED;
+    }
 
 }
 
@@ -89,25 +89,25 @@ void Leave_LowPowerMode(void)
 *******************************************************************************/
 void Interrupts_Config(void)
 {
-  NVIC_InitTypeDef NVIC_InitStructure;
+    NVIC_InitTypeDef NVIC_InitStructure;
 
-  /* Set the Vector Table base address at 0x08008000 */
-  NVIC_SetVectorTable(NVIC_VectTab_FLASH, 0x000);
-  
-  NVIC_PriorityGroupConfig(NVIC_PriorityGroup_1);
+    /* Set the Vector Table base address at 0x08008000 */
+    NVIC_SetVectorTable(NVIC_VectTab_FLASH, 0x000);
 
-  NVIC_InitStructure.NVIC_IRQChannel = USB_LP_CAN1_RX0_IRQn;  //USB 低优先级配置
-  NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 1;
-  NVIC_InitStructure.NVIC_IRQChannelSubPriority = 1;
-  NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
-  NVIC_Init(&NVIC_InitStructure);
+    NVIC_PriorityGroupConfig(NVIC_PriorityGroup_1);
 
-  NVIC_InitStructure.NVIC_IRQChannel = USB_HP_CAN1_TX_IRQn;  //USB高优先级配置
-  NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 1;
-  NVIC_InitStructure.NVIC_IRQChannelSubPriority = 0;
-  NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
-  NVIC_Init(&NVIC_InitStructure);
-    
+    NVIC_InitStructure.NVIC_IRQChannel = USB_LP_CAN1_RX0_IRQn;  //USB 低优先级配置
+    NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 1;
+    NVIC_InitStructure.NVIC_IRQChannelSubPriority = 1;
+    NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
+    NVIC_Init(&NVIC_InitStructure);
+
+    NVIC_InitStructure.NVIC_IRQChannel = USB_HP_CAN1_TX_IRQn;  //USB高优先级配置
+    NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 1;
+    NVIC_InitStructure.NVIC_IRQChannelSubPriority = 0;
+    NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
+    NVIC_Init(&NVIC_InitStructure);
+
 }
 
 /*******************************************************************************
@@ -119,25 +119,25 @@ void Interrupts_Config(void)
 *******************************************************************************/
 void GPIO_Config(void)
 {
-  GPIO_InitTypeDef GPIO_InitStructure;
+    GPIO_InitTypeDef GPIO_InitStructure;
 
-  /* 配置LED灯使用的GPIO管脚模式 */
-  RCC_APB2PeriphClockCmd(RCC_GPIO_LED, ENABLE); 
+    /* 配置LED灯使用的GPIO管脚模式 */
+    RCC_APB2PeriphClockCmd(RCC_GPIO_LED, ENABLE);
 
-  GPIO_InitStructure.GPIO_Pin = DS1_PIN; 
-  GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;
-  GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
-  
-  GPIO_Init(GPIO_LED_PORT, &GPIO_InitStructure); 
-  /*关闭LED指示灯*/
-  GPIO_SetBits(GPIO_LED_PORT,DS1_PIN);
+    GPIO_InitStructure.GPIO_Pin = DS1_PIN;
+    GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;
+    GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
 
-  /* 配置USB上拉电阻使用的GPIO管脚模式*/
-  RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIO_DISCONNECT, ENABLE); 
-  GPIO_InitStructure.GPIO_Pin = USB_DISCONNECT_PIN;
-  GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
-  GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP; 
-  GPIO_Init(USB_DISCONNECT, &GPIO_InitStructure);
+    GPIO_Init(GPIO_LED_PORT, &GPIO_InitStructure);
+    /*关闭LED指示灯*/
+    GPIO_SetBits(GPIO_LED_PORT, DS1_PIN);
+
+    /* 配置USB上拉电阻使用的GPIO管脚模式*/
+    RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIO_DISCONNECT, ENABLE);
+    GPIO_InitStructure.GPIO_Pin = USB_DISCONNECT_PIN;
+    GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
+    GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;
+    GPIO_Init(USB_DISCONNECT, &GPIO_InitStructure);
 
 }
 
@@ -150,7 +150,7 @@ void GPIO_Config(void)
 *******************************************************************************/
 void Led_RW_ON(void)
 {
-  GPIO_ResetBits(GPIO_LED_PORT, DS1_PIN);
+    GPIO_ResetBits(GPIO_LED_PORT, DS1_PIN);
 }
 /*******************************************************************************
 * Function Name  : Led_RW_OFF
@@ -161,7 +161,7 @@ void Led_RW_ON(void)
 *******************************************************************************/
 void Led_RW_OFF(void)
 {
-  GPIO_SetBits(GPIO_LED_PORT, DS1_PIN);
+    GPIO_SetBits(GPIO_LED_PORT, DS1_PIN);
 }
 /*******************************************************************************
 * Function Name  : USB_Configured_LED
@@ -172,7 +172,7 @@ void Led_RW_OFF(void)
 *******************************************************************************/
 void USB_Configured_LED(void)
 {
-  GPIO_ResetBits(GPIO_LED_PORT, DS1_PIN);
+    GPIO_ResetBits(GPIO_LED_PORT, DS1_PIN);
 
 }
 
@@ -185,7 +185,7 @@ void USB_Configured_LED(void)
 *******************************************************************************/
 void USB_NotConfigured_LED(void)
 {
-  GPIO_SetBits(GPIO_LED_PORT, DS1_PIN);
+    GPIO_SetBits(GPIO_LED_PORT, DS1_PIN);
 }
 
 /*******************************************************************************
@@ -194,18 +194,18 @@ void USB_NotConfigured_LED(void)
 * Input          : None.
 * Return         : Status
 *******************************************************************************/
-void USB_Cable_Config (FunctionalState NewState)
+void USB_Cable_Config(FunctionalState NewState)
 {
-  if (NewState != DISABLE)
-  {
-    GPIO_ResetBits(USB_DISCONNECT, USB_DISCONNECT_PIN);
-  }
-  else
-  {
-    GPIO_SetBits(USB_DISCONNECT, USB_DISCONNECT_PIN);
-  }
+    if(NewState != DISABLE)
+    {
+        GPIO_ResetBits(USB_DISCONNECT, USB_DISCONNECT_PIN);
+    }
+    else
+    {
+        GPIO_SetBits(USB_DISCONNECT, USB_DISCONNECT_PIN);
+    }
 }
- 
+
 /*******************************************************************************
 * Function Name  : Get_SerialNum.
 * Description    : Create the serial number string descriptor.
@@ -215,29 +215,29 @@ void USB_Cable_Config (FunctionalState NewState)
 *******************************************************************************/
 void Get_SerialNum(void)
 {
-  uint32_t Device_Serial0, Device_Serial1, Device_Serial2;
+    uint32_t Device_Serial0, Device_Serial1, Device_Serial2;
 
-  Device_Serial0 = *(__IO uint32_t*)(0x1FFFF7E8);
-  Device_Serial1 = *(__IO uint32_t*)(0x1FFFF7EC);
-  Device_Serial2 = *(__IO uint32_t*)(0x1FFFF7F0);
+    Device_Serial0 = *(__IO uint32_t*)(0x1FFFF7E8);
+    Device_Serial1 = *(__IO uint32_t*)(0x1FFFF7EC);
+    Device_Serial2 = *(__IO uint32_t*)(0x1FFFF7F0);
 
-  if (Device_Serial0 != 0)
-  {
-    MASS_StringSerial[2] = (uint8_t)(Device_Serial0 & 0x000000FF);
-    MASS_StringSerial[4] = (uint8_t)((Device_Serial0 & 0x0000FF00) >> 8);
-    MASS_StringSerial[6] = (uint8_t)((Device_Serial0 & 0x00FF0000) >> 16);
-    MASS_StringSerial[8] = (uint8_t)((Device_Serial0 & 0xFF000000) >> 24);
+    if(Device_Serial0 != 0)
+    {
+        MASS_StringSerial[2] = (uint8_t)(Device_Serial0 & 0x000000FF);
+        MASS_StringSerial[4] = (uint8_t)((Device_Serial0 & 0x0000FF00) >> 8);
+        MASS_StringSerial[6] = (uint8_t)((Device_Serial0 & 0x00FF0000) >> 16);
+        MASS_StringSerial[8] = (uint8_t)((Device_Serial0 & 0xFF000000) >> 24);
 
-    MASS_StringSerial[10] = (uint8_t)(Device_Serial1 & 0x000000FF);
-    MASS_StringSerial[12] = (uint8_t)((Device_Serial1 & 0x0000FF00) >> 8);
-    MASS_StringSerial[14] = (uint8_t)((Device_Serial1 & 0x00FF0000) >> 16);
-    MASS_StringSerial[16] = (uint8_t)((Device_Serial1 & 0xFF000000) >> 24);
+        MASS_StringSerial[10] = (uint8_t)(Device_Serial1 & 0x000000FF);
+        MASS_StringSerial[12] = (uint8_t)((Device_Serial1 & 0x0000FF00) >> 8);
+        MASS_StringSerial[14] = (uint8_t)((Device_Serial1 & 0x00FF0000) >> 16);
+        MASS_StringSerial[16] = (uint8_t)((Device_Serial1 & 0xFF000000) >> 24);
 
-    MASS_StringSerial[18] = (uint8_t)(Device_Serial2 & 0x000000FF);
-    MASS_StringSerial[20] = (uint8_t)((Device_Serial2 & 0x0000FF00) >> 8);
-    MASS_StringSerial[22] = (uint8_t)((Device_Serial2 & 0x00FF0000) >> 16);
-    MASS_StringSerial[24] = (uint8_t)((Device_Serial2 & 0xFF000000) >> 24);
-  }
+        MASS_StringSerial[18] = (uint8_t)(Device_Serial2 & 0x000000FF);
+        MASS_StringSerial[20] = (uint8_t)((Device_Serial2 & 0x0000FF00) >> 8);
+        MASS_StringSerial[22] = (uint8_t)((Device_Serial2 & 0x00FF0000) >> 16);
+        MASS_StringSerial[24] = (uint8_t)((Device_Serial2 & 0xFF000000) >> 24);
+    }
 }
 
 
@@ -249,10 +249,10 @@ void Get_SerialNum(void)
 *******************************************************************************/
 void MAL_Config(void)
 {
-  if(!MAL_Init(0))
-  {
+    if(!MAL_Init(0))
+    {
 
-  }
+    }
 }
 
 

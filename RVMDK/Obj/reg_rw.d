@@ -20,14 +20,19 @@
 .\obj\reg_rw.o: D:\Program Files (x86)\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 .\obj\reg_rw.o: D:\Program Files (x86)\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
 .\obj\reg_rw.o: D:\Program Files (x86)\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
+.\obj\reg_rw.o: ..\BSP\oled\oled.h
+.\obj\reg_rw.o: ..\BSP\sys\sys.h
+.\obj\reg_rw.o: ..\BSP\relay\Relay.h
+.\obj\reg_rw.o: ..\BSP\led\led.h
+.\obj\reg_rw.o: ..\BSP\delay\delay.h
+.\obj\reg_rw.o: ..\BSP\buzzer\buzzer.h
+.\obj\reg_rw.o: ..\BSP\ds18b20\ds18b20.h
 .\obj\reg_rw.o: ..\BSP\LD_Driver\LDchip.h
 .\obj\reg_rw.o: ..\BSP\LD_Driver\Reg_RW.h
-.\obj\reg_rw.o: ..\BSP\led\LEDtest.h
 .\obj\reg_rw.o: ..\BSP\dma\dma.h
 .\obj\reg_rw.o: ..\BSP\usart\usart.h
 .\obj\reg_rw.o: ..\BSP\usart\usart2.h
 .\obj\reg_rw.o: ..\user\includes.h
-.\obj\reg_rw.o: ..\BSP\delay\delay.h
 .\obj\reg_rw.o: ..\BSP\timer\timer.h
 .\obj\reg_rw.o: ..\BSP\timer\timer3.h
 .\obj\reg_rw.o: ..\BSP\KEY\user_key.h
@@ -48,21 +53,5 @@
 .\obj\reg_rw.o: ..\Libraries\STM32_USB-FS-Device_Driver\inc\usb_int.h
 .\obj\reg_rw.o: ..\BSP\usb_user\hw_config.h
 .\obj\reg_rw.o: ..\BSP\usb_user\usb_pwr.h
-.\obj\reg_rw.o: ..\BSP\MQTT\TCPinterface.h
 .\obj\reg_rw.o: ..\BSP\ESP8266\ESP8266.h
-.\obj\reg_rw.o: ..\BSP\ESP8266\TCP_ESP8266.h
-.\obj\reg_rw.o: ..\BSP\MQTT\mqtt.h
-.\obj\reg_rw.o: ..\BSP\MQTT\lib\MQTTPacket.h
-.\obj\reg_rw.o: ..\BSP\MQTT\lib\MQTTConnect.h
-.\obj\reg_rw.o: ..\BSP\MQTT\lib\MQTTPublish.h
-.\obj\reg_rw.o: ..\BSP\MQTT\lib\MQTTSubscribe.h
-.\obj\reg_rw.o: ..\BSP\MQTT\lib\MQTTUnsubscribe.h
-.\obj\reg_rw.o: ..\BSP\MQTT\lib\MQTTFormat.h
-.\obj\reg_rw.o: ..\BSP\MQTT\lib\StackTrace.h
-.\obj\reg_rw.o: ..\BSP\MQTT\lib\MQTTPacket.h
-.\obj\reg_rw.o: ..\BSP\MQTT\handle.h
-.\obj\reg_rw.o: ..\BSP\cjson\cJSON.h
-.\obj\reg_rw.o: D:\Program Files (x86)\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
-.\obj\reg_rw.o: ..\BSP\oled\oled.h
-.\obj\reg_rw.o: ..\BSP\sys\sys.h
-.\obj\reg_rw.o: ..\BSP\relay\Relay.h
+.\obj\reg_rw.o: ..\BSP\ESP8266\at.h

@@ -20,14 +20,19 @@
 .\obj\main.o: D:\Program Files (x86)\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 .\obj\main.o: D:\Program Files (x86)\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
 .\obj\main.o: D:\Program Files (x86)\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
+.\obj\main.o: ..\BSP\oled\oled.h
+.\obj\main.o: ..\BSP\sys\sys.h
+.\obj\main.o: ..\BSP\relay\Relay.h
+.\obj\main.o: ..\BSP\led\led.h
+.\obj\main.o: ..\BSP\delay\delay.h
+.\obj\main.o: ..\BSP\buzzer\buzzer.h
+.\obj\main.o: ..\BSP\ds18b20\ds18b20.h
 .\obj\main.o: ..\BSP\LD_Driver\LDchip.h
 .\obj\main.o: ..\BSP\LD_Driver\Reg_RW.h
-.\obj\main.o: ..\BSP\led\LEDtest.h
 .\obj\main.o: ..\BSP\dma\dma.h
 .\obj\main.o: ..\BSP\usart\usart.h
 .\obj\main.o: ..\BSP\usart\usart2.h
 .\obj\main.o: ..\user\includes.h
-.\obj\main.o: ..\BSP\delay\delay.h
 .\obj\main.o: ..\BSP\timer\timer.h
 .\obj\main.o: ..\BSP\timer\timer3.h
 .\obj\main.o: ..\BSP\KEY\user_key.h
@@ -48,22 +53,6 @@
 .\obj\main.o: ..\Libraries\STM32_USB-FS-Device_Driver\inc\usb_int.h
 .\obj\main.o: ..\BSP\usb_user\hw_config.h
 .\obj\main.o: ..\BSP\usb_user\usb_pwr.h
-.\obj\main.o: ..\BSP\MQTT\TCPinterface.h
 .\obj\main.o: ..\BSP\ESP8266\ESP8266.h
-.\obj\main.o: ..\BSP\ESP8266\TCP_ESP8266.h
-.\obj\main.o: ..\BSP\MQTT\mqtt.h
-.\obj\main.o: ..\BSP\MQTT\lib\MQTTPacket.h
-.\obj\main.o: ..\BSP\MQTT\lib\MQTTConnect.h
-.\obj\main.o: ..\BSP\MQTT\lib\MQTTPublish.h
-.\obj\main.o: ..\BSP\MQTT\lib\MQTTSubscribe.h
-.\obj\main.o: ..\BSP\MQTT\lib\MQTTUnsubscribe.h
-.\obj\main.o: ..\BSP\MQTT\lib\MQTTFormat.h
-.\obj\main.o: ..\BSP\MQTT\lib\StackTrace.h
-.\obj\main.o: ..\BSP\MQTT\lib\MQTTPacket.h
-.\obj\main.o: ..\BSP\MQTT\handle.h
-.\obj\main.o: ..\BSP\cjson\cJSON.h
-.\obj\main.o: D:\Program Files (x86)\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
-.\obj\main.o: ..\BSP\oled\oled.h
-.\obj\main.o: ..\BSP\sys\sys.h
-.\obj\main.o: ..\BSP\relay\Relay.h
+.\obj\main.o: ..\BSP\ESP8266\at.h
 .\obj\main.o: ..\BSP\oled\bmp.h

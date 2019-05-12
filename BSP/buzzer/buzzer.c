@@ -20,7 +20,5 @@ void Buzzer_GPIO_Config(void)
     GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;//设置引脚速度为50MHZ
     GPIO_Init(BUZZER_GPIO_PORT, &GPIO_InitStructure);//调用库函数，初始化GPIO
 
-
     GPIO_ResetBits(BUZZER_GPIO_PORT, BUZZER_GPIO_PIN);
-
 }

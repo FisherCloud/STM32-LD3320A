@@ -38,31 +38,31 @@ void Led_RW_ON(void);
 void Led_RW_OFF(void);
 void USB_Configured_LED(void);
 void USB_NotConfigured_LED(void);
-void USB_Cable_Config (FunctionalState NewState);
+void USB_Cable_Config(FunctionalState NewState);
 void USB_Disconnect_Config(void);
 void Get_SerialNum(void);
 void MAL_Config(void);
 /* External variables --------------------------------------------------------*/
 
-#define RCC_GPIO_LED                                 RCC_APB2Periph_GPIOC      /*LED使用的GPIO时钟*/
-#define GPIO_LED_PORT                                GPIOC                     /*LED数量*/
-#define LEDn                                         4            /*LED灯使用的GPIO组*/
-#define DS1_PIN                                      GPIO_Pin_3    /*DS1使用的GPIO管脚*/
+#define RCC_GPIO_LED                                RCC_APB2Periph_GPIOC      /*LED使用的GPIO时钟*/
+#define GPIO_LED_PORT                               GPIOC                     /*LED数量*/
+#define LEDn                                        4            /*LED灯使用的GPIO组*/
+#define DS1_PIN                                     GPIO_Pin_4    /*DS1使用的GPIO管脚*/
 //#define DS2_PIN                                      GPIO_Pin_7    /*DS2使用的GPIO管脚*/
 //#define DS3_PIN                                      GPIO_Pin_8    /*DS3使用的GPIO管脚*/
 //#define DS4_PIN                                      GPIO_Pin_9    /*DS4使用的GPIO管脚*/
-//#define GPIO_LED_ALL                                 DS1_PIN |DS2_PIN |DS3_PIN |DS4_PIN 
+//#define GPIO_LED_ALL                                 DS1_PIN |DS2_PIN |DS3_PIN |DS4_PIN
 
 
 /* SD卡检测 */
-#define GPIO_SD_CTRL_PORT                          GPIOD
-#define GPIO_SD_NCD                                GPIO_Pin_13   /* input: SD CARD DETECT   ACTIVE 0   */
-#define RCC_SD_CTRL                                RCC_APB2Periph_GPIOD
+#define GPIO_SD_CTRL_PORT                           GPIOD
+#define GPIO_SD_NCD                                 GPIO_Pin_13   /* input: SD CARD DETECT   ACTIVE 0   */
+#define RCC_SD_CTRL                                 RCC_APB2Periph_GPIOD
 
 /*USB相关定义*/
-#define USB_DISCONNECT            			GPIOC  
-#define USB_DISCONNECT_PIN        			GPIO_Pin_7
-#define RCC_APB2Periph_GPIO_DISCONNECT      RCC_APB2Periph_GPIOC
+#define USB_DISCONNECT            					GPIOC
+#define USB_DISCONNECT_PIN        					GPIO_Pin_7
+#define RCC_APB2Periph_GPIO_DISCONNECT      		RCC_APB2Periph_GPIOC
 
 
 #endif  /*__HW_CONFIG_H*/
