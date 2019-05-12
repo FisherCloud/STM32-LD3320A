@@ -109,7 +109,7 @@ u8 ESP8266_STA_TCPServer(void)
  */
 u8 ESP8266_STA_TCPCLient(void)
 {
-    u8 res;
+    u8 res = 0;
 
     if(ESP8266_SoftReset(50))
     {
@@ -180,23 +180,23 @@ u8 ESP8266_STA_TCPCLient(void)
     printf("ESP8266连接服务器中... ...\r\n");
     res = ESP8266_Connect_Server(SERVER_IP, SERVER_PORT, 50); //连接TCP服务器,并进入透传，超时时间5s，失败返回7
 
-//    switch(res)
-//    {
-//    case 0 :
-//        break;
+    switch(res)
+    {
+    case 0 :
+        break;
 
-//    case 1 :
-//        return 7;
+    case 1 :
+        return 7;
 
-//    case 2 :
-//        return 8;
+    case 2 :
+        return 8;
 
-//    case 3 :
-//        return 9;
+    case 3 :
+        return 9;
 
-//    case 4 :
-//        return 10;
-//    }
+    case 4 :
+        return 10;
+    }
 
     return res;
 }
@@ -554,7 +554,7 @@ u8 ESP8266_Get_Data(u8 *data, u8 *len, u8 *id)
 
 /**
  * @file   ESP8266_Tcp_GetData
- * @brief  ESP8266获取客户端数据
+ * @brief  ESP8266获取服务端数据
 * @param  data：客户端数据存储地址;len:数据长度;
 * @retval 1：有数据到来;0:无数据到来
  */
@@ -562,26 +562,39 @@ u8 ESP8266_Tcp_GetData(u8 *data, int *len)
 {
     u8 temp[10] = {0};    //缓冲区，
     char *presult;
+	
+	delay_ms(5);
+	sscanf((const char *)USART2_RX_BUF, "%[^,],%d", temp, len); //截取各段数据
+	presult = strstr((const char *)USART2_RX_BUF, (const char *)":");
 
-    if(strstr((const char *)USART2_RX_BUF, (const char *)"+IPD"))  //如果接受到+IPD表示有数据
-    {
-        delay_ms(5);
-        sscanf((const char *)USART2_RX_BUF, "%[^,],%d", temp, len); //截取各段数据
-        presult = strstr((const char *)USART2_RX_BUF, (const char *)":");
+	if(presult != NULL)
+	{
+		sprintf((char *)data, "%s", (presult + 1));
+	}
 
-        if(presult != NULL)
-        {
-            sprintf((char *)data, "%s", (presult + 1));
-        }
+	USART2_RX_STA = 0;
+	//memset(USART2_RX_BUF, 0, USART2_REC_LEN);             //清除串口2数据
+	return 1;  //有数据到来
 
-        USART2_RX_STA = 0;
-        memset(USART2_RX_BUF, 0, USART2_REC_LEN);             //清除串口2数据
-        return 1;  //有数据到来
-    }
-    else
-    {
-        return 0;    //无数据到来
-    }
+//    if(strstr((const char *)USART2_RX_BUF, (const char *)"+IPD"))  //如果接受到+IPD表示有数据
+//    {
+//        delay_ms(5);
+//        sscanf((const char *)USART2_RX_BUF, "%[^,],%d", temp, len); //截取各段数据
+//        presult = strstr((const char *)USART2_RX_BUF, (const char *)":");
+
+//        if(presult != NULL)
+//        {
+//            sprintf((char *)data, "%s", (presult + 1));
+//        }
+
+//        USART2_RX_STA = 0;
+//        //memset(USART2_RX_BUF, 0, USART2_REC_LEN);             //清除串口2数据
+//        return 1;  //有数据到来
+//    }
+//    else
+//    {
+//        return 0;    //无数据到来
+//    }
 }
 /**
  * @file   ESP8266_SendData
@@ -670,7 +683,17 @@ u8 ESP8266_Tcp_SendData(u8 *databuff, u16 data_len, u16 timeout)
 
     USART2_RX_STA = 0;
     memset(USART2_RX_BUF, 0, USART2_REC_LEN);             //清除串口2数据
-    u2_printf("AT+CIPSEND=%d\r\n", data_len);              //发送发送数据指令
+	if(ESP8266_SendCmd_OK((u8*)"AT+CIPMODE=1\r\n", 50))
+    {
+        printf("ESP8266设置透传模式失败\r\n");
+    }
+    printf("ESP8266设置透传模式成功\r\n");
+	
+	if(ESP8266_SendCmd_OK((u8*)"AT+CIPSEND\r\n", 50))
+    {
+        printf("ESP8266设置透传指令失败\r\n");
+    }
+    printf("ESP8266设置透传指令成功\r\n");
     time = 0;
 
     while(time < timeout)
@@ -789,6 +812,8 @@ u8 ESP8266_Connect_Server(u8 *ip, u16 port, u16 timeout)
         printf("ESP8266连接服务器成功，准备进入透传\r\n");
         USART2_RX_STA = 0;
         memset(USART2_RX_BUF, 0, USART2_REC_LEN);             //清除串口2数据
+		u2_printf("AT+CIPMODE=1\r\n");
+		delay_ms(1000);
         u2_printf("AT+CIPSEND\r\n");                          //发送进入透传指令
         time = 0;
 

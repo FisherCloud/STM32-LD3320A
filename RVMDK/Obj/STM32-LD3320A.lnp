@@ -17,7 +17,6 @@
 ".\obj\led.o"
 ".\obj\ds18b20.o"
 ".\obj\buzzer.o"
-".\obj\cjson.o"
 ".\obj\core_cm3.o"
 ".\obj\system_stm32f10x.o"
 ".\obj\startup_stm32f10x_hd.o"

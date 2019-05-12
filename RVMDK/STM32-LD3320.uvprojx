@@ -478,11 +478,6 @@
               <FileType>1</FileType>
               <FilePath>..\BSP\buzzer\buzzer.c</FilePath>
             </File>
-            <File>
-              <FileName>cJSON.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\BSP\cjson\cJSON.c</FilePath>
-            </File>
           </Files>
         </Group>
         <Group>

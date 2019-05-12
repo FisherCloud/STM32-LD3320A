@@ -22,3 +22,8 @@ void Buzzer_GPIO_Config(void)
 
     GPIO_ResetBits(BUZZER_GPIO_PORT, BUZZER_GPIO_PIN);
 }
+
+void Buzzer_Toggle(void)
+{
+	BUZZER_GPIO_PORT->ODR ^= BUZZER_GPIO_PIN;
+}
