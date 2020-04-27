@@ -1,4 +1,4 @@
-# 基于单片机的智能语音控制系统
+# 基于语音识别的智能家居控制方案研究与设计
 
 ## 前言
 
@@ -59,7 +59,7 @@ LD3320 芯片是一款“语音识别”专用芯片。该芯片集成了语音�
 ## 电路图
 
 可CSDN下载：
-[基于单片机智能语音控制系统STM32_V3.1.1.zip](https://download.csdn.net/download/qq_36248828/11248209)
+[STM32-LD3320A.zip](https://download.csdn.net/download/qq_36248828/11248209)
 
 也可Email：
 [FisherCloud](mailto:fishercloud@qq.com)
